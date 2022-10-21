@@ -101,7 +101,7 @@ total_start_time = time.time()
 fpga_inst = fpga.FPGA(arch_params_dict, args, spice_interface)
                      
 ###############################################################
-## GENERATE FILES
+## GENERATE FILES $$$$$$$
 ###############################################################
 
 
