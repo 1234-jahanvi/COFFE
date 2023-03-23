@@ -1,0 +1,262 @@
+warning, can't find model 'cw' from line
+
+    cwire_1 n_in gnd cw
+
+warning, can't find model 'rw' from line
+
+    rwire_1 n_in n_out rw
+
+warning, can't find model 'cw' from line
+
+    cwire_2 n_out gnd cw
+
+Warning: vin: no DC value, transient time 0 value used
+
+******
+
+** ngspice-37+ : Circuit level simulation program
+
+** The U. C. Berkeley CAD Group
+
+** Copyright 1985-1994, Regents of the University of California.
+
+** Copyright 2001-2022, The ngspice team.
+
+** Please get your ngspice manual from http://ngspice.sourceforge.net/docs.html
+
+** Please file your bug-reports at http://ngspice.sourceforge.net/bugrep.html
+
+** Creation Date: Mon Jul 25 11:02:59 UTC 2022
+
+******
+
+
+
+Note: No compatibility mode selected!
+
+
+
+
+
+Circuit: General BLE output
+
+
+
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+
+
+Warning: toxe, toxp and dtox all given and toxe != toxp + dtox; dtox ignored.
+
+
+
+Initial Transient Solution
+
+--------------------------
+
+
+
+Node                                   Voltage
+
+----                                   -------
+
+vdd                                        0.8
+
+vdd_lp                                    0.95
+
+vsram                                        1
+
+vrefmtj                                  0.627
+
+vclmpmtj                                 0.653
+
+vsram_n                                      0
+
+ground                                       0
+
+n_in                                         0
+
+vdd_f                                      0.8
+
+xlut.n_1_1                             0.79997
+
+xlut.n_1_2                             0.79997
+
+xlut.n_2_1                          4.8439e-05
+
+xlut.n_2_2                          4.8476e-05
+
+xlut.n_3_1                         6.03929e-05
+
+xlut.n_3_2                         6.04188e-05
+
+xlut.n_3_3                         6.04188e-05
+
+xlut.n_4_1                         7.22513e-05
+
+xlut.n_4_2                         7.23028e-05
+
+xlut.n_4_3                         7.23028e-05
+
+xlut.n_5_1                         8.40509e-05
+
+xlut.n_5_2                         8.41531e-05
+
+xlut.n_5_3                         8.41531e-05
+
+xlut.n_6_1                            0.799945
+
+xlut.n_6_2                            0.799945
+
+xlut.n_7_1                         4.84746e-05
+
+xlut.n_7_2                         4.85128e-05
+
+xlut.n_8_1                         5.63369e-05
+
+xlut.n_8_2                         5.65436e-05
+
+xlut.n_8_3                         5.65436e-05
+
+xlut.n_9_1                         6.42809e-05
+
+xlut.n_9_2                         6.46897e-05
+
+xlut.n_9_3                         6.46897e-05
+
+xlut.n_11_1                           0.799945
+
+xlut.n_11_2                           0.799945
+
+n_1_1                              4.83705e-05
+
+n_1_2                              4.96385e-05
+
+xthemux.n_1_1                      6.13559e-05
+
+xthemux.n_1_2                      6.13814e-05
+
+xthemux.n_1_3                      6.13814e-05
+
+xthemux.n_2_1                         0.799946
+
+xthemux.n_2_2                         0.799946
+
+n_1_3                              3.26791e-05
+
+n_1_4                              3.29116e-05
+
+xccmux.n_1_1                       4.46307e-05
+
+xccmux.n_1_2                       4.46562e-05
+
+xccmux.n_1_3                       4.46562e-05
+
+xccmux.n_2_1                          0.799946
+
+xccmux.n_2_2                          0.799946
+
+n_local_out                        2.80925e-05
+
+n_general_out                        0.0877443
+
+xgeneral_ble_output_load.n_1_2       0.0877443
+
+xgeneral_ble_output_load.n_1_3       0.0877443
+
+xgeneral_ble_output_load.n_1_4       0.0877443
+
+xgeneral_ble_output_load.n_1_5       0.0877443
+
+xgeneral_ble_output_load.n_1_6       0.0877443
+
+xgeneral_ble_output_load.n_1_7       0.0877443
+
+xgeneral_ble_output_load.n_1_8       0.0877443
+
+xgeneral_ble_output_load.xsb_mux_partial_1.n_1       0.0877433
+
+xgeneral_ble_output_load.xsb_mux_partial_1.n_1_1       0.0877433
+
+xgeneral_ble_output_load.xsb_mux_partial_1.n_1_2       0.0877433
+
+xgeneral_ble_output_load.xsb_mux_partial_1.n_1_3       0.0877433
+
+xgeneral_ble_output_load.xsb_mux_partial_1.n_1_4       0.0877433
+
+xgeneral_ble_output_load.n_meas_point       0.0877443
+
+xgeneral_ble_output_load.xsb_mux_on_1.xsb_mux_on_mux_only.n_1       0.0877466
+
+xgeneral_ble_output_load.xsb_mux_on_1.xsb_mux_on_mux_only.n_1_1       0.0877466
+
+xgeneral_ble_output_load.xsb_mux_on_1.xsb_mux_on_mux_only.n_1_2       0.0877467
+
+xgeneral_ble_output_load.xsb_mux_on_1.xsb_mux_on_mux_only.n_1_3       0.0877467
+
+xgeneral_ble_output_load.xsb_mux_on_1.xsb_mux_on_mux_only.n_1_4       0.0877468
+
+xgeneral_ble_output_load.xsb_mux_on_1.xsb_mux_on_mux_only.n_2       0.0877489
+
+xgeneral_ble_output_load.xsb_mux_on_1.n_1_1        0.087749
+
+xgeneral_ble_output_load.xsb_mux_on_1.xsb_mux_on_mux_only.n_2_1        0.087749
+
+xgeneral_ble_output_load.xsb_mux_on_1.xsb_mux_driver.n_1_1        0.798806
+
+xgeneral_ble_output_load.xsb_mux_on_1.xsb_mux_driver.n_1_2        0.798806
+
+n_hang1                            5.94639e-05
+
+v_flut#branch                     -3.66243e-08
+
+vin#branch                         1.01719e-11
+
+vground#branch                     6.61566e-07
+
+vsram_n#branch                               0
+
+vclmomtjn#branch                             0
+
+vrefmtjn#branch                              0
+
+vsram#branch                       -3.5038e-10
+
+vsupplylp#branch                             0
+
+vsupply#branch                    -6.61216e-07
+
+
+
+ Reference value :  6.76960e-10 Reference value :  1.45996e-09 Reference value :  2.21496e-09 Reference value :  2.99396e-09 Reference value :  3.78296e-09
+
+No. of Data Rows : 4019
+
+
+
+  Measurements for Transient Analysis
+
+
+
+meas_inv_flut_mux_1_tfall=  5.367457e-11 targ=  3.729882e-10 trig=  3.193136e-10
+
+meas_inv_flut_mux_1_trise=  2.305104e-11 targ=  2.128875e-09 trig=  2.105823e-09
+
+meas_inv_flut_mux_2_tfall=  5.481672e-11 targ=  2.160640e-09 trig=  2.105823e-09
+
+meas_inv_flut_mux_2_trise=  1.253585e-10 targ=  4.446721e-10 trig=  3.193136e-10
+
+meas_total_tfall    =  5.498290e-11 targ=  2.160640e-09 trig=  2.105657e-09
+
+meas_total_trise    =  1.255582e-10 targ=  4.446721e-10 trig=  3.191139e-10
+
+meas_logic_low_voltage=  8.774429e-02
+
+meas_current        =   -2.57844e-15 from=  0.00000e+00 to=  4.00000e-09
+
+meas_avg_power      =  5.15687e-07
+
+
+
+ngspice-37+ done
+

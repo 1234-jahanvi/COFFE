@@ -1,0 +1,251 @@
+warning, can't find model 'cw' from line
+    cwire_1 n_in gnd cw
+warning, can't find model 'rw' from line
+    rwire_1 n_in n_out rw
+warning, can't find model 'cw' from line
+    cwire_2 n_out gnd cw
+Warning: vin: no DC value, transient time 0 value used
+******
+** ngspice-37+ : Circuit level simulation program
+** The U. C. Berkeley CAD Group
+** Copyright 1985-1994, Regents of the University of California.
+** Copyright 2001-2022, The ngspice team.
+** Please get your ngspice manual from http://ngspice.sourceforge.net/docs.html
+** Please file your bug-reports at http://ngspice.sourceforge.net/bugrep.html
+** Creation Date: Mon Jul 25 11:02:59 UTC 2022
+******
+
+Note: No compatibility mode selected!
+
+
+Circuit: Switch block multiplexer
+
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+Warning: toxe, toxp and dtox all given and toxe != toxp + dtox; dtox ignored.
+
+Initial Transient Solution
+--------------------------
+
+Node                                   Voltage
+----                                   -------
+vdd                                        0.8
+vdd_lp                                    0.95
+vsram                                        1
+vrefmtj                                  0.627
+vclmpmtj                                 0.653
+vsram_n                                      0
+ground                                       0
+n_in                                         0
+vdd_sb_mux                                 0.8
+xsb_mux_on_1.xsb_mux_on_mux_only.n_1     2.19112e-05
+xsb_mux_on_1.xsb_mux_on_mux_only.n_1_1     2.19678e-05
+xsb_mux_on_1.xsb_mux_on_mux_only.n_1_2     2.20244e-05
+xsb_mux_on_1.xsb_mux_on_mux_only.n_1_3      2.2081e-05
+xsb_mux_on_1.xsb_mux_on_mux_only.n_1_4     2.21377e-05
+xsb_mux_on_1.xsb_mux_on_mux_only.n_2     4.38558e-05
+xsb_mux_on_1.n_1_1                  4.3968e-05
+xsb_mux_on_1.xsb_mux_on_mux_only.n_2_1      4.3968e-05
+xsb_mux_on_1.xsb_mux_driver.n_1_1        0.799947
+xsb_mux_on_1.xsb_mux_driver.n_1_2        0.799947
+n_1_1                               7.5766e-05
+xrouting_wire_load_1.xrouting_wire_load_tile_4.n_1_1     7.69823e-05
+xrouting_wire_load_1.xrouting_wire_load_tile_4.n_1_sb_off_1     7.69822e-05
+xrouting_wire_load_1.xrouting_wire_load_tile_4.n_1_sb_off_2     7.69822e-05
+xrouting_wire_load_1.xrouting_wire_load_tile_4.n_1_cb_off_1      7.6982e-05
+xrouting_wire_load_1.xrouting_wire_load_tile_4.n_1_cb_off_2      7.6982e-05
+xrouting_wire_load_1.xrouting_wire_load_tile_4.n_1_cb_off_3      7.6982e-05
+xrouting_wire_load_1.xrouting_wire_load_tile_4.n_1_cb_off_4      7.6982e-05
+xrouting_wire_load_1.n_4           7.81987e-05
+xrouting_wire_load_1.xrouting_wire_load_tile_3.n_1_1     7.94151e-05
+xrouting_wire_load_1.xrouting_wire_load_tile_3.n_1_sb_off_1      7.9415e-05
+xrouting_wire_load_1.xrouting_wire_load_tile_3.n_1_sb_off_2      7.9415e-05
+xrouting_wire_load_1.xrouting_wire_load_tile_3.n_1_cb_off_1     7.94148e-05
+xrouting_wire_load_1.xrouting_wire_load_tile_3.n_1_cb_off_2     7.94148e-05
+xrouting_wire_load_1.xrouting_wire_load_tile_3.n_1_cb_off_3     7.94148e-05
+xrouting_wire_load_1.xrouting_wire_load_tile_3.n_1_cb_off_4     7.94148e-05
+xrouting_wire_load_1.n_3           8.06316e-05
+xrouting_wire_load_1.xrouting_wire_load_tile_2.n_1_1      8.1848e-05
+xrouting_wire_load_1.xrouting_wire_load_tile_2.n_1_sb_off_1      8.1848e-05
+xrouting_wire_load_1.xrouting_wire_load_tile_2.n_1_sb_off_2      8.1848e-05
+xrouting_wire_load_1.xrouting_wire_load_tile_2.n_1_cb_off_1     8.18477e-05
+xrouting_wire_load_1.xrouting_wire_load_tile_2.n_1_cb_off_2     8.18477e-05
+xrouting_wire_load_1.xrouting_wire_load_tile_2.n_1_cb_off_3     8.18477e-05
+xrouting_wire_load_1.xrouting_wire_load_tile_2.n_1_cb_off_4     8.18477e-05
+xrouting_wire_load_1.n_2           8.30646e-05
+xrouting_wire_load_1.xrouting_wire_load_tile_1.n_1_1     8.42812e-05
+xrouting_wire_load_1.xrouting_wire_load_tile_1.n_1_sb_partial_1     8.43173e-05
+xrouting_wire_load_1.xrouting_wire_load_tile_1.xsb_load_partial_1.n_1     8.44126e-05
+xrouting_wire_load_1.xrouting_wire_load_tile_1.xsb_load_partial_1.n_1_1     8.44126e-05
+xrouting_wire_load_1.xrouting_wire_load_tile_1.xsb_load_partial_1.n_1_2     8.44126e-05
+xrouting_wire_load_1.xrouting_wire_load_tile_1.xsb_load_partial_1.n_1_3     8.44126e-05
+xrouting_wire_load_1.xrouting_wire_load_tile_1.xsb_load_partial_1.n_1_4     8.44126e-05
+xrouting_wire_load_1.xrouting_wire_load_tile_1.n_1_sb_off_1     8.42812e-05
+xrouting_wire_load_1.xrouting_wire_load_tile_1.n_1_cb_on_1     9.27508e-05
+xrouting_wire_load_1.xrouting_wire_load_tile_1.xcb_load_on_1.xcb_mux_on_mux_only.n_1     0.000103474
+xrouting_wire_load_1.xrouting_wire_load_tile_1.xcb_load_on_1.xcb_mux_on_mux_only.n_1_1     0.000103555
+xrouting_wire_load_1.xrouting_wire_load_tile_1.xcb_load_on_1.xcb_mux_on_mux_only.n_1_2     0.000103637
+xrouting_wire_load_1.xrouting_wire_load_tile_1.xcb_load_on_1.xcb_mux_on_mux_only.n_1_3     0.000103719
+xrouting_wire_load_1.xrouting_wire_load_tile_1.xcb_load_on_1.xcb_mux_on_mux_only.n_1_4       0.0001038
+xrouting_wire_load_1.xrouting_wire_load_tile_1.xcb_load_on_1.xcb_mux_on_mux_only.n_1_5     0.000103882
+xrouting_wire_load_1.xrouting_wire_load_tile_1.xcb_load_on_1.xcb_mux_on_mux_only.n_1_6     0.000103964
+xrouting_wire_load_1.xrouting_wire_load_tile_1.xcb_load_on_1.xcb_mux_on_mux_only.n_1_7     0.000104045
+xrouting_wire_load_1.xrouting_wire_load_tile_1.xcb_load_on_1.xcb_mux_on_mux_only.n_1_8     0.000104127
+xrouting_wire_load_1.xrouting_wire_load_tile_1.xcb_load_on_1.xcb_mux_on_mux_only.n_2     0.000114641
+xrouting_wire_load_1.xrouting_wire_load_tile_1.xcb_load_on_1.xcb_mux_on_mux_only.n_2_1     0.000114733
+xrouting_wire_load_1.xrouting_wire_load_tile_1.xcb_load_on_1.xcb_mux_on_mux_only.n_2_2     0.000114824
+xrouting_wire_load_1.xrouting_wire_load_tile_1.xcb_load_on_1.xcb_mux_on_mux_only.n_2_3     0.000114916
+xrouting_wire_load_1.xrouting_wire_load_tile_1.xcb_load_on_1.n_1_1     0.000114961
+xrouting_wire_load_1.xrouting_wire_load_tile_1.xcb_load_on_1.xcb_mux_on_mux_only.n_2_4     0.000114961
+xrouting_wire_load_1.xrouting_wire_load_tile_1.xcb_load_on_1.xcb_mux_on_mux_only.n_2_5     0.000114961
+xrouting_wire_load_1.xrouting_wire_load_tile_1.xcb_load_on_1.xcb_mux_on_mux_only.n_2_6     0.000114961
+xrouting_wire_load_1.xrouting_wire_load_tile_1.xcb_load_on_1.xcb_mux_on_mux_only.n_2_7     0.000114961
+xrouting_wire_load_1.xrouting_wire_load_tile_1.xcb_load_on_1.xcb_mux_driver.n_1_1        0.799945
+xrouting_wire_load_1.xrouting_wire_load_tile_1.xcb_load_on_1.xcb_mux_driver.n_1_2        0.799945
+n_hang_1                           5.75357e-05
+xrouting_wire_load_1.xrouting_wire_load_tile_1.n_1_cb_partial_1     8.44449e-05
+xrouting_wire_load_1.xrouting_wire_load_tile_1.xcb_load_partial_1.n_1     8.45479e-05
+xrouting_wire_load_1.xrouting_wire_load_tile_1.xcb_load_partial_1.n_1_1     8.45479e-05
+xrouting_wire_load_1.xrouting_wire_load_tile_1.xcb_load_partial_1.n_1_2     8.45478e-05
+xrouting_wire_load_1.xrouting_wire_load_tile_1.xcb_load_partial_1.n_1_3     8.45478e-05
+xrouting_wire_load_1.xrouting_wire_load_tile_1.xcb_load_partial_1.n_1_4     8.45478e-05
+xrouting_wire_load_1.xrouting_wire_load_tile_1.xcb_load_partial_1.n_1_5     8.45478e-05
+xrouting_wire_load_1.xrouting_wire_load_tile_1.xcb_load_partial_1.n_1_6     8.45478e-05
+xrouting_wire_load_1.xrouting_wire_load_tile_1.xcb_load_partial_1.n_1_7     8.45478e-05
+xrouting_wire_load_1.xrouting_wire_load_tile_1.xcb_load_partial_1.n_1_8     8.45478e-05
+xrouting_wire_load_1.xrouting_wire_load_tile_1.n_1_cb_off_1     8.42809e-05
+xrouting_wire_load_1.xrouting_wire_load_tile_1.n_1_cb_off_2     8.42809e-05
+xrouting_wire_load_1.xrouting_wire_load_tile_1.n_1_2     8.48737e-05
+xrouting_wire_load_1.xrouting_wire_load_tile_1.xsb_mux_on_out.xsb_mux_on_mux_only.n_1     0.000106766
+xrouting_wire_load_1.xrouting_wire_load_tile_1.xsb_mux_on_out.xsb_mux_on_mux_only.n_1_1     0.000106823
+xrouting_wire_load_1.xrouting_wire_load_tile_1.xsb_mux_on_out.xsb_mux_on_mux_only.n_1_2     0.000106879
+xrouting_wire_load_1.xrouting_wire_load_tile_1.xsb_mux_on_out.xsb_mux_on_mux_only.n_1_3     0.000106936
+xrouting_wire_load_1.xrouting_wire_load_tile_1.xsb_mux_on_out.xsb_mux_on_mux_only.n_1_4     0.000106992
+xrouting_wire_load_1.xrouting_wire_load_tile_1.xsb_mux_on_out.xsb_mux_on_mux_only.n_2     0.000128693
+xrouting_wire_load_1.xrouting_wire_load_tile_1.xsb_mux_on_out.n_1_1     0.000128805
+xrouting_wire_load_1.xrouting_wire_load_tile_1.xsb_mux_on_out.xsb_mux_on_mux_only.n_2_1     0.000128805
+xrouting_wire_load_1.xrouting_wire_load_tile_1.xsb_mux_on_out.xsb_mux_driver.n_1_1        0.799947
+xrouting_wire_load_1.xrouting_wire_load_tile_1.xsb_mux_on_out.xsb_mux_driver.n_1_2        0.799947
+n_2_1                              7.57661e-05
+xrouting_wire_load_2.xrouting_wire_load_tile_4.n_1_1     7.69824e-05
+xrouting_wire_load_2.xrouting_wire_load_tile_4.n_1_sb_off_1     7.69823e-05
+xrouting_wire_load_2.xrouting_wire_load_tile_4.n_1_sb_off_2     7.69823e-05
+xrouting_wire_load_2.xrouting_wire_load_tile_4.n_1_cb_off_1     7.69821e-05
+xrouting_wire_load_2.xrouting_wire_load_tile_4.n_1_cb_off_2     7.69821e-05
+xrouting_wire_load_2.xrouting_wire_load_tile_4.n_1_cb_off_3     7.69821e-05
+xrouting_wire_load_2.xrouting_wire_load_tile_4.n_1_cb_off_4     7.69821e-05
+xrouting_wire_load_2.n_4           7.81988e-05
+xrouting_wire_load_2.xrouting_wire_load_tile_3.n_1_1     7.94151e-05
+xrouting_wire_load_2.xrouting_wire_load_tile_3.n_1_sb_off_1     7.94151e-05
+xrouting_wire_load_2.xrouting_wire_load_tile_3.n_1_sb_off_2     7.94151e-05
+xrouting_wire_load_2.xrouting_wire_load_tile_3.n_1_cb_off_1     7.94148e-05
+xrouting_wire_load_2.xrouting_wire_load_tile_3.n_1_cb_off_2     7.94148e-05
+xrouting_wire_load_2.xrouting_wire_load_tile_3.n_1_cb_off_3     7.94148e-05
+xrouting_wire_load_2.xrouting_wire_load_tile_3.n_1_cb_off_4     7.94148e-05
+xrouting_wire_load_2.n_3           8.06316e-05
+xrouting_wire_load_2.xrouting_wire_load_tile_2.n_1_1     8.18481e-05
+xrouting_wire_load_2.xrouting_wire_load_tile_2.n_1_sb_off_1     8.18481e-05
+xrouting_wire_load_2.xrouting_wire_load_tile_2.n_1_sb_off_2     8.18481e-05
+xrouting_wire_load_2.xrouting_wire_load_tile_2.n_1_cb_off_1     8.18478e-05
+xrouting_wire_load_2.xrouting_wire_load_tile_2.n_1_cb_off_2     8.18478e-05
+xrouting_wire_load_2.xrouting_wire_load_tile_2.n_1_cb_off_3     8.18478e-05
+xrouting_wire_load_2.xrouting_wire_load_tile_2.n_1_cb_off_4     8.18478e-05
+xrouting_wire_load_2.n_2           8.30647e-05
+xrouting_wire_load_2.xrouting_wire_load_tile_1.n_1_1     8.42813e-05
+xrouting_wire_load_2.xrouting_wire_load_tile_1.n_1_sb_partial_1     8.43174e-05
+xrouting_wire_load_2.xrouting_wire_load_tile_1.xsb_load_partial_1.n_1     8.44127e-05
+xrouting_wire_load_2.xrouting_wire_load_tile_1.xsb_load_partial_1.n_1_1     8.44127e-05
+xrouting_wire_load_2.xrouting_wire_load_tile_1.xsb_load_partial_1.n_1_2     8.44127e-05
+xrouting_wire_load_2.xrouting_wire_load_tile_1.xsb_load_partial_1.n_1_3     8.44127e-05
+xrouting_wire_load_2.xrouting_wire_load_tile_1.xsb_load_partial_1.n_1_4     8.44127e-05
+xrouting_wire_load_2.xrouting_wire_load_tile_1.n_1_sb_off_1     8.42813e-05
+xrouting_wire_load_2.xrouting_wire_load_tile_1.n_1_cb_on_1     9.27509e-05
+xrouting_wire_load_2.xrouting_wire_load_tile_1.xcb_load_on_1.xcb_mux_on_mux_only.n_1     0.000103474
+xrouting_wire_load_2.xrouting_wire_load_tile_1.xcb_load_on_1.xcb_mux_on_mux_only.n_1_1     0.000103555
+xrouting_wire_load_2.xrouting_wire_load_tile_1.xcb_load_on_1.xcb_mux_on_mux_only.n_1_2     0.000103637
+xrouting_wire_load_2.xrouting_wire_load_tile_1.xcb_load_on_1.xcb_mux_on_mux_only.n_1_3     0.000103719
+xrouting_wire_load_2.xrouting_wire_load_tile_1.xcb_load_on_1.xcb_mux_on_mux_only.n_1_4       0.0001038
+xrouting_wire_load_2.xrouting_wire_load_tile_1.xcb_load_on_1.xcb_mux_on_mux_only.n_1_5     0.000103882
+xrouting_wire_load_2.xrouting_wire_load_tile_1.xcb_load_on_1.xcb_mux_on_mux_only.n_1_6     0.000103964
+xrouting_wire_load_2.xrouting_wire_load_tile_1.xcb_load_on_1.xcb_mux_on_mux_only.n_1_7     0.000104046
+xrouting_wire_load_2.xrouting_wire_load_tile_1.xcb_load_on_1.xcb_mux_on_mux_only.n_1_8     0.000104127
+xrouting_wire_load_2.xrouting_wire_load_tile_1.xcb_load_on_1.xcb_mux_on_mux_only.n_2     0.000114641
+xrouting_wire_load_2.xrouting_wire_load_tile_1.xcb_load_on_1.xcb_mux_on_mux_only.n_2_1     0.000114733
+xrouting_wire_load_2.xrouting_wire_load_tile_1.xcb_load_on_1.xcb_mux_on_mux_only.n_2_2     0.000114824
+xrouting_wire_load_2.xrouting_wire_load_tile_1.xcb_load_on_1.xcb_mux_on_mux_only.n_2_3     0.000114916
+xrouting_wire_load_2.xrouting_wire_load_tile_1.xcb_load_on_1.n_1_1     0.000114961
+xrouting_wire_load_2.xrouting_wire_load_tile_1.xcb_load_on_1.xcb_mux_on_mux_only.n_2_4     0.000114961
+xrouting_wire_load_2.xrouting_wire_load_tile_1.xcb_load_on_1.xcb_mux_on_mux_only.n_2_5     0.000114961
+xrouting_wire_load_2.xrouting_wire_load_tile_1.xcb_load_on_1.xcb_mux_on_mux_only.n_2_6     0.000114961
+xrouting_wire_load_2.xrouting_wire_load_tile_1.xcb_load_on_1.xcb_mux_on_mux_only.n_2_7     0.000114961
+xrouting_wire_load_2.xrouting_wire_load_tile_1.xcb_load_on_1.xcb_mux_driver.n_1_1        0.799945
+xrouting_wire_load_2.xrouting_wire_load_tile_1.xcb_load_on_1.xcb_mux_driver.n_1_2        0.799945
+n_hang_2                           5.75357e-05
+xrouting_wire_load_2.xrouting_wire_load_tile_1.n_1_cb_partial_1      8.4445e-05
+xrouting_wire_load_2.xrouting_wire_load_tile_1.xcb_load_partial_1.n_1      8.4548e-05
+xrouting_wire_load_2.xrouting_wire_load_tile_1.xcb_load_partial_1.n_1_1     8.45479e-05
+xrouting_wire_load_2.xrouting_wire_load_tile_1.xcb_load_partial_1.n_1_2     8.45479e-05
+xrouting_wire_load_2.xrouting_wire_load_tile_1.xcb_load_partial_1.n_1_3     8.45479e-05
+xrouting_wire_load_2.xrouting_wire_load_tile_1.xcb_load_partial_1.n_1_4     8.45479e-05
+xrouting_wire_load_2.xrouting_wire_load_tile_1.xcb_load_partial_1.n_1_5     8.45479e-05
+xrouting_wire_load_2.xrouting_wire_load_tile_1.xcb_load_partial_1.n_1_6     8.45479e-05
+xrouting_wire_load_2.xrouting_wire_load_tile_1.xcb_load_partial_1.n_1_7     8.45479e-05
+xrouting_wire_load_2.xrouting_wire_load_tile_1.xcb_load_partial_1.n_1_8     8.45478e-05
+xrouting_wire_load_2.xrouting_wire_load_tile_1.n_1_cb_off_1      8.4281e-05
+xrouting_wire_load_2.xrouting_wire_load_tile_1.n_1_cb_off_2      8.4281e-05
+xrouting_wire_load_2.xrouting_wire_load_tile_1.n_1_2     8.48738e-05
+xrouting_wire_load_2.xrouting_wire_load_tile_1.xsb_mux_on_out.xsb_mux_on_mux_only.n_1     0.000106766
+xrouting_wire_load_2.xrouting_wire_load_tile_1.xsb_mux_on_out.xsb_mux_on_mux_only.n_1_1     0.000106823
+xrouting_wire_load_2.xrouting_wire_load_tile_1.xsb_mux_on_out.xsb_mux_on_mux_only.n_1_2     0.000106879
+xrouting_wire_load_2.xrouting_wire_load_tile_1.xsb_mux_on_out.xsb_mux_on_mux_only.n_1_3     0.000106936
+xrouting_wire_load_2.xrouting_wire_load_tile_1.xsb_mux_on_out.xsb_mux_on_mux_only.n_1_4     0.000106993
+xrouting_wire_load_2.xrouting_wire_load_tile_1.xsb_mux_on_out.xsb_mux_on_mux_only.n_2     0.000128693
+xrouting_wire_load_2.xrouting_wire_load_tile_1.xsb_mux_on_out.n_1_1     0.000128805
+xrouting_wire_load_2.xrouting_wire_load_tile_1.xsb_mux_on_out.xsb_mux_on_mux_only.n_2_1     0.000128805
+xrouting_wire_load_2.xrouting_wire_load_tile_1.xsb_mux_on_out.xsb_mux_driver.n_1_1        0.799947
+xrouting_wire_load_2.xrouting_wire_load_tile_1.xsb_mux_on_out.xsb_mux_driver.n_1_2        0.799947
+n_3_1                              2.45337e-05
+v_sb_mux#branch                   -1.32884e-08
+vin#branch                         4.58885e-09
+vground#branch                      1.9344e-07
+vsram_n#branch                               0
+vclmomtjn#branch                             0
+vrefmtjn#branch                              0
+vsram#branch                         -1.14e-09
+vsupplylp#branch                             0
+vsupply#branch                      -1.923e-07
+
+ Reference value :  2.42960e-10 Reference value :  5.69960e-10 Reference value :  8.97960e-10 Reference value :  1.22596e-09 Reference value :  1.55496e-09 Reference value :  1.88396e-09 Reference value :  2.20096e-09 Reference value :  2.52696e-09 Reference value :  2.85296e-09 Reference value :  3.17896e-09 Reference value :  3.50496e-09 Reference value :  3.83096e-09 Reference value :  4.15696e-09 Reference value :  4.48196e-09 Reference value :  4.80796e-09 Reference value :  5.13396e-09 Reference value :  5.45996e-09 Reference value :  5.78396e-09 Reference value :  6.10796e-09 Reference value :  6.43296e-09 Reference value :  6.75696e-09 Reference value :  7.08196e-09 Reference value :  7.40796e-09 Reference value :  7.73296e-09
+No. of Data Rows : 8019
+
+  Measurements for Transient Analysis
+
+ .measure tran meas_inv_sb_mux_1_tfall trig v(xrouting_wire_load_1.xrouting_wire_load_tile_1.n_1_2) val=    4.000000000000000e-01     rise=1 targ v(xrouting_wire_load_1.xrouting_wire_load_tile_1.xsb_mux_on_out.xsb_mux_driver.n_1_1) val=    4.000000000000000e-01     fall=1 failed!
+
+
+Error: measure  meas_inv_sb_mux_1_tfall  trig(TRIG) : out of interval
+ .measure tran meas_inv_sb_mux_1_trise trig v(xrouting_wire_load_1.xrouting_wire_load_tile_1.n_1_2) val=    4.000000000000000e-01     fall=1 targ v(xrouting_wire_load_1.xrouting_wire_load_tile_1.xsb_mux_on_out.xsb_mux_driver.n_1_1) val=    4.000000000000000e-01     rise=1 failed!
+
+
+Error: measure  meas_inv_sb_mux_1_trise  trig(TRIG) : out of interval
+ .measure tran meas_inv_sb_mux_2_tfall trig v(xrouting_wire_load_1.xrouting_wire_load_tile_1.n_1_2) val=    4.000000000000000e-01     fall=1 targ v(xrouting_wire_load_2.xrouting_wire_load_tile_1.n_1_2) val=    4.000000000000000e-01     fall=1 failed!
+
+
+Error: measure  meas_inv_sb_mux_2_tfall  trig(TRIG) : out of interval
+ .measure tran meas_inv_sb_mux_2_trise trig v(xrouting_wire_load_1.xrouting_wire_load_tile_1.n_1_2) val=    4.000000000000000e-01     rise=1 targ v(xrouting_wire_load_2.xrouting_wire_load_tile_1.n_1_2) val=    4.000000000000000e-01     rise=1 failed!
+
+
+Error: measure  meas_inv_sb_mux_2_trise  trig(TRIG) : out of interval
+ .measure tran meas_total_tfall trig v(xrouting_wire_load_1.xrouting_wire_load_tile_1.n_1_2) val=    4.000000000000000e-01     fall=1 targ v(xrouting_wire_load_2.xrouting_wire_load_tile_1.n_1_2) val=    4.000000000000000e-01     fall=1 failed!
+
+
+Error: measure  meas_total_tfall  trig(TRIG) : out of interval
+ .measure tran meas_total_trise trig v(xrouting_wire_load_1.xrouting_wire_load_tile_1.n_1_2) val=    4.000000000000000e-01     rise=1 targ v(xrouting_wire_load_2.xrouting_wire_load_tile_1.n_1_2) val=    4.000000000000000e-01     rise=1 failed!
+
+
+Error: measure  meas_total_trise  trig(TRIG) : out of interval
+meas_logic_low_voltage=  2.871980e-01
+meas_current        =   -8.11363e-14 from=  0.00000e+00 to=  4.00000e-09
+meas_avg_power      =  1.62273e-05
+
+ngspice-37+ done

@@ -12,7 +12,7 @@ import math
 
 
 # wire loads in the library are WireAreaLowkCon WireAreaLowkAgr WireAreaForZero
-def hardblock_flow(flow_settings):
+def hardblock_flow1(flow_settings):
 
   # Enter all the signals that change modes
   lowest_cost = sys.float_info.max

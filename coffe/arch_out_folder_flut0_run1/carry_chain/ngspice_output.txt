@@ -1,0 +1,282 @@
+warning, can't find model 'cw' from line
+
+    cwire_1 n_in gnd cw
+
+warning, can't find model 'rw' from line
+
+    rwire_1 n_in n_out rw
+
+warning, can't find model 'cw' from line
+
+    cwire_2 n_out gnd cw
+
+Warning: vin: no DC value, transient time 0 value used
+
+Note: Starting dynamic gmin stepping
+
+Trying gmin =   1.0000E-03 Note: One successful gmin step
+
+Trying gmin =   1.0000E-04 Note: One successful gmin step
+
+Trying gmin =   1.0000E-05 Note: One successful gmin step
+
+Trying gmin =   1.0000E-06 Warning: Further gmin increment
+
+Trying gmin =   5.6234E-06 Note: One successful gmin step
+
+Trying gmin =   2.3714E-06 Note: One successful gmin step
+
+Trying gmin =   6.4938E-07 Note: One successful gmin step
+
+Trying gmin =   9.3057E-08 Note: One successful gmin step
+
+Trying gmin =   9.3057E-09 Note: One successful gmin step
+
+Trying gmin =   9.3057E-10 Note: One successful gmin step
+
+Trying gmin =   9.3057E-11 Note: One successful gmin step
+
+Trying gmin =   9.3057E-12 Note: One successful gmin step
+
+Trying gmin =   1.0000E-12 Note: One successful gmin step
+
+Note: Dynamic gmin stepping completed
+
+******
+
+** ngspice-37+ : Circuit level simulation program
+
+** The U. C. Berkeley CAD Group
+
+** Copyright 1985-1994, Regents of the University of California.
+
+** Copyright 2001-2022, The ngspice team.
+
+** Please get your ngspice manual from http://ngspice.sourceforge.net/docs.html
+
+** Please file your bug-reports at http://ngspice.sourceforge.net/bugrep.html
+
+** Creation Date: Mon Jul 25 11:02:59 UTC 2022
+
+******
+
+
+
+Note: No compatibility mode selected!
+
+
+
+
+
+Circuit: Carry Chain
+
+
+
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+
+
+Warning: toxe, toxp and dtox all given and toxe != toxp + dtox; dtox ignored.
+
+
+
+Initial Transient Solution
+
+--------------------------
+
+
+
+Node                                   Voltage
+
+----                                   -------
+
+vdd                                        0.8
+
+vdd_lp                                    0.95
+
+vsram                                        1
+
+vrefmtj                                  0.627
+
+vclmpmtj                                 0.653
+
+vsram_n                                      0
+
+ground                                       0
+
+n_in                                         0
+
+vdd_test                                   0.8
+
+xcarrychain_shape.n_a_in_bar       9.46165e-05
+
+xcarrychain_shape.n_a_in              0.799995
+
+xcarrychain_shape.n_cin_in_bar        0.799627
+
+xcarrychain_shape.n_cin_in         2.77682e-07
+
+n_p_1                                 0.799835
+
+xcarrychain_shape.n_sum_internal     4.76695e-05
+
+xcarrychain_shape.n_p_bar          2.39843e-05
+
+xcarrychain_shape.n_b_in           6.67573e-07
+
+xcarrychain_shape.n_cout_in           0.799414
+
+n_0_1                                 0.799414
+
+n_hang                                0.799947
+
+xcarrychain_shape.n_sum_in            0.799947
+
+xcarrychain_shape1.n_a_in_bar      4.76774e-05
+
+xcarrychain_shape1.n_a_in             0.799995
+
+xcarrychain_shape1.n_cin_in_bar      0.00011916
+
+xcarrychain_shape1.n_cin_in           0.799413
+
+n_p_0                                 0.799835
+
+xcarrychain_shape1.n_sum_internal        0.799307
+
+xcarrychain_shape1.n_p_bar         2.39322e-05
+
+xcarrychain_shape1.n_b_in          6.66831e-07
+
+xcarrychain_shape1.n_cout_in       0.000166518
+
+n_0_2                              0.000166795
+
+n_hangz                            2.49585e-05
+
+xcarrychain_shape1.n_sum_in        2.49585e-05
+
+xcarrychain_shape2.n_a_in_bar      9.46166e-05
+
+xcarrychain_shape2.n_a_in             0.799995
+
+xcarrychain_shape2.n_cin_in_bar        0.799627
+
+xcarrychain_shape2.n_cin_in        0.000167072
+
+n_p_z                                 0.799835
+
+xcarrychain_shape2.n_sum_internal     0.000214289
+
+xcarrychain_shape2.n_p_bar         2.39843e-05
+
+xcarrychain_shape2.n_b_in          6.67573e-07
+
+xcarrychain_shape2.n_cout_in          0.799414
+
+n_1_1                                 0.799414
+
+n_hangzz                              0.799947
+
+xcarrychain_shape2.n_sum_in           0.799947
+
+xcarrychain.n_a_in_bar             4.76774e-05
+
+xcarrychain.n_a_in                    0.799995
+
+xcarrychain.n_cin_in_bar           0.000119281
+
+xcarrychain.n_cin_in                  0.799413
+
+n_p_2                                 0.799835
+
+xcarrychain.n_sum_internal            0.799307
+
+xcarrychain.n_p_bar                2.39322e-05
+
+xcarrychain.n_b_in                 6.66831e-07
+
+xcarrychain.n_cout_in              0.000166761
+
+n_1_2                              0.000167038
+
+n_sum_out                          2.49585e-05
+
+xcarrychain.n_sum_in               2.49585e-05
+
+xcarrychain_load.n_a_in_bar        9.48584e-05
+
+xcarrychain_load.n_a_in               0.799995
+
+xcarrychain_load.n_cin_in_bar         0.799733
+
+xcarrychain_load.n_cin_in          0.000167315
+
+n_p_3                                 0.799835
+
+xcarrychain_load.n_sum_internal     0.000214654
+
+xcarrychain_load.n_p_bar           2.39844e-05
+
+xcarrychain_load.n_b_in            6.67575e-07
+
+xcarrychain_load.n_cout_in            0.799626
+
+n_1_3                                 0.799626
+
+n_sum_out2                            0.799947
+
+xcarrychain_load.n_sum_in             0.799947
+
+v_test#branch                     -1.36334e-08
+
+vin#branch                         8.72167e-09
+
+vground#branch                     2.08593e-07
+
+vsram_n#branch                               0
+
+vclmomtjn#branch                             0
+
+vrefmtjn#branch                              0
+
+vsram#branch                                 0
+
+vsupplylp#branch                             0
+
+vsupply#branch                    -2.08593e-07
+
+
+
+ Reference value :  2.16960e-10 Reference value :  6.46960e-10 Reference value :  1.07796e-09 Reference value :  1.50696e-09 Reference value :  1.93696e-09 Reference value :  2.32496e-09 Reference value :  2.75696e-09 Reference value :  3.18796e-09 Reference value :  3.61696e-09 Reference value :  4.03396e-09 Reference value :  4.45196e-09 Reference value :  4.88296e-09 Reference value :  5.31196e-09 Reference value :  5.74396e-09 Reference value :  6.13096e-09 Reference value :  6.55996e-09 Reference value :  6.99096e-09 Reference value :  7.42196e-09 Reference value :  7.85496e-09 Reference value :  8.25596e-09 Reference value :  8.68696e-09 Reference value :  9.11696e-09 Reference value :  9.54896e-09 Reference value :  9.98096e-09 Reference value :  1.03690e-08 Reference value :  1.08010e-08 Reference value :  1.12340e-08 Reference value :  1.16640e-08 Reference value :  1.20720e-08 Reference value :  1.24940e-08 Reference value :  1.29270e-08 Reference value :  1.33590e-08 Reference value :  1.37910e-08 Reference value :  1.41782e-08 Reference value :  1.46082e-08 Reference value :  1.50382e-08 Reference value :  1.54642e-08 Reference value :  1.58942e-08 Reference value :  1.62992e-08 Reference value :  1.67312e-08 Reference value :  1.71602e-08 Reference value :  1.75892e-08 Reference value :  1.80102e-08 Reference value :  1.84092e-08 Reference value :  1.88382e-08 Reference value :  1.92682e-08 Reference value :  1.97002e-08 Reference value :  2.01052e-08 Reference value :  2.05322e-08 Reference value :  2.09622e-08 Reference value :  2.13912e-08 Reference value :  2.18212e-08 Reference value :  2.22092e-08 Reference value :  2.26382e-08 Reference value :  2.30672e-08 Reference value :  2.34962e-08 Reference value :  2.39252e-08 Reference value :  2.43272e-08 Reference value :  2.47562e-08 Reference value :  2.51892e-08 Reference value :  2.56192e-08
+
+No. of Data Rows : 26091
+
+
+
+  Measurements for Transient Analysis
+
+
+
+meas_inv_carry_chain_1_tfall=  2.289376e-11 targ=  2.155354e-09 trig=  2.132460e-09
+
+meas_inv_carry_chain_1_trise=  2.994514e-11 targ=  1.458156e-10 trig=  1.158704e-10
+
+meas_inv_carry_chain_2_tfall=  3.054272e-11 targ=  2.163003e-09 trig=  2.132460e-09
+
+meas_inv_carry_chain_2_trise=  2.562094e-11 targ=  1.414914e-10 trig=  1.158704e-10
+
+meas_total_tfall    =  4.386909e-11 targ=  2.176329e-09 trig=  2.132460e-09
+
+meas_total_trise    =  5.183647e-11 targ=  1.677069e-10 trig=  1.158704e-10
+
+meas_logic_low_voltage=  0.000000e+00
+
+meas_current        =   -1.22365e-14 from=  0.00000e+00 to=  2.60000e-08
+
+meas_avg_power      =  3.76509e-07
+
+
+
+ngspice-37+ done
+

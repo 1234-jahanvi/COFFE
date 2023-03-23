@@ -1,0 +1,42 @@
+****** HSPICE -- O-2018.09-SP1 linux64 (Nov 25 2018) ******
+ Input File: lut_c_driver_not.sp
+ lic:
+ lic: FLEXlm: SDK_11.6.9.6
+ lic: USER:   aarora1              HOSTNAME: koopa.ece.utexas.edu
+ lic: HOSTID: "e4434bc49dca"       PID:      282931
+ lic: Using FLEXlm license file:
+ lic: /usr/local/packages/synopsys_2018/key
+ lic: Checkout 1 hspice
+ lic: License/Maintenance for hspice will expire on 14-jan-2025/2022.06
+ lic: 1(in_use)/100(total) FLOATING license(s) on SERVER /usr/local/packages/synopsys_2018/key
+ lic:
+ init: begin read circuit files, cpu clock= 9.00E-02
+       option search = /usr/local/packages/synopsys_2018//hspice/O-2018
+                         .09-SP1/hspice/parts/ad
+       option runlvl
+       option brief =     1.00
+ init: end read circuit files, cpu clock= 1.10E-01 peak memory=     292 mb
+ init: begin check errors, cpu clock= 1.10E-01
+  **warning**  No DC path to ground from node        0:
+ init: end check errors, cpu clock= 1.50E-01 peak memory=     294 mb
+ init: begin setup matrix, pivot=     0 cpu clock= 1.50E-01
+       establish matrix -- done, cpu clock= 1.50E-01 peak memory=     295 mb
+       re-order matrix -- done, cpu clock= 1.60E-01 peak memory=     295 mb
+ init: end setup matrix, cpu clock= 1.60E-01 peak memory=     295 mb
+ data: data=sweep_data      i509           }=    4.05E-07
+ dcop: begin dcop, cpu clock= 1.60E-01
+ dcop: end dcop, cpu clock= 1.70E-01 peak memory=     295 mb tot_iter=       7
+ sweep: tran tran1    begin, stop_t=  4.00E-09 #sweeps=4001 cpu clock= 1.70E-01
+ tran: time= 4.4139E-10 tot_iter=     136 conv_iter=      48 cpu clock= 2.60E-01
+ tran: time= 8.6214E-10 tot_iter=     142 conv_iter=      51 cpu clock= 2.60E-01
+ tran: time= 1.2621E-09 tot_iter=     146 conv_iter=      53 cpu clock= 2.70E-01
+ tran: time= 1.6621E-09 tot_iter=     150 conv_iter=      55 cpu clock= 2.70E-01
+ tran: time= 2.0010E-09 tot_iter=     154 conv_iter=      57 cpu clock= 2.70E-01
+ tran: time= 2.4592E-09 tot_iter=     308 conv_iter=     112 cpu clock= 3.40E-01
+ tran: time= 2.9966E-09 tot_iter=     314 conv_iter=     115 cpu clock= 3.40E-01
+ tran: time= 3.3966E-09 tot_iter=     318 conv_iter=     117 cpu clock= 3.50E-01
+ tran: time= 3.7966E-09 tot_iter=     322 conv_iter=     119 cpu clock= 3.50E-01
+ tran: time= 4.0000E-09 tot_iter=     324 conv_iter=     120 cpu clock= 3.50E-01
+ sweep: tran tran1    end, cpu clock= 3.50E-01 peak memory=     295 mb
+>info:         ***** hspice job concluded
+ lic: Release hspice token(s)

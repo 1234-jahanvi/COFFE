@@ -1,0 +1,131 @@
+Using: /usr/local/packages/synopsys_2015/hspice/hspice/linux64/hspice matmul4x4_ddriver.sp
+ ****** HSPICE -- K-2015.06-SP2 linux64 (Nov 18 2015) ******                    
+  Copyright (c) 1986 - 2020 by Synopsys, Inc. All Rights Reserved.              
+  This software and the associated documentation are proprietary
+  to Synopsys, Inc. This software may only be used in accordance
+  with the terms and conditions of a written license agreement with
+  Synopsys, Inc. All other use, reproduction, or distribution of
+  this software is strictly prohibited.
+  Input File: matmul4x4_ddriver.sp                                              
+  Command line options: /usr/local/packages/synopsys_2015/hspice/hspice/linux64/hspice matmul4x4_ddriver.sp
+ lic:  
+ lic: FLEXlm: v11.2.1 
+ lic: USER:   aarora1              HOSTNAME: luigi 
+ lic: HOSTID: "782bcb44a06e"       PID:      74994 
+ lic: Using FLEXlm license file: 
+ lic: /usr/local/packages/synopsys_2015/key 
+ lic: Checkout 1 hspice 
+ lic: License/Maintenance for hspice will expire on 14-jan-2021/2019.06 
+ lic: 2(in_use)/100(total) FLOATING license(s) on SERVER /usr/local/packages/synopsys_2015/key 
+ lic:   
+ Init: read install configuration file: /usr/local/packages/synopsys_2015/hspice/hspice/meta.cfg
+  **info** (matmul4x4_ddriver.sp:17) DC voltage reset to initial transient source value in source        0:vin. new dc=  0.0000D+00
+  **warning** (v_$vin:0) pulse rise time is  < or = zero, reset to tstep
+  **warning** (v_$vin:0) pulse fall time is  < or = zero, reset to tstep
+  **warning** (nmos:mndown (../basic_subcircuits.l:61)) Warning:  Acde = 0.245565 may be too small in BSIM4 model with w=1.8e-07 l=2.2e-08.
+  
+
+  **warning** the following singular supplies were terminated to 1 meg resistor 
+          supply       node1            node2
+(../process_data.l:34)vclmomtjn               0:vclmpmtj         defined in subckt 0                     0:0                defined in subckt 0               
+(../process_data.l:30)vsupplylp               0:vdd_lp           defined in subckt 0                     0:0                defined in subckt 0               
+(../process_data.l:33)vrefmtjn                0:vrefmtj          defined in subckt 0                     0:0                defined in subckt 0               
+(../process_data.l:32)vsram                   0:vsram            defined in subckt 0                     0:0                defined in subckt 0               
+(../process_data.l:35)vsram_n                 0:vsram_n          defined in subckt 0                     0:0                defined in subckt 0               
+             
+ Warning:'No DC path nodes' occurs 1 times
+ No DC path from the following nodes,connected with gdcpath:
+ -----------------------
+ |Node      |Subckt    |
+ |----------+----------|
+ |nnd       |0         |
+ -----------------------
+              
+      
+  **warning** (v_$vin:0) pulse rise time is  < or = zero, reset to tstep
+  **warning** (v_$vin:0) pulse fall time is  < or = zero, reset to tstep
+ **info** set option symb=1 internally to help for convergence.
+ *****************************************************************
+ ******  option summary
+ ******
+ runlvl  = 3         bypass  = 2         
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = sweep_data , index =     1 ***
+
+ ******
+ .title dedicated routing driver
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ meas_inv_matmul4x4_ddriver_1_tfall= 133.2529p  targ= 138.5907p   trig=   5.3378p
+ meas_inv_matmul4x4_ddriver_1_trise= 206.3861p  targ=   2.2128n   trig=   2.0064n
+ meas_inv_matmul4x4_ddriver_2_tfall= 474.0737p  targ=   2.4805n   trig=   2.0064n
+ meas_inv_matmul4x4_ddriver_2_trise= 426.6226p  targ= 431.9603p   trig=   5.3378p
+ meas_inv_matmul4x4_ddriver_3_tfall= 694.8219p  targ= 700.1597p   trig=   5.3378p
+ meas_inv_matmul4x4_ddriver_3_trise= 786.9157p  targ=   2.7933n   trig=   2.0064n
+ meas_inv_matmul4x4_ddriver_4_tfall=   1.3014n  targ=   3.3078n   trig=   2.0064n
+ meas_inv_matmul4x4_ddriver_4_trise=   1.8152n  targ=   1.8205n   trig=   5.3378p
+ meas_total_tfall=   1.3755n  targ=   3.3819n   trig=   2.0064n
+ meas_total_trise=   1.8844n  targ=   1.8898n   trig=   5.3378p
+ meas_logic_low_voltage=   0.     
+ meas_current= -82.0117f  from=   0.             to=   4.0000n
+ meas_avg_power=  16.4023u
+
+          ***** job concluded
+ ****** HSPICE -- K-2015.06-SP2 linux64 (Nov 18 2015) ******                    
+ ******  
+ .title dedicated routing driver
+
+ ****** job statistics summary tnom=  25.000 temp=  25.000 ******
+  
+  
+ ******  Machine Information  ******
+ CPU:
+ model name	: Intel(R) Xeon(R) CPU E7- 4850  @ 2.00GHz
+ cpu MHz	: 1994.935
+  
+ OS:
+ Linux version 2.6.32-754.29.2.el6.x86_64 (mockbuild@x86-02.bsys.centos.org) (gcc version 4.4.7 20120313 (Red Hat 4.4.7-23) (GCC) ) #1 SMP Tue May 12 17:39:04 UTC 2020
+
+
+  ******  HSPICE Threads Information  ******
+
+  Command Line Threads Count :     1
+  Available CPU Count        :    80
+  Actual Threads Count       :     1
+
+
+  ******  Circuit Statistics  ******
+  # nodes       =     175 # elements   =      84
+  # resistors   =      17 # capacitors =      24 # inductors   =       0
+  # mutual_inds =       0 # vccs       =       0 # vcvs        =       0
+  # cccs        =       0 # ccvs       =       0 # volt_srcs   =       8
+  # curr_srcs   =       0 # diodes     =       0 # bjts        =       0
+  # jfets       =       0 # mosfets    =      35 # U elements  =       0
+  # T elements  =       0 # W elements =       0 # B elements  =       0
+  # S elements  =       0 # P elements =       0 # va device   =       0
+  # vector_srcs =       0 # N elements =       0
+
+
+  ******  Runtime Statistics (seconds)  ******
+
+  analysis           time    # points   tot. iter  conv.iter
+  op point           0.00           1           8
+  transient          0.08        4001         333         122 rev=         4
+  readin             0.06
+  errchk             0.01
+  setup              0.01
+  output             0.00
+
+
+           peak memory used        197.66 megabytes
+           total cpu time            0.17 seconds
+           total elapsed time        0.35 seconds
+           job started at     13:18:53 07/08/2020
+           job ended   at     13:18:53 07/08/2020
+
+
+
+>info:         ***** hspice job concluded
+ lic: Release hspice token(s) 
+ lic: total license checkout elapse time:        0.25(s)

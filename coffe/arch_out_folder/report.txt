@@ -1,4 +1,4 @@
-Created 2022-10-19 18:05:44.274334
+Created 2023-02-16 20:47:54.811156
 
 ----------------------------------------------
   RUN OPTIONS:
@@ -46,7 +46,7 @@ Created 2022-10-19 18:05:44.274334
   min_tran_width = 45
   min_width_tran_area = 33864
   sram_cell_area = 4.0
-  model_path = /home/iiitb/Documents/jahanvi_IMT2019506/COFFE-master/spice_models/ptm_22nm_bulk_hp.l
+  model_path = /home/iiitb/Documents/Karthik/COFFE-master/spice_models/ptm_22nm_bulk_hp.l
   model_library = 22NM_BULK_HP
   metal = [(0.054825, 0.000175), (0.007862, 0.000215), (0.02924, 0.000139), (0.227273, 0.0)]
 

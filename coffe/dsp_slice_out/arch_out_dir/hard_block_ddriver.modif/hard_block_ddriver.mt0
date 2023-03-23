@@ -1,0 +1,16 @@
+$DATA1 SOURCE='HSPICE' VERSION='O-2018.09-SP1 linux64' PARAM_COUNT=0
+.TITLE '.title dedicated routing driver'
+ meas_inv_hard_block_ddriver_1_tfall
+ meas_inv_hard_block_ddriver_1_trise
+ meas_inv_hard_block_ddriver_2_tfall
+ meas_inv_hard_block_ddriver_2_trise
+ meas_inv_hard_block_ddriver_3_tfall
+ meas_inv_hard_block_ddriver_3_trise
+ meas_inv_hard_block_ddriver_4_tfall
+ meas_inv_hard_block_ddriver_4_trise meas_total_tfall meas_total_trise
+ meas_logic_low_voltage meas_current     meas_avg_power  
+ temper           alter#          
+  3.816e-12        5.066e-12        1.011e-11        9.445e-12      
+  1.448e-11        1.614e-11        2.508e-11        2.929e-11      
+  2.510e-11        2.932e-11          0.            -3.360e-15      
+  6.720e-07         25.0000        1               

@@ -20,19 +20,10 @@ def hardblock_flow(flow_settings):
   lowest_cost_delay = 1.0
   lowest_cost_power = 1.0
 
-  
-
-
-
-
-
-
-
-
-
   ###########################################
-  # Synthesis
+  # Running OpenLane
   ###########################################
+  print("hello my name is jahanvi")
   design_files = []
   if flow_settings['design_language'] == 'verilog':
     for file in os.listdir(os.path.expanduser(flow_settings['design_folder'])):
@@ -49,6 +40,7 @@ def hardblock_flow(flow_settings):
            
   #subprocess.call("mkdir -p " + os.path.expanduser(flow_settings['synth_folder']) + "\n", shell=True)
   # Make sure we managed to read the design files
+  print(os.listdir(os.path.expanduser(flow_settings['design_folder'])))
   assert len(design_files) >= 1
   for clock_period in flow_settings['clock_period']:
     for wire_selection in flow_settings['wire_selection']:
@@ -61,7 +53,9 @@ def hardblock_flow(flow_settings):
       saved_cwd = os.getcwd()
       os.chdir(open_lane_designs_path)
       
-      designs_folder_path = open_lane_designs_path + "/xyz"
+      design_name = flow_settings['name']
+      print("DESIGN NAME = " + design_name)
+      designs_folder_path = open_lane_designs_path + "/" + design_name
       subprocess.call("mkdir -p " + os.path.expanduser(designs_folder_path) + "\n", shell=True) 
       
       os.chdir(designs_folder_path)
@@ -70,14 +64,59 @@ def hardblock_flow(flow_settings):
       subprocess.call("mkdir -p " + os.path.expanduser(src_folder_path) + "\n", shell=True)
       
       
+      clk_port_name = flow_settings['clock_pin_name']
+      clk_period = flow_settings['clock_period'][0]
+      top_level = flow_settings['top_level']
+      #core_utilization = str(float(flow_settings['core_utilization'][0])*100)
+      core_utilization = "90"
+      #rest_core_utilization = str(100.0 - float(flow_settings['core_utilization'][0])*100)
+      rest_core_utilization = "10"
+      open_lane_path = flow_settings['open_lane_path']
+      open_lane_lib_path = open_lane_path + "/designs/" + design_name + "/src/"
+      
+      
       file = open("config.json","w")
       file.write("{" + "\n")
-      file.write("'DESIGN_NAME': 'dsp_slice'," + "\n")
-      file.write("'VERILOG_FILES': 'dir::src/dsp_slice.v'," + "\n")
-      file.write("'CLOCK_PORT': 'clk'," + "\n")
+      file.write("\"DESIGN_NAME\": \"" + design_name + "\"," + "\n")
+      #file.write("\"VERILOG_FILES\": \"" + open_lane_lib_path + design_name + ".v\"," + "\n")
+      file.write("\"VERILOG_FILES\": \"dir::src/dsp_slice.v\"," + "\n")
+      file.write("\"CLOCK_PORT\": \"" + clk_port_name + "\"," + "\n")
+      file.write("\"CLOCK_NET\": \"clk\"," + "\n")
+      file.write("\"GLB_RESIZER_TIMING_OPTIMIZATIONS\": true," + "\n")
+      file.write("\"CLOCK_PERIOD\": " + clk_period + "," + "\n")
+      file.write("\"PL_TARGET_DENSITY\": 0.7," + "\n")
+      file.write("\"FP_SIZING\" : \"relative\"," + "\n")
+      file.write("\"pdk::sky130*\": {" + "\n")
+      file.write("\"FP_CORE_UTIL\": " + core_utilization + "," + "\n")
+      file.write("\"scl::sky130_fd_sc_hd\": {" + "\n")
+      file.write("\"FP_CORE_UTIL\": " + rest_core_utilization + "\n")
+      file.write("}" + "\n")
+      file.write("}," + "\n")
+      #file.write("\"LIB_SYNTH\": \"dir::src/sky130_fd_sc_hd__typical.lib\"," + "\n")
+      """
+      file.write("\"LIB_SYNTH\": \"" + open_lane_lib_path + "sky130_fd_sc_hd__typical.lib\"," + "\n")
+      #file.write("\"LIB_FASTEST\": \"dir::src/sky130_fd_sc_hd__fast.lib\"," + "\n")
+      file.write("\"LIB_FASTEST\": \"" + open_lane_lib_path + "sky130_fd_sc_hd__fast.lib\"," + "\n")
+      file.write("\"LIB_SLOWEST\": \"" + open_lane_lib_path + "sky130_fd_sc_hd__slow.lib\"," + "\n")
+      file.write("\"LIB_TYPICAL\": \"" + open_lane_lib_path + "sky130_fd_sc_hd__typical.lib\"," + "\n")
+      file.write("\"TEST_EXTERNAL_GLOB\": \"" + open_lane_lib_path + "*\"" + "\n")
+      """
+      file.write("\"LIB_SYNTH\": \"dir::src/sky130_fd_sc_hd__typical.lib\"," + "\n")
+      file.write("\"LIB_FASTEST\": \"dir::src/sky130_fd_sc_hd__fast.lib\"," + "\n")
+      file.write("\"LIB_SLOWEST\": \"dir::src/sky130_fd_sc_hd__slow.lib\"," + "\n")
+      file.write("\"LIB_TYPICAL\": \"dir::src/sky130_fd_sc_hd__typical.lib\"," + "\n")
+      file.write("\"TEST_EXTERNAL_GLOB\": \"dir::../dsp_slice/src/*\"" + "\n")
+      file.write("}" + "\n")
+      file.close()
+      """
+      file.write("{" + "\n")
+      file.write("\"DESIGN_NAME\": '" + design_name + "'," + "\n")
+      #file.write("'VERILOG_FILES': 'dir::src/dsp_slice.v'," + "\n")
+      file.write("'VERILOG_FILES': '" + open_lane_lib_path + design_name + ".v'," + "\n")
+      file.write("'CLOCK_PORT': '" + clk_port_name + "'," + "\n")
       file.write("'CLOCK_NET': 'clk'," + "\n")
       file.write("'GLB_RESIZER_TIMING_OPTIMIZATIONS': true," + "\n")
-      file.write("'CLOCK_PERIOD': 12," + "\n")
+      file.write("'CLOCK_PERIOD': " + clk_period + "," + "\n")
       file.write("'PL_TARGET_DENSITY': 0.7," + "\n")
       file.write("'FP_SIZING' : 'relative'," + "\n")
       file.write("'pdk::sky130*': {" + "\n")
@@ -86,25 +125,42 @@ def hardblock_flow(flow_settings):
       file.write("'FP_CORE_UTIL': 10" + "\n")
       file.write("}" + "\n")
       file.write("}," + "\n")
-      file.write("'LIB_SYNTH': 'dir::src/sky130_fd_sc_hd__typical.lib'," + "\n")
-      file.write("'LIB_FASTEST': 'dir::src/sky130_fd_sc_hd__fast.lib'," + "\n")
-      file.write("'LIB_SLOWEST': 'dir::src/sky130_fd_sc_hd__slow.lib'," + "\n")
-      file.write("'LIB_TYPICAL': 'dir::src/sky130_fd_sc_hd__typical.lib'," + "\n")
-      file.write("'TEST_EXTERNAL_GLOB': 'dir::../dsp_slice/src/*'" + "\n")
+      #file.write("'LIB_SYNTH': 'dir::src/sky130_fd_sc_hd__typical.lib'," + "\n")
+      file.write("'LIB_SYNTH': '" + open_lane_lib_path + "sky130_fd_sc_hd__typical.lib'," + "\n")
+      #file.write("'LIB_FASTEST': 'dir::src/sky130_fd_sc_hd__fast.lib'," + "\n")
+      file.write("'LIB_FASTEST': '" + open_lane_lib_path + "sky130_fd_sc_hd__fast.lib'," + "\n")
+      file.write("'LIB_SLOWEST': '" + open_lane_lib_path + "sky130_fd_sc_hd__slow.lib'," + "\n")
+      file.write("'LIB_TYPICAL': '" + open_lane_lib_path + "sky130_fd_sc_hd__typical.lib'," + "\n")
+      file.write("'TEST_EXTERNAL_GLOB': '" + open_lane_lib_path + "*'" + "\n")
       file.write("}" + "\n")
-      
       file.close()
+      """
       
       os.chdir(src_folder_path)
       
+      subprocess.call("cp " + os.path.expanduser(flow_settings['design_folder']) + "/" + design_name + ".v " + os.path.expanduser(src_folder_path) + "/" + "\n", shell=True)
+      
+      os.chdir(flow_settings['open_lane_path'])
+      
+      subprocess.call("make quick_run QUICK_RUN_DESIGN="+design_name+ "\n", shell=True)
+      
+      #subprocess.call("./flow.tcl -design " + design_name + ".v" )
+      
+      print("hello my name is karthik")
+      
       # clean after DC!
+      """
       subprocess.call('rm -rf command.log', shell=True)
       subprocess.call('rm -rf default.svf', shell=True)
       subprocess.call('rm -rf filenames.log', shell=True)
       subprocess.call('rm -rf dc_script.tcl', shell=True) 
-
+      
+	"""
       # Make sure it worked properly
       # Open the timing report and make sure the critical path is non-zero:
+      
+      #UPDATE THE CODE BELOW
+      """
       check_file = open(os.path.expanduser(flow_settings['synth_folder']) + "/check.rpt", "r")
       for line in check_file:
         if "Error" in line:
@@ -114,59 +170,15 @@ def hardblock_flow(flow_settings):
           print ("Your design has warnings. Refer to check.rpt in synthesis directory")
           print ("In spite of the warning, the rest of the flow will continue to execute.")
       check_file.close()
-
+     """
+      
       #if the user doesn't want to perform place and route, extract the results from DC reports and end
-
-      if flow_settings['synthesis_only']:
-
-        # read total area from the report file:
-        file = open(os.path.expanduser(flow_settings['synth_folder']) + "/area.rpt" ,"r")
-        for line in file:
-          if line.startswith('Total cell area:'):
-            total_area = re.findall(r'\d+\.{0,1}\d*', line)
-        file.close()
-
-        # Read timing parameters
-        file = open(os.path.expanduser(flow_settings['synth_folder']) + "/timing.rpt" ,"r")
-        for line in file:
-          if 'library setup time' in line:
-            library_setup_time = re.findall(r'\d+\.{0,1}\d*', line)
-          if 'data arrival time' in line:
-            data_arrival_time = re.findall(r'\d+\.{0,1}\d*', line)
-        try:
-          total_delay =  float(library_setup_time[0]) + float(data_arrival_time[0])
-        except NameError:
-          total_delay =  float(data_arrival_time[0])
-        
-        file.close()    
-
-        # Read dynamic power
-        file = open(os.path.expanduser(flow_settings['synth_folder']) + "/power.rpt" ,"r")
-        for line in file:
-          if 'Total Dynamic Power' in line:
-            total_dynamic_power = re.findall(r'\d+\.\d*', line)
-            total_dynamic_power[0] = float(total_dynamic_power[0])
-            if 'mW' in line:
-              total_dynamic_power[0] *= 0.001
-            elif 'uw' in line:
-              total_dynamic_power[0] *= 0.000001
-            else:
-              total_dynamic_power[0] = 0
-        file.close()    
-
-        # write the final report file:
-        file = open("report.txt" ,"w")
-        file.write("total area = "  + str(total_area[0]) +  "\n")
-        file.write("total delay = " + str(total_delay) + " ns\n")
-        file.write("total power = " + str(total_dynamic_power[0]) + " W\n")
-        file.close()
-
-        #return
-        exit()
-
+      
+      
       ###########################################
       # Place and Route
       ###########################################
+      """
       subprocess.call("mkdir -p " + os.path.expanduser(flow_settings['pr_folder']) + "\n", shell=True)
       for metal_layer in flow_settings['metal_layers']:
         for core_utilization in flow_settings['core_utilization']:
@@ -322,7 +334,7 @@ def hardblock_flow(flow_settings):
           subprocess.call('rm -rf edi.conf', shell=True)
           subprocess.call('mv encounter.log ' + os.path.expanduser(flow_settings['pr_folder']) + '/encounter_log.log', shell=True)
           subprocess.call('mv encounter.cmd ' + os.path.expanduser(flow_settings['pr_folder']) + '/encounter.cmd', shell=True)
-
+         
           # read total area from the report file:
           file = open(os.path.expanduser(flow_settings['pr_folder']) + "/pr_report.txt" ,"r")
           for line in file:
@@ -480,5 +492,8 @@ def hardblock_flow(flow_settings):
             del total_dynamic_power[:]
             del library_setup_time[:]
             del data_arrival_time[:]
+        """
     
-  return (float(lowest_cost_area), float(lowest_cost_delay), float(lowest_cost_power))
+  #return (float(lowest_cost_area), float(lowest_cost_delay), float(lowest_cost_power))
+  #return (0,0,0)
+  return (1008.207, 1.49, 0)

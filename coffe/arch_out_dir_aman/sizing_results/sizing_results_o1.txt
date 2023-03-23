@@ -1,0 +1,275 @@
+cb_mux:
+inv_cb_mux_1    : 1   
+inv_cb_mux_2    : 4   
+ptran_cb_mux_L2 : 2   
+rest_cb_mux     : 1   
+ptran_cb_mux_L1 : 1   
+
+Area                Delay               APD                 
+2701828.98319       1.948e-10           0.000526316285925   
+
+columndecoder:
+inv_columndecoder_1 : 6   
+inv_columndecoder_2 : 17  
+inv_columndecoder_3 : 34  
+
+Area                Delay               APD                 
+5211447.91417       5.835e-10           0.00304087985792    
+
+flut_mux:
+inv_flut_mux_1 : 7   
+ptran_flut_mux : 15  
+inv_flut_mux_2 : 9   
+rest_flut_mux  : 1   
+
+Area                Delay               APD                 
+823766.431          1.015e-10           8.36122927465e-05   
+
+general_ble_output:
+inv_general_ble_output_2 : 3   
+inv_general_ble_output_1 : 2   
+rest_general_ble_output  : 1   
+ptran_general_ble_output : 5   
+
+Area                Delay               APD                 
+615841.280293       4.605e-11           2.83594909575e-05   
+
+local_ble_output:
+inv_local_ble_output_2 : 5   
+ptran_local_ble_output : 5   
+inv_local_ble_output_1 : 2   
+rest_local_ble_output  : 1   
+
+Area                Delay               APD                 
+709569.068898       1.249e-10           8.86251767053e-05   
+
+local_mux:
+inv_local_mux_1    : 1   
+rest_local_mux     : 1   
+ptran_local_mux_L1 : 1   
+ptran_local_mux_L2 : 2   
+
+Area                Delay               APD                 
+1309726.46561       4.823e-11           6.31681074362e-05   
+
+lut:
+rest_lut_out_buffer    : 1   
+inv_lut_out_buffer_2   : 3   
+inv_lut_out_buffer_1   : 2   
+inv_lut_0sram_driver_2 : 2   
+rest_lut_int_buffer    : 1   
+inv_lut_int_buffer_2   : 3   
+inv_lut_int_buffer_1   : 2   
+ptran_lut_L1           : 3   
+ptran_lut_L2           : 5   
+ptran_lut_L3           : 4   
+ptran_lut_L4           : 8   
+ptran_lut_L5           : 9   
+
+Area                Delay               APD                 
+27534999.6083       3.09e-10            0.00850831487896    
+
+lut_a_driver:
+inv_lut_a_driver_2 : 9   
+
+Area                Delay               APD                 
+256176.08765        3.774e-11           9.66808554791e-06   
+
+lut_a_driver_not:
+inv_lut_a_driver_not_1 : 6   
+inv_lut_a_driver_not_2 : 8   
+
+Area                Delay               APD                 
+364461.815704       4.097e-11           1.49320005894e-05   
+
+lut_b_driver:
+inv_lut_b_driver_2 : 9   
+
+Area                Delay               APD                 
+250142.843332       3.111e-11           7.78194385605e-06   
+
+lut_b_driver_not:
+inv_lut_b_driver_not_1 : 6   
+inv_lut_b_driver_not_2 : 7   
+
+Area                Delay               APD                 
+350565.029211       3.288e-11           1.15265781604e-05   
+
+lut_c_driver:
+rest_lut_c_driver    : 1   
+inv_lut_c_driver_2   : 4   
+inv_lut_c_driver_1   : 5   
+ptran_lut_c_driver_0 : 5   
+inv_lut_c_driver_0   : 12  
+
+Area                Delay               APD                 
+798436.24993        6.868e-11           5.48366016452e-05   
+
+lut_c_driver_not:
+inv_lut_c_driver_not_2 : 5   
+inv_lut_c_driver_not_1 : 2   
+
+Area                Delay               APD                 
+268397.232382       7.204e-11           1.93353366208e-05   
+
+lut_d_driver:
+inv_lut_d_driver_2 : 4   
+
+Area                Delay               APD                 
+163461.528          2.706e-11           4.42326894768e-06   
+
+lut_d_driver_not:
+inv_lut_d_driver_not_2 : 4   
+inv_lut_d_driver_not_1 : 3   
+
+Area                Delay               APD                 
+254466.112302       3.031e-11           7.71286786388e-06   
+
+lut_e_driver:
+inv_lut_e_driver_2 : 3   
+
+Area                Delay               APD                 
+141541.337325       2.567e-11           3.63336612912e-06   
+
+lut_e_driver_not:
+inv_lut_e_driver_not_1 : 2   
+inv_lut_e_driver_not_2 : 3   
+
+Area                Delay               APD                 
+213283.485632       2.955e-11           6.30252700041e-06   
+
+lut_f_driver:
+inv_lut_f_driver_2 : 4   
+
+Area                Delay               APD                 
+163461.528          2.476e-11           4.04730743328e-06   
+
+lut_f_driver_not:
+inv_lut_f_driver_not_1 : 3   
+inv_lut_f_driver_not_2 : 3   
+
+Area                Delay               APD                 
+238097.456579       2.906e-11           6.91911208818e-06   
+
+matmul4x4_ddriver:
+inv_matmul4x4_ddriver_4 : 1   
+inv_matmul4x4_ddriver_1 : 1   
+inv_matmul4x4_ddriver_3 : 1   
+inv_matmul4x4_ddriver_2 : 1   
+
+Area                Delay               APD                 
+290688.576          8.545e-10           0.000248393388192   
+
+matmul4x4_local_mux:
+inv_matmul4x4_local_mux_1    : 1   
+rest_matmul4x4_local_mux     : 1   
+ptran_matmul4x4_local_mux_L1 : 1   
+ptran_matmul4x4_local_mux_L2 : 1   
+inv_matmul4x4_local_mux_2    : 1   
+
+Area                Delay               APD                 
+4368330.14122       1.909e-10           0.000833914223958   
+
+pgateoutputcrossbar:
+inv_pgateoutputcrossbar_1   : 2   
+inv_pgateoutputcrossbar_3   : 8   
+inv_pgateoutputcrossbar_2   : 3   
+ptran_pgateoutputcrossbar_4 : 5   
+
+Area                Delay               APD                 
+70380898.3319       1.66e-10            0.0116832291231     
+
+precharge:
+ptran_equalization   : 1   
+ptran_precharge_side : 17  
+
+Area                Delay               APD                 
+319549.799844       1.881e-10           6.01073173507e-05   
+
+ram_local_mux:
+inv_ram_local_mux_1    : 5   
+rest_ram_local_mux     : 1   
+ptran_ram_local_mux_L2 : 3   
+ptran_ram_local_mux_L1 : 2   
+
+Area                Delay               APD                 
+1494288.65778       1.677e-10           0.00025059220791    
+
+rowdecoderstage0:
+inv_rowdecoderstage0_1 : 13  
+
+Area                Delay               APD                 
+2656658.11644       2.405e-11           6.38926277005e-05   
+
+rowdecoderstage12:
+inv_rowdecoderstage12_2       : 4   
+inv_nand2_rowdecoderstage12_1 : 1   
+
+Area                Delay               APD                 
+1662867.90531       2.046e-10           0.000340222773426   
+
+rowdecoderstage13:
+inv_rowdecoderstage13_2       : 4   
+inv_nand3_rowdecoderstage13_1 : 1   
+
+Area                Delay               APD                 
+1662867.90531       1.837e-10           0.000305468834205   
+
+rowdecoderstage3:
+inv_rowdecoderstage3_2       : 1   
+inv_nand3_rowdecoderstage3_1 : 1   
+
+Area                Delay               APD                 
+74104506.4099       2.964e-11           0.00219645756999    
+
+sb_mux:
+ptran_sb_mux_L2 : 5   
+ptran_sb_mux_L1 : 3   
+inv_sb_mux_1    : 4   
+rest_sb_mux     : 1   
+inv_sb_mux_2    : 20  
+
+Area                Delay               APD                 
+1571443.54633       2.704e-10           0.000424918334928   
+
+wordline_driver:
+inv_wordline_driver_4       : 14  
+inv_wordline_driver_3       : 4   
+inv_wordline_driver_2       : 2   
+inv_nand3_wordline_driver_1 : 1   
+
+Area                Delay               APD                 
+105823344.95        5.692e-10           0.0602346479456     
+
+xconfigurabledecoder2ii:
+inv_nand2_xconfigurabledecoder2ii_1 : 1   
+inv_xconfigurabledecoder2ii_2       : 6   
+
+Area                Delay               APD                 
+1240744.8801        3.868e-10           0.000479920119622   
+
+xconfigurabledecoder3ii:
+inv_nand3_xconfigurabledecoder3ii_1 : 1   
+inv_xconfigurabledecoder3ii_2       : 4   
+
+Area                Delay               APD                 
+2825622.20931       2.464e-10           0.000696233312374   
+
+xconfigurabledecoderi:
+tgate_xconfigurabledecoderi_2 : 5   
+inv_xconfigurabledecoderi_1   : 6   
+
+Area                Delay               APD                 
+6223294.54056       8.408e-11           0.00052325460497    
+
+xconfigurabledecoderiii:
+inv_xconfigurabledecoderiii_2       : 7   
+inv_nand2_xconfigurabledecoderiii_1 : 1   
+
+Area                Delay               APD                 
+324279.91562        1.862e-10           6.03809202884e-05   
+
+TOTALS:
+Area                Delay               APD                 
+1126924948.76       2.37716391e-10      0.267888531747      
+

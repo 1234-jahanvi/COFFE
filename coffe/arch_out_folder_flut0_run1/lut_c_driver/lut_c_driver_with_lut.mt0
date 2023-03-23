@@ -1,0 +1,313 @@
+warning, can't find model 'cw' from line
+    cwire_1 n_in gnd cw
+warning, can't find model 'rw' from line
+    rwire_1 n_in n_out rw
+warning, can't find model 'cw' from line
+    cwire_2 n_out gnd cw
+Warning: vin_gate: no DC value, transient time 0 value used
+Warning: vin_sram: no DC value, transient time 0 value used
+Note: Starting dynamic gmin stepping
+Trying gmin =   1.0000E-03 Note: One successful gmin step
+Trying gmin =   1.0000E-04 Note: One successful gmin step
+Trying gmin =   1.0000E-05 Note: One successful gmin step
+Trying gmin =   3.1623E-06 Note: One successful gmin step
+Trying gmin =   5.6234E-07 Warning: Further gmin increment
+Trying gmin =   2.0535E-06 Warning: Further gmin increment
+Trying gmin =   2.8387E-06 Note: One successful gmin step
+Trying gmin =   2.4144E-06 Warning: Further gmin increment
+Trying gmin =   2.7261E-06 Warning: Further gmin increment
+Trying gmin =   2.8102E-06 Warning: Further gmin increment
+Trying gmin =   2.8316E-06 Note: One successful gmin step
+Trying gmin =   2.8208E-06 Warning: Further gmin increment
+Trying gmin =   2.8289E-06 Warning: Further gmin increment
+Trying gmin =   2.8309E-06 Note: One successful gmin step
+Trying gmin =   2.8299E-06 Warning: Further gmin increment
+Trying gmin =   2.8306E-06 Note: One successful gmin step
+Trying gmin =   2.8303E-06 Warning: Further gmin increment
+Trying gmin =   2.8305E-06 Note: One successful gmin step
+Trying gmin =   2.8304E-06 Note: One successful gmin step
+Trying gmin =   2.8302E-06 Warning: Further gmin increment
+Trying gmin =   2.8304E-06 Note: One successful gmin step
+Trying gmin =   2.8303E-06 Note: One successful gmin step
+Trying gmin =   2.8301E-06 Note: One successful gmin step
+Trying gmin =   2.8299E-06 Note: One successful gmin step
+Trying gmin =   2.8296E-06 Note: One successful gmin step
+Trying gmin =   2.8291E-06 Note: One successful gmin step
+Trying gmin =   2.8284E-06 Note: One successful gmin step
+Trying gmin =   2.8273E-06 Note: One successful gmin step
+Trying gmin =   2.8257E-06 Note: One successful gmin step
+Trying gmin =   2.8233E-06 Note: One successful gmin step
+Trying gmin =   2.8197E-06 Warning: Further gmin increment
+Trying gmin =   2.8224E-06 Warning: Further gmin increment
+Trying gmin =   2.8231E-06 Note: One successful gmin step
+Trying gmin =   2.8229E-06 Note: One successful gmin step
+Trying gmin =   2.8227E-06 Note: One successful gmin step
+Trying gmin =   2.8224E-06 Warning: Further gmin increment
+Trying gmin =   2.8227E-06 Warning: Last gmin step failed
+Warning: Dynamic gmin stepping failed
+Note: Starting true gmin stepping
+Trying gmin =   1.0000E-03 Note: One successful gmin step
+Trying gmin =   1.0000E-04 Note: One successful gmin step
+Trying gmin =   1.0000E-05 Warning: Further gmin increment
+Trying gmin =   5.6234E-05 Note: One successful gmin step
+Trying gmin =   2.3714E-05 Note: One successful gmin step
+Trying gmin =   6.4938E-06 Warning: Further gmin increment
+Trying gmin =   1.7154E-05 Note: One successful gmin step
+Trying gmin =   1.0554E-05 Note: One successful gmin step
+Trying gmin =   5.0937E-06 Note: One successful gmin step
+Trying gmin =   1.7077E-06 Warning: Further gmin increment
+Trying gmin =   3.8760E-06 Note: One successful gmin step
+Trying gmin =   2.5728E-06 Warning: Further gmin increment
+Trying gmin =   3.4985E-06 Note: One successful gmin step
+Trying gmin =   3.0001E-06 Note: One successful gmin step
+Trying gmin =   2.3825E-06 Warning: Further gmin increment
+Trying gmin =   2.8321E-06 Note: One successful gmin step
+Trying gmin =   2.5976E-06 Warning: Further gmin increment
+Trying gmin =   2.7716E-06 Warning: Further gmin increment
+Trying gmin =   2.8169E-06 Note: One successful gmin step
+Trying gmin =   2.7941E-06 Warning: Further gmin increment
+Trying gmin =   2.8112E-06 Note: One successful gmin step
+Trying gmin =   2.8026E-06 Warning: Further gmin increment
+Trying gmin =   2.8090E-06 Note: One successful gmin step
+Trying gmin =   2.8058E-06 Note: One successful gmin step
+Trying gmin =   2.8010E-06 Warning: Further gmin increment
+Trying gmin =   2.8046E-06 Note: One successful gmin step
+Trying gmin =   2.8028E-06 Warning: Further gmin increment
+Trying gmin =   2.8042E-06 Note: One successful gmin step
+Trying gmin =   2.8035E-06 Note: One successful gmin step
+Trying gmin =   2.8025E-06 Warning: Further gmin increment
+Trying gmin =   2.8033E-06 Note: One successful gmin step
+Trying gmin =   2.8029E-06 Warning: Further gmin increment
+Trying gmin =   2.8032E-06 Note: One successful gmin step
+Trying gmin =   2.8030E-06 Warning: Further gmin increment
+Trying gmin =   2.8031E-06 Warning: Last gmin step failed
+Warning: True gmin stepping failed
+Note: Starting source stepping
+Supplies reduced to   0.0000% Note: One successful source step
+Supplies reduced to   0.1000% Note: One successful source step
+Supplies reduced to   0.2000% Note: One successful source step
+Supplies reduced to   0.3500% Note: One successful source step
+Supplies reduced to   0.5750% Note: One successful source step
+Supplies reduced to   0.9125% Note: One successful source step
+Supplies reduced to   1.4188% Note: One successful source step
+Supplies reduced to   2.1781% Note: One successful source step
+Supplies reduced to   3.3172% Note: One successful source step
+Supplies reduced to   5.0258% Note: One successful source step
+Supplies reduced to   7.5887% Note: One successful source step
+Supplies reduced to  11.4330% Note: One successful source step
+Supplies reduced to  17.1995% Note: One successful source step
+Supplies reduced to  25.8493% Supplies reduced to  17.1995% Note: One successful source step
+Supplies reduced to  18.1995% Note: One successful source step
+Supplies reduced to  19.6995% Note: One successful source step
+Supplies reduced to  21.9495% Note: One successful source step
+Supplies reduced to  25.3245% Note: One successful source step
+Supplies reduced to  28.6995% Note: One successful source step
+Supplies reduced to  33.7620% Note: One successful source step
+Supplies reduced to  41.3558% Note: One successful source step
+Supplies reduced to  52.7464% Note: One successful source step
+Supplies reduced to  69.8323% Note: One successful source step
+Supplies reduced to  95.4612% Note: One successful source step
+Supplies reduced to 100.0000% Note: One successful source step
+Note: Source stepping completed
+******
+** ngspice-37+ : Circuit level simulation program
+** The U. C. Berkeley CAD Group
+** Copyright 1985-1994, Regents of the University of California.
+** Copyright 2001-2022, The ngspice team.
+** Please get your ngspice manual from http://ngspice.sourceforge.net/docs.html
+** Please file your bug-reports at http://ngspice.sourceforge.net/bugrep.html
+** Creation Date: Mon Jul 25 11:02:59 UTC 2022
+******
+
+Note: No compatibility mode selected!
+
+
+Circuit: lut_c_driver 
+
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+Warning: toxe, toxp and dtox all given and toxe != toxp + dtox; dtox ignored.
+
+Initial Transient Solution
+--------------------------
+
+Node                                   Voltage
+----                                   -------
+vdd                                        0.8
+vdd_lp                                    0.95
+vsram                                        1
+vrefmtj                                  0.627
+vclmpmtj                                 0.653
+vsram_n                                      0
+ground                                       0
+n_in_sram                                    0
+n_in_gate                                  0.8
+vdd_lut                                    0.8
+xcb_mux_on_1.xcb_mux_on_mux_only.n_1        0.676989
+xcb_mux_on_1.xcb_mux_on_mux_only.n_1_1        0.676989
+xcb_mux_on_1.xcb_mux_on_mux_only.n_1_2        0.676989
+xcb_mux_on_1.xcb_mux_on_mux_only.n_1_3        0.676989
+xcb_mux_on_1.xcb_mux_on_mux_only.n_1_4        0.676989
+xcb_mux_on_1.xcb_mux_on_mux_only.n_1_5        0.676989
+xcb_mux_on_1.xcb_mux_on_mux_only.n_1_6        0.676989
+xcb_mux_on_1.xcb_mux_on_mux_only.n_1_7        0.676989
+xcb_mux_on_1.xcb_mux_on_mux_only.n_1_8        0.676989
+xcb_mux_on_1.xcb_mux_on_mux_only.n_2        0.798972
+xcb_mux_on_1.xcb_mux_on_mux_only.n_2_1        0.798972
+xcb_mux_on_1.xcb_mux_on_mux_only.n_2_2        0.798973
+xcb_mux_on_1.xcb_mux_on_mux_only.n_2_3        0.798973
+xcb_mux_on_1.n_1_1                    0.798974
+xcb_mux_on_1.xcb_mux_on_mux_only.n_2_4        0.798974
+xcb_mux_on_1.xcb_mux_on_mux_only.n_2_5        0.798973
+xcb_mux_on_1.xcb_mux_on_mux_only.n_2_6        0.798973
+xcb_mux_on_1.xcb_mux_on_mux_only.n_2_7        0.798972
+xcb_mux_on_1.xcb_mux_driver.n_1_1     2.76585e-05
+xcb_mux_on_1.xcb_mux_driver.n_1_2     2.76592e-05
+n_1_1                                 0.799678
+xlocal_routing_wire_load_1.n_1        0.799658
+xlocal_routing_wire_load_1.n_2        0.799638
+xlocal_routing_wire_load_1.n_3        0.799619
+xlocal_routing_wire_load_1.n_4        0.799601
+xlocal_routing_wire_load_1.n_5        0.799583
+xlocal_routing_wire_load_1.n_6        0.799565
+xlocal_routing_wire_load_1.n_7        0.799548
+xlocal_routing_wire_load_1.n_8        0.799532
+xlocal_routing_wire_load_1.n_9        0.799517
+xlocal_routing_wire_load_1.xlocal_mux_partial_1.n_1        0.664844
+xlocal_routing_wire_load_1.xlocal_mux_partial_1.n_1_1        0.664844
+xlocal_routing_wire_load_1.xlocal_mux_partial_1.n_1_2        0.664843
+xlocal_routing_wire_load_1.xlocal_mux_partial_1.n_1_3        0.664843
+xlocal_routing_wire_load_1.xlocal_mux_partial_1.n_1_4        0.664843
+xlocal_routing_wire_load_1.xlocal_mux_partial_1.n_1_5        0.664843
+xlocal_routing_wire_load_1.xlocal_mux_partial_1.n_1_6        0.664843
+xlocal_routing_wire_load_1.n_10        0.799502
+xlocal_routing_wire_load_1.n_11        0.799489
+xlocal_routing_wire_load_1.n_12        0.799476
+xlocal_routing_wire_load_1.n_13        0.799463
+xlocal_routing_wire_load_1.n_14        0.799452
+xlocal_routing_wire_load_1.n_15         0.79944
+xlocal_routing_wire_load_1.n_16         0.79943
+xlocal_routing_wire_load_1.n_17         0.79942
+xlocal_routing_wire_load_1.n_18         0.79941
+xlocal_routing_wire_load_1.xlocal_mux_partial_2.n_1        0.664828
+xlocal_routing_wire_load_1.xlocal_mux_partial_2.n_1_1        0.664827
+xlocal_routing_wire_load_1.xlocal_mux_partial_2.n_1_2        0.664827
+xlocal_routing_wire_load_1.xlocal_mux_partial_2.n_1_3        0.664827
+xlocal_routing_wire_load_1.xlocal_mux_partial_2.n_1_4        0.664827
+xlocal_routing_wire_load_1.xlocal_mux_partial_2.n_1_5        0.664826
+xlocal_routing_wire_load_1.xlocal_mux_partial_2.n_1_6        0.664826
+xlocal_routing_wire_load_1.n_19        0.799402
+xlocal_routing_wire_load_1.n_20        0.799395
+xlocal_routing_wire_load_1.n_21        0.799388
+xlocal_routing_wire_load_1.n_22        0.799382
+xlocal_routing_wire_load_1.n_23        0.799376
+xlocal_routing_wire_load_1.n_24        0.799371
+xlocal_routing_wire_load_1.n_25        0.799366
+xlocal_routing_wire_load_1.n_26        0.799363
+xlocal_routing_wire_load_1.n_27        0.799359
+xlocal_routing_wire_load_1.xlocal_mux_partial_3.n_1         0.66482
+xlocal_routing_wire_load_1.xlocal_mux_partial_3.n_1_1        0.664819
+xlocal_routing_wire_load_1.xlocal_mux_partial_3.n_1_2        0.664819
+xlocal_routing_wire_load_1.xlocal_mux_partial_3.n_1_3        0.664819
+xlocal_routing_wire_load_1.xlocal_mux_partial_3.n_1_4        0.664819
+xlocal_routing_wire_load_1.xlocal_mux_partial_3.n_1_5        0.664818
+xlocal_routing_wire_load_1.xlocal_mux_partial_3.n_1_6        0.664818
+xlocal_routing_wire_load_1.n_28        0.799357
+xlocal_routing_wire_load_1.xlocal_mux_on_1.xlocal_mux_on_mux_only.n_1        0.684477
+xlocal_routing_wire_load_1.xlocal_mux_on_1.xlocal_mux_on_mux_only.n_1_1        0.684477
+xlocal_routing_wire_load_1.xlocal_mux_on_1.xlocal_mux_on_mux_only.n_1_2        0.684477
+xlocal_routing_wire_load_1.xlocal_mux_on_1.xlocal_mux_on_mux_only.n_1_3        0.684477
+xlocal_routing_wire_load_1.xlocal_mux_on_1.xlocal_mux_on_mux_only.n_1_4        0.684477
+xlocal_routing_wire_load_1.xlocal_mux_on_1.xlocal_mux_on_mux_only.n_1_5        0.684477
+xlocal_routing_wire_load_1.xlocal_mux_on_1.xlocal_mux_on_mux_only.n_1_6        0.684477
+xlocal_routing_wire_load_1.xlocal_mux_on_1.xlocal_mux_on_mux_only.n_2        0.799378
+xlocal_routing_wire_load_1.xlocal_mux_on_1.xlocal_mux_on_mux_only.n_2_1        0.799378
+xlocal_routing_wire_load_1.xlocal_mux_on_1.n_1_1        0.799378
+xlocal_routing_wire_load_1.xlocal_mux_on_1.xlocal_mux_on_mux_only.n_2_2        0.799378
+xlocal_routing_wire_load_1.xlocal_mux_on_1.xlocal_mux_on_mux_only.n_2_3        0.799378
+n_1_2                              2.72245e-05
+xlocal_routing_wire_load_1.n_29        0.799356
+xlocal_routing_wire_load_1.n_30        0.799356
+xlut_c_driver_1.n_1_1                 0.799945
+n_rsel                                0.799945
+xlut_c_driver_1.n_1_2                 0.799945
+xlut_c_driver_1.n_2_1                 0.799879
+xlut_c_driver_1.n_2_2                 0.799879
+xlut_c_driver_1.n_2_3                 0.799879
+xlut_c_driver_1.n_3_1              2.47563e-05
+n_2_1                              2.47565e-05
+n_3_1                                 0.799945
+xff.n_1_1                             0.799744
+xff.n_1_2                             0.799744
+xff.n_1_3                             0.799744
+xff.n_2_1                          7.66057e-05
+xff.n_2_2                           7.6591e-05
+xff.n_3_1                          6.76789e-05
+xff.n_3_2                          6.76272e-05
+xff.n_4_1                             0.799935
+xff.n_4_2                             0.799935
+xff.n_5_1                          0.000106052
+xff.n_5_2                          0.000105953
+xff.n_6_1                              0.79996
+xff.n_6_2                              0.79996
+n_ff_out                           6.98562e-05
+xlut_c_driver_not_1.n_1_1             0.799947
+xlut_c_driver_not_1.n_1_2             0.799947
+n_1_4                              2.67554e-05
+xlut.n_1_1                             0.79997
+xlut.n_1_2                             0.79997
+xlut.n_2_1                          4.8439e-05
+xlut.n_2_2                         4.84759e-05
+xlut.n_3_1                         6.03928e-05
+xlut.n_3_2                         6.04188e-05
+xlut.n_3_3                         6.04188e-05
+xlut.n_4_1                         7.22512e-05
+xlut.n_4_2                         7.23027e-05
+xlut.n_4_3                         7.23027e-05
+xlut.n_5_1                         8.40514e-05
+xlut.n_5_2                         8.41536e-05
+xlut.n_5_3                         8.41536e-05
+xlut.n_6_1                            0.799945
+xlut.n_6_2                            0.799945
+xlut.n_7_1                         4.84746e-05
+xlut.n_7_2                         4.85128e-05
+xlut.n_8_1                         5.63369e-05
+xlut.n_8_2                         5.65436e-05
+xlut.n_8_3                         5.65436e-05
+xlut.n_9_1                         6.42808e-05
+xlut.n_9_2                         6.46897e-05
+xlut.n_9_3                         6.46897e-05
+xlut.n_11_1                           0.799945
+xlut.n_11_2                           0.799945
+n_out                              4.83705e-05
+n_out2                             4.96385e-05
+xthemux.n_1_1                      6.13559e-05
+xthemux.n_1_2                      6.13813e-05
+xthemux.n_1_3                      6.13813e-05
+xthemux.n_2_1                         0.799946
+xthemux.n_2_2                         0.799946
+n_out3                             2.80926e-05
+v_lut#branch                      -1.33746e-07
+vin_gate#branch                   -1.53343e-08
+vin_sram#branch                    1.01719e-11
+vground#branch                     7.81087e-07
+vsram_n#branch                     6.74977e-11
+vclmomtjn#branch                             0
+vrefmtjn#branch                              0
+vsram#branch                      -2.85616e-12
+vsupplylp#branch                             0
+vsupply#branch                    -7.81151e-07
+
+ Reference value :  0.00000e+00 Reference value :  3.07280e-10 Reference value :  6.24280e-10 Reference value :  9.38280e-10 Reference value :  1.25228e-09 Reference value :  1.56528e-09 Reference value :  1.87928e-09 Reference value :  2.19328e-09 Reference value :  2.50628e-09 Reference value :  2.81928e-09 Reference value :  3.11920e-09 Reference value :  3.41820e-09 Reference value :  3.72720e-09 Reference value :  4.02220e-09 Reference value :  4.32920e-09 Reference value :  4.63520e-09 Reference value :  4.94320e-09 Reference value :  5.22620e-09 Reference value :  5.52920e-09 Reference value :  5.83620e-09 Reference value :  6.14320e-09 Reference value :  6.45020e-09 Reference value :  6.75920e-09 Reference value :  7.05620e-09 Reference value :  7.34620e-09 Reference value :  7.65720e-09 Reference value :  7.96920e-09 Reference value :  8.26720e-09 Reference value :  8.58020e-09 Reference value :  8.89320e-09 Reference value :  9.18620e-09 Reference value :  9.48820e-09 Reference value :  9.80020e-09 Reference value :  1.01132e-08 Reference value :  1.04222e-08 Reference value :  1.07342e-08 Reference value :  1.10362e-08 Reference value :  1.13292e-08 Reference value :  1.16412e-08 Reference value :  1.19512e-08 Reference value :  1.22472e-08 Reference value :  1.25602e-08 Reference value :  1.28722e-08 Reference value :  1.31712e-08 Reference value :  1.34702e-08 Reference value :  1.37822e-08 Reference value :  1.40942e-08 Reference value :  1.44062e-08 Reference value :  1.47172e-08 Reference value :  1.50222e-08 Reference value :  1.53182e-08 Reference value :  1.56282e-08 Reference value :  1.59382e-08
+No. of Data Rows : 16068
+
+  Measurements for Transient Analysis
+
+meas_total_tfall    =  8.417106e-11 targ=  9.254421e-09 trig=  9.170250e-09
+meas_total_trise    =  2.996120e-10 targ=  5.469882e-09 trig=  5.170270e-09
+meas_logic_low_voltage=  4.837054e-05
+meas_current1       =   -6.65000e-15 from=  5.00000e-09 to=  7.00000e-09
+meas_current2       =   -2.71159e-15 from=  9.00000e-09 to=  1.10000e-08
+meas_avg_power      =  1.87232e-06
+
+ngspice-37+ done

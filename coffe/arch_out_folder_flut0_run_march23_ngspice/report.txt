@@ -1,0 +1,119 @@
+Created 2023-03-23 17:55:51.301240
+
+----------------------------------------------
+  RUN OPTIONS:
+----------------------------------------------
+
+  Transistor sizing: on
+  Optimization type: global
+  Number of top combos to re-ERF: 1
+  Area optimization weight: 1
+  Delay optimization weight: 1
+  Maximum number of sizing iterations: 6
+
+
+-------------------------------------------------
+  ARCHITECTURE PARAMETERS:
+-------------------------------------------------
+
+  Number of BLEs per cluster (N): 10
+  LUT size (K): 6
+  LUT fracturability level: 1
+  Number of adder bits per ALM: 2
+  Channel width (W): 320
+  Wire segment length (L): 4
+  Number of cluster inputs (I): 40
+  Number of BLE outputs to general routing (Or): 2
+  Number of BLE outputs to local routing (Ofb): 2
+  Total number of cluster outputs (N*Or): 20
+  Switch block flexibility (Fs): 3
+  Cluster input flexibility (Fcin): 0.2
+  Cluster output flexibility (Fcout): 0.025
+  Local MUX population (Fclocal): 0.5
+  LUT input for register selection MUX (Rsel): c
+  LUT input(s) for register feedback MUX(es) (Rfb): c
+
+-------------------------------------------------
+  PROCESS TECHNOLOGY PARAMETERS:
+-------------------------------------------------
+
+  transistor_type = bulk
+  switch_type = pass_transistor
+  vdd = 0.8
+  vsram = 1.0
+  vsram_n = 0.0
+  gate_length = 22
+  min_tran_width = 45
+  min_width_tran_area = 33864
+  sram_cell_area = 4.0
+  model_path = /home/iiitb/Documents/Saketh/COFFE-master/spice_models/ptm_22nm_bulk_hp.l
+  model_library = 22NM_BULK_HP
+  metal = [(0.054825, 0.000175), (0.007862, 0.000215), (0.02924, 0.000139), (0.227273, 0.0)]
+
+  Spice tool used : NgSpice
+|------------------------------------------------------------------------------|
+|   FPGA Implementation Details                                                |
+|------------------------------------------------------------------------------|
+
+  SWITCH BLOCK DETAILS:
+  Style: two-level MUX
+  Required MUX size: 10:1
+  Implemented MUX size: 12:1
+  Level 1 size = 4
+  Level 2 size = 3
+  Number of unused inputs = 2
+  Number of MUXes per tile: 160
+  Number of SRAM cells per MUX: 7
+
+  CONNECTION BLOCK DETAILS:
+  Style: two-level MUX
+  Required MUX size: 64:1
+  Implemented MUX size: 64:1
+  Level 1 size = 8
+  Level 2 size = 8
+  Number of unused inputs = 0
+  Number of MUXes per tile: 40
+  Number of SRAM cells per MUX: 16
+
+  LOCAL MUX DETAILS:
+  Style: two-level MUX
+  Required MUX size: 30:1
+  Implemented MUX size: 30:1
+  Level 1 size = 6
+  Level 2 size = 5
+  Number of unused inputs = 0
+  Number of MUXes per tile: 60
+  Number of SRAM cells per MUX: 11
+
+  LUT DETAILS:
+  Style: Fully encoded MUX tree
+  Size: 6-LUT
+  Internal buffering: 2-stage buffer betweens levels 3 and 4
+  Isolation inverters between SRAM and LUT inputs
+
+  LUT INPUT DRIVER DETAILS:
+  LUT input a type: default
+  LUT input c type: reg_fb_rsel
+  LUT input b type: default
+  LUT input e type: default
+  LUT input d type: default
+  LUT input f type: default
+
+  CLUSTER OUTPUT LOAD DETAILS:
+  Total number of SB inputs connected to cluster output: 8
+  Number of 'on' SB MUXes (assumed): 1
+  Number of 'partial' SB MUXes: 1
+  Number of 'off' SB MUXes: 6
+
+  ROUTING WIRE LOAD DETAILS:
+  Number of SB inputs connected to routing wire = 9
+  Wire: SB (on = 1, partial = 1, off = 7)
+  Number of CB inputs connected to routing wire = 16
+  Wire: CB (on = 1, partial = 1, off = 14)
+  Tile 1: SB (on = 1, partial = 1, off = 1); CB (on = 1, partial = 1, off = 2)
+  Tile 2: SB (on = 0, partial = 0, off = 2); CB (on = 0, partial = 0, off = 4)
+  Tile 3: SB (on = 0, partial = 0, off = 2); CB (on = 0, partial = 0, off = 4)
+  Tile 4: SB (on = 0, partial = 0, off = 2); CB (on = 0, partial = 0, off = 4)
+
+|------------------------------------------------------------------------------|
+

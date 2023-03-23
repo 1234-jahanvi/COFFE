@@ -1,0 +1,127 @@
+Using: /usr/local/packages/synopsys_2018/hspice/O-2018.09-SP1/hspice/linux64/hspice rowdecoderstage3.sp
+ ****** HSPICE -- O-2018.09-SP1 linux64 (Nov 25 2018) ******                    
+  Copyright (c) 1986 - 2023 by Synopsys, Inc. All Rights Reserved.              
+  This software and the associated documentation are proprietary
+  to Synopsys, Inc. This software may only be used in accordance
+  with the terms and conditions of a written license agreement with
+  Synopsys, Inc. All other use, reproduction, or distribution of
+  this software is strictly prohibited.
+  Input File: rowdecoderstage3.sp                                               
+  Command line options: /usr/local/packages/synopsys_2018/hspice/O-2018.09-SP1/hspice/linux64/hspice rowdecoderstage3.sp
+  Start time: Thu Feb  2 11:34:29 2023
+ lic:  
+ lic: FLEXlm: SDK_11.6.9.6 
+ lic: USER:   aarora1              HOSTNAME: koopa.ece.utexas.edu 
+ lic: HOSTID: "e4434bc49dca"       PID:      283803 
+ lic: Using FLEXlm license file: 
+ lic: /usr/local/packages/synopsys_2018/key 
+ lic: Checkout 1 hspice 
+ lic: License/Maintenance for hspice will expire on 14-jan-2025/2022.06 
+ lic: 1(in_use)/100(total) FLOATING license(s) on SERVER /usr/local/packages/synopsys_2018/key 
+ lic:   
+  **info** (rowdecoderstage3.sp:17) DC voltage reset to initial transient source value in source 0:vin. new dc=0.0000D+00
+  **warning** (v_$vin:0) pulse rise time is  < or = zero, reset to tstep
+  **warning** (v_$vin:0) pulse fall time is  < or = zero, reset to tstep
+  **warning** (nmos:mndown2 (../basic_subcircuits.l:123)) Warning:  Acde = 0.245565 may be too small in BSIM4 model with w=4.5e-08 l=2.2e-08.
+  
+
+  **warning** the following singular supplies were terminated to 1 meg resistor 
+          supply       node1            node2
+(../process_data.l:34)vclmomtjn               0:vclmpmtj         defined in subckt 0                     0:0                defined in subckt 0               
+(../process_data.l:29)vsupply                 0:vdd              defined in subckt 0                     0:0                defined in subckt 0               
+(../process_data.l:33)vrefmtjn                0:vrefmtj          defined in subckt 0                     0:0                defined in subckt 0               
+(../process_data.l:32)vsram                   0:vsram            defined in subckt 0                     0:0                defined in subckt 0               
+(../process_data.l:35)vsram_n                 0:vsram_n          defined in subckt 0                     0:0                defined in subckt 0               
+      
+  **warning** (v_$vin:0) pulse rise time is  < or = zero, reset to tstep
+  **warning** (v_$vin:0) pulse fall time is  < or = zero, reset to tstep
+
+Element variations(Local):   element              parameter
+ **info** set option symb=1 internally to help for convergence.
+ *****************************************************************
+ ******  option summary
+ ******
+ runlvl  = 3         bypass  = 2.0000    
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = sweep_data , index =     1 ***
+
+ ******
+ .title thirdstage
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ meaz1_inv_nand3_rowdecoderstage3_1_tfall=  23.2783p  targ= 146.4221p   trig= 123.1438p
+ meaz1_inv_nand3_rowdecoderstage3_1_trise=  16.9108p  targ=   2.1004n   trig=   2.0835n
+ meaz1_inv_rowdecoderstage3_2_tfall=  19.8535p  targ=   2.1034n   trig=   2.0835n
+ meaz1_inv_rowdecoderstage3_2_trise=  29.6395p  targ= 152.7833p   trig= 123.1438p
+ meaz1_total_tfall=  19.8535p  targ=   2.1034n   trig=   2.0835n
+ meaz1_total_trise=  29.6395p  targ= 152.7833p   trig= 123.1438p
+ meaz2_inv_nand3_rowdecoderstage3_1_tfall=  21.8897p  targ= 173.0774p   trig= 151.1877p
+ meaz2_inv_nand3_rowdecoderstage3_1_trise=  16.0508p  targ=   2.1095n   trig=   2.0935n
+ meaz2_inv_rowdecoderstage3_2_tfall=  19.2831p  targ=   2.1128n   trig=   2.0935n
+ meaz2_inv_rowdecoderstage3_2_trise=  28.6722p  targ= 179.8599p   trig= 151.1877p
+ meaz2_total_tfall=  19.2831p  targ=   2.1128n   trig=   2.0935n
+ meaz2_total_trise=  28.6722p  targ= 179.8599p   trig= 151.1877p
+ meas_logic_low_voltage=   0.        
+ meaz1_current=  -2.1822f  from=   0.             to=   4.0000n
+ meaz1_avg_power= 545.5514n
+ meaz2_current=  -2.1961f  from=   0.             to=   4.0000n
+ meaz2_avg_power= 549.0133n
+
+          ***** job concluded
+1****** HSPICE -- O-2018.09-SP1 linux64 (Nov 25 2018) ******                    
+ ******  
+ .title thirdstage
+
+ ****** job statistics summary tnom=  25.000 temp=  25.000 ******
+  
+ ******  Machine Information  ******
+ CPU:
+ model name	: Intel(R) Xeon(R) Gold 5218 CPU @ 2.30GHz
+ cpu MHz	: 1199.975
+  
+ OS:
+ Linux version 3.10.0-1160.81.1.el7.x86_64 (mockbuild@kbuilder.bsys.centos.org) (gcc version 4.8.5 20150623 (Red Hat 4.8.5-44) (GCC) ) #1 SMP Fri Dec 16 17:29:43 UTC 2022
+
+
+  ******  HSPICE Threads Information  ******
+
+  Command Line Threads Count :     1
+  Available CPU Count        :    64
+  Actual Threads Count       :     1
+
+
+  ******  Circuit Statistics  ******
+  # nodes       =     771 # elements   =     222
+  # resistors   =      19 # capacitors =      28 # inductors   =       0
+  # mutual_inds =       0 # vccs       =       0 # vcvs        =       0
+  # cccs        =       0 # ccvs       =       0 # volt_srcs   =       9
+  # curr_srcs   =       0 # diodes     =       0 # bjts        =       0
+  # jfets       =       0 # mosfets    =     166 # U elements  =       0
+  # T elements  =       0 # W elements =       0 # B elements  =       0
+  # S elements  =       0 # P elements =       0 # va device   =       0
+  # vector_srcs =       0 # N elements =       0
+
+
+  ******  Runtime Statistics (seconds)  ******
+
+  analysis           time    # points   tot. iter  conv.iter
+  op point           0.03           1          20
+  transient          0.20        4001         374         135 rev=         1
+  readin             0.06
+  errchk             0.03
+  setup              0.01
+  output             0.00
+
+
+           peak memory used        295.00 megabytes
+           total cpu time            0.33 seconds
+           total elapsed time        0.22 seconds
+           job started at     11:34:29 02/02/2023
+           job ended   at     11:34:29 02/02/2023
+
+
+
+>info:         ***** hspice job concluded
+ lic: Release hspice token(s) 
+ lic: total license checkout elapse time:        0.04(s)

@@ -45,17 +45,18 @@ import math
 
 # Subcircuit Modules
 import basic_subcircuits
+# from basic_subcircuits import *
 import mux_subcircuits 
 import lut_subcircuits 
 import ff_subcircuits 
 import load_subcircuits
 import memory_subcircuits
 import utils
-import hardblock_functions
+import hardblocks_openlane
 import tran_sizing
-
-# Top level file generation module
 import top_level
+   
+
 
 # HSPICE handling module
 import spice
@@ -115,6 +116,8 @@ class _Specs:
         self.enable_carry_chain      = arch_params_dict['enable_carry_chain']
         self.carry_chain_type        = arch_params_dict['carry_chain_type']
         self.FAs_per_flut            = arch_params_dict['FAs_per_flut']
+        
+        self.spice_flag              = arch_params_dict['spice_flag']
 
 
         # BRAM specs
@@ -5176,7 +5179,7 @@ class _hard_block(_CompoundCircuit):
             self.dedicated.generate_top()
 
         # hard flow
-        self.flow_results = hardblock_functions.hardblock_flow(self.parameters)
+        self.flow_results = hardblocks_openlane.hardblock_flow(self.parameters)
         #the area returned by the hardblock flow is in um^2. In area_dict, all areas are in nm^2 
         self.area = self.flow_results[0] * self.parameters['area_scale_factor'] * (1e+6) 
 
@@ -6079,7 +6082,7 @@ class FPGA:
             rc = self.metal_stack[layer]
             # Calculate total wire R and C
             resistance = rc[0]*length
-            capacitance = rc[1]*length/2
+            capacitance = rc[1]*(length/2)
             # Add to wire_rc dictionary
             self.wire_rc_dict[wire] = (resistance, capacitance)     
 
@@ -6136,6 +6139,7 @@ class FPGA:
         self.delay_dict[self.sb_mux.name] = self.sb_mux.delay 
         self.sb_mux.power = float(spice_meas["meas_avg_power"][0])
         
+        '''
         # Connection Block MUX
         print ("  Updating delay for " + self.cb_mux.name)
         spice_meas = spice_interface.run(self.cb_mux.top_spice_path, parameter_dict) 
@@ -6360,7 +6364,7 @@ class FPGA:
             crit_path_delay += self.logic_cluster.ble.fmux.delay * DELAY_WEIGHT_LUT_FRAC
         self.delay_dict["rep_crit_path"] = crit_path_delay  
 
-
+	
 
         # Carry Chain
         
@@ -6915,7 +6919,7 @@ class FPGA:
         self.RAM.wordlinedriver.power = float(spice_meas["meas_avg_power"][0])
         if self.RAM.wordlinedriver.wl_repeater == 1:
             self.RAM.wordlinedriver.power *=2
-
+	'''
         return valid_delay
 
 

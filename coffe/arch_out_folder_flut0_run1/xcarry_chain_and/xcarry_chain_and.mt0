@@ -1,0 +1,144 @@
+warning, can't find model 'cw' from line
+    cwire_1 n_in gnd cw
+warning, can't find model 'rw' from line
+    rwire_1 n_in n_out rw
+warning, can't find model 'cw' from line
+    cwire_2 n_out gnd cw
+Warning: vin: no DC value, transient time 0 value used
+Note: Starting dynamic gmin stepping
+Trying gmin =   1.0000E-03 Note: One successful gmin step
+Trying gmin =   1.0000E-04 Note: One successful gmin step
+Trying gmin =   1.0000E-05 Note: One successful gmin step
+Trying gmin =   1.0000E-06 Warning: Further gmin increment
+Trying gmin =   5.6234E-06 Note: One successful gmin step
+Trying gmin =   2.3714E-06 Note: One successful gmin step
+Trying gmin =   6.4938E-07 Note: One successful gmin step
+Trying gmin =   9.3057E-08 Note: One successful gmin step
+Trying gmin =   9.3057E-09 Note: One successful gmin step
+Trying gmin =   9.3057E-10 Note: One successful gmin step
+Trying gmin =   9.3057E-11 Note: One successful gmin step
+Trying gmin =   9.3057E-12 Note: One successful gmin step
+Trying gmin =   1.0000E-12 Note: One successful gmin step
+Note: Dynamic gmin stepping completed
+******
+** ngspice-37+ : Circuit level simulation program
+** The U. C. Berkeley CAD Group
+** Copyright 1985-1994, Regents of the University of California.
+** Copyright 2001-2022, The ngspice team.
+** Please get your ngspice manual from http://ngspice.sourceforge.net/docs.html
+** Please file your bug-reports at http://ngspice.sourceforge.net/bugrep.html
+** Creation Date: Mon Jul 25 11:02:59 UTC 2022
+******
+
+Note: No compatibility mode selected!
+
+
+Circuit: Carry Chain
+
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+Warning: toxe, toxp and dtox all given and toxe != toxp + dtox; dtox ignored.
+
+Initial Transient Solution
+--------------------------
+
+Node                                   Voltage
+----                                   -------
+vdd                                        0.8
+vdd_lp                                    0.95
+vsram                                        1
+vrefmtj                                  0.627
+vclmpmtj                                 0.653
+vsram_n                                      0
+ground                                       0
+n_in                                         0
+vdd_test                                   0.8
+xlut.n_1_1                             0.79997
+xlut.n_1_2                             0.79997
+xlut.n_2_1                          4.8439e-05
+xlut.n_2_2                          4.8476e-05
+xlut.n_3_1                         6.03929e-05
+xlut.n_3_2                         6.04188e-05
+xlut.n_3_3                         6.04188e-05
+xlut.n_4_1                         7.22513e-05
+xlut.n_4_2                         7.23028e-05
+xlut.n_4_3                         7.23028e-05
+xlut.n_5_1                         8.40509e-05
+xlut.n_5_2                         8.41531e-05
+xlut.n_5_3                         8.41531e-05
+xlut.n_6_1                            0.799945
+xlut.n_6_2                            0.799945
+xlut.n_7_1                         4.84746e-05
+xlut.n_7_2                         4.85128e-05
+xlut.n_8_1                         5.63369e-05
+xlut.n_8_2                         5.65436e-05
+xlut.n_8_3                         5.65436e-05
+xlut.n_9_1                         6.42809e-05
+xlut.n_9_2                         6.46897e-05
+xlut.n_9_3                         6.46897e-05
+xlut.n_11_1                           0.799945
+xlut.n_11_2                           0.799945
+n_1_1                              6.51208e-05
+xcarrychain.n_a_in_bar                0.799892
+xcarrychain.n_a_in                 7.02745e-05
+xcarrychain.n_cin_in_bar               0.79984
+xcarrychain.n_cin_in               2.79115e-07
+n_1_2                                 0.799944
+xcarrychain.n_sum_internal         4.79107e-05
+xcarrychain.n_p_bar                0.000142405
+xcarrychain.n_b_in                    0.799999
+xcarrychain.n_cout_in                 0.799839
+n_hang                                0.799839
+n_sum_out                             0.799947
+xcarrychain.n_sum_in                  0.799947
+xandtree.n_1_1                        0.799944
+xandtree.n_1_2                     0.000220376
+xandtree.xnand1.n_z                 0.00014699
+xandtree.xnand1.n_z2               7.35325e-05
+xandtree.n_1_3                        0.799947
+xandtree.n_1_4                        0.799947
+xandtree.n_1_5                     9.81084e-05
+xandtree.xnand2.n_z                 4.9093e-05
+n_1_3                                 0.799947
+xcarrychainskip_mux.n_1_1             0.799879
+xcarrychainskip_mux.n_1_2             0.799879
+xcarrychainskip_mux.n_1_3             0.799879
+xcarrychainskip_mux.n_2_1          2.49093e-05
+xcarrychainskip_mux.n_2_2          2.49098e-05
+n_1_4                                 0.799944
+xcarrychain_mux.n_1_1                 0.799879
+xcarrychain_mux.n_1_2                 0.799879
+xcarrychain_mux.n_1_3                 0.799879
+xcarrychain_mux.n_2_1              2.49093e-05
+xcarrychain_mux.n_2_2              2.49098e-05
+n_1_5                                 0.799944
+v_test#branch                     -3.10762e-08
+vin#branch                         1.01719e-11
+vground#branch                     2.54397e-07
+vsram_n#branch                               0
+vclmomtjn#branch                             0
+vrefmtjn#branch                              0
+vsram#branch                                 0
+vsupplylp#branch                             0
+vsupply#branch                    -2.54397e-07
+
+ Reference value :  4.21960e-10 Reference value :  1.06696e-09 Reference value :  1.72096e-09 Reference value :  2.34096e-09 Reference value :  2.98796e-09 Reference value :  3.64296e-09 Reference value :  4.27996e-09 Reference value :  4.92096e-09 Reference value :  5.57296e-09 Reference value :  6.19296e-09 Reference value :  6.83796e-09 Reference value :  7.48396e-09 Reference value :  8.12196e-09 Reference value :  8.76496e-09 Reference value :  9.41596e-09 Reference value :  1.00540e-08 Reference value :  1.06860e-08 Reference value :  1.13370e-08 Reference value :  1.19910e-08 Reference value :  1.26220e-08 Reference value :  1.32720e-08 Reference value :  1.39260e-08 Reference value :  1.45452e-08 Reference value :  1.51962e-08 Reference value :  1.58502e-08 Reference value :  1.64852e-08 Reference value :  1.71352e-08 Reference value :  1.77852e-08 Reference value :  1.84002e-08 Reference value :  1.90502e-08 Reference value :  1.96982e-08 Reference value :  2.03372e-08 Reference value :  2.09832e-08 Reference value :  2.16362e-08 Reference value :  2.22592e-08 Reference value :  2.29122e-08 Reference value :  2.35612e-08 Reference value :  2.42012e-08 Reference value :  2.48462e-08 Reference value :  2.54992e-08
+No. of Data Rows : 26091
+
+  Measurements for Transient Analysis
+
+meas_inv_nand3_xcarry_chain_and_1_tfall=  3.125981e-11 targ=  2.163396e-09 trig=  2.132136e-09
+meas_inv_nand3_xcarry_chain_and_1_trise=  2.276069e-11 targ=  3.991643e-10 trig=  3.764036e-10
+meas_inv_xcarry_chain_and_2_tfall=  3.055289e-11 targ=  4.069565e-10 trig=  3.764036e-10
+meas_inv_xcarry_chain_and_2_trise=  4.118499e-11 targ=  2.173321e-09 trig=  2.132136e-09
+meas_inv_nand2_xcarry_chain_and_3_tfall=  5.401680e-11 targ=  2.186153e-09 trig=  2.132136e-09
+meas_inv_nand2_xcarry_chain_and_3_trise=  4.004478e-11 targ=  4.164484e-10 trig=  3.764036e-10
+meas_inv_xcarry_chain_and_4_tfall=  4.608556e-11 targ=  4.224892e-10 trig=  3.764036e-10
+meas_inv_xcarry_chain_and_4_trise=  6.608571e-11 targ=  2.198222e-09 trig=  2.132136e-09
+meas_total_tfall    =  4.608556e-11 targ=  4.224892e-10 trig=  3.764036e-10
+meas_total_trise    =  6.608571e-11 targ=  2.198222e-09 trig=  2.132136e-09
+meas_logic_low_voltage=  0.000000e+00
+meas_current        =   -1.07914e-14 from=  0.00000e+00 to=  2.60000e-08
+meas_avg_power      =  3.32042e-07
+
+ngspice-37+ done

@@ -1,0 +1,150 @@
+Using: /usr/local/packages/synopsys_2018/hspice/O-2018.09-SP1/hspice/linux64/hspice lut_e_driver_with_lut.sp
+ ****** HSPICE -- O-2018.09-SP1 linux64 (Nov 25 2018) ******                    
+  Copyright (c) 1986 - 2023 by Synopsys, Inc. All Rights Reserved.              
+  This software and the associated documentation are proprietary
+  to Synopsys, Inc. This software may only be used in accordance
+  with the terms and conditions of a written license agreement with
+  Synopsys, Inc. All other use, reproduction, or distribution of
+  this software is strictly prohibited.
+  Input File: lut_e_driver_with_lut.sp                                          
+  Command line options: /usr/local/packages/synopsys_2018/hspice/O-2018.09-SP1/hspice/linux64/hspice lut_e_driver_with_lut.sp
+  Start time: Thu Feb  2 11:34:25 2023
+ lic:  
+ lic: FLEXlm: SDK_11.6.9.6 
+ lic: USER:   aarora1              HOSTNAME: koopa.ece.utexas.edu 
+ lic: HOSTID: "e4434bc49dca"       PID:      283088 
+ lic: Using FLEXlm license file: 
+ lic: /usr/local/packages/synopsys_2018/key 
+ lic: Checkout 1 hspice 
+ lic: License/Maintenance for hspice will expire on 14-jan-2025/2022.06 
+ lic: 1(in_use)/100(total) FLOATING license(s) on SERVER /usr/local/packages/synopsys_2018/key 
+ lic:   
+  **info** (lut_e_driver_with_lut.sp:18) DC voltage reset to initial transient source value in source 0:vin_gate. new dc=0.8000D+00
+  **warning** (v_$vin_gate:0) pulse rise time is  < or = zero, reset to tstep
+  **warning** (v_$vin_gate:0) pulse fall time is  < or = zero, reset to tstep
+  **warning** (v_$vin_sram:0) pulse rise time is  < or = zero, reset to tstep
+  **warning** (v_$vin_sram:0) pulse fall time is  < or = zero, reset to tstep
+  **warning** (nmos:mndown (../basic_subcircuits.l:61)) Warning:  Acde = 0.245565 may be too small in BSIM4 model with w=9e-08 l=2.2e-08.
+  
+  **warning** No connections on node n_rsel; Node ignored.
+
+  **warning** the following singular supplies were terminated to 1 meg resistor 
+          supply       node1            node2
+(../process_data.l:34)vclmomtjn               0:vclmpmtj         defined in subckt 0                     0:0                defined in subckt 0               
+(../process_data.l:30)vsupplylp               0:vdd_lp           defined in subckt 0                     0:0                defined in subckt 0               
+(../process_data.l:33)vrefmtjn                0:vrefmtj          defined in subckt 0                     0:0                defined in subckt 0               
+(../process_data.l:35)vsram_n                 0:vsram_n          defined in subckt 0                     0:0                defined in subckt 0               
+      
+  **warning** (v_$vin_gate:0) pulse rise time is  < or = zero, reset to tstep
+  **warning** (v_$vin_gate:0) pulse fall time is  < or = zero, reset to tstep
+  **warning** (v_$vin_sram:0) pulse rise time is  < or = zero, reset to tstep
+  **warning** (v_$vin_sram:0) pulse fall time is  < or = zero, reset to tstep
+
+Element variations(Local):   element              parameter
+ **info** set option symb=1 internally to help for convergence.
+ *****************************************************************
+ ******  option summary
+ ******
+ runlvl  = 3         bypass  = 2.0000    
+             
+ Summary of Linear Res Distribution Info
+ ---------------------------------------
+ |Range          |Total     |Percent(%)|
+ |---------------+----------+----------|
+ |1e+00  ~  1e+03|96        |95.0495   |
+ |1e+05  ~  1e+06|5         |4.9505    |
+ ---------------------------------------
+              
+             
+ Summary of Linear Cap Distribution Info
+ ---------------------------------------
+ |Range          |Total     |Percent(%)|
+ |---------------+----------+----------|
+ |1e-18  ~  1e-17|8         |4.1667    |
+ |1e-17  ~  1e-16|178       |92.7083   |
+ |1e-16  ~  1e-15|6         |3.1250    |
+ ---------------------------------------
+              
+             
+ Summary of Detailed RC Type Statistics
+ -----------------------------
+ |Element Type    |Number    |
+ |----------------+----------|
+ |Constant Res    |97        |
+ |Other Linear Res|4         |
+ |                |          |
+ |Constant Cap    |192       |
+ -----------------------------
+              
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** data name = sweep_data , index =     1 ***
+
+ ******
+ .title lut_e_driver
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ meas_total_tfall=  35.1552p  targ=   9.1635n   trig=   9.1284n
+ meas_total_trise= 128.7416p  targ=   5.2571n   trig=   5.1284n
+ meas_logic_low_voltage=  46.2733u
+ meas_current1=  -3.5521f  from=   5.0000n     to=   7.0000n
+ meas_current2=  -1.4082f  from=   9.0000n     to=  11.0000n
+ meas_avg_power= 992.0608n
+
+          ***** job concluded
+1****** HSPICE -- O-2018.09-SP1 linux64 (Nov 25 2018) ******                    
+ ******  
+ .title lut_e_driver
+
+ ****** job statistics summary tnom=  25.000 temp=  25.000 ******
+  
+ ******  Machine Information  ******
+ CPU:
+ model name	: Intel(R) Xeon(R) Gold 5218 CPU @ 2.30GHz
+ cpu MHz	: 1001.196
+  
+ OS:
+ Linux version 3.10.0-1160.81.1.el7.x86_64 (mockbuild@kbuilder.bsys.centos.org) (gcc version 4.8.5 20150623 (Red Hat 4.8.5-44) (GCC) ) #1 SMP Fri Dec 16 17:29:43 UTC 2022
+
+
+  ******  HSPICE Threads Information  ******
+
+  Command Line Threads Count :     1
+  Available CPU Count        :    64
+  Actual Threads Count       :     1
+
+
+  ******  Circuit Statistics  ******
+  # nodes       =     610 # elements   =     421
+  # resistors   =     101 # capacitors =     192 # inductors   =       0
+  # mutual_inds =       0 # vccs       =       0 # vcvs        =       0
+  # cccs        =       0 # ccvs       =       0 # volt_srcs   =       9
+  # curr_srcs   =       0 # diodes     =       0 # bjts        =       0
+  # jfets       =       0 # mosfets    =     119 # U elements  =       0
+  # T elements  =       0 # W elements =       0 # B elements  =       0
+  # S elements  =       0 # P elements =       0 # va device   =       0
+  # vector_srcs =       0 # N elements =       0
+
+
+  ******  Runtime Statistics (seconds)  ******
+
+  analysis           time    # points   tot. iter  conv.iter
+  op point           0.01           1          10
+  transient          0.37       16001        1274         472 rev=        10
+  readin             0.05
+  errchk             0.02
+  setup              0.01
+  output             0.00
+
+
+           peak memory used        295.52 megabytes
+           total cpu time            0.46 seconds
+           total elapsed time        0.28 seconds
+           job started at     11:34:25 02/02/2023
+           job ended   at     11:34:25 02/02/2023
+
+
+
+>info:         ***** hspice job concluded
+ lic: Release hspice token(s) 
+ lic: total license checkout elapse time:        0.03(s)

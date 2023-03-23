@@ -1,0 +1,388 @@
+$DATA1 SOURCE='HSPICE' VERSION='O-2018.09-SP1 linux64' PARAM_COUNT=378
+.TITLE '.title dedicated routing driver'
+ index            inv_rowdecoderstage0_1_pmos inv_columndecoder_2_pmos
+                  wire_sb_load_partial_res wire_lut_e_driver_not_cap
+                  wire_lut_d_driver_cap wire_lut_l5_cap 
+                  inv_lut_c_driver_1_nmos wire_ff_tgate_2_out_res
+                  wire_lut_e_driver_load_cap
+                  inv_general_ble_output_1_nmos
+                  inv_nand2_rowdecoderstage12_1_pmos
+                  ptran_level_shifter_2_nmos rest_ram_local_mux_pmos
+                  inv_sb_mux_2_nmos tran_ff_set_nmos
+                  inv_samp_output_1_pmos
+                  inv_xconfigurabledecoder3ii_2_nmos
+                  inv_ram_local_mux_1_pmos wire_gen_routing_res
+                  wire_local_mux_l2_res wire_lut_f_driver_load_cap
+                  rest_lut_int_buffer_pmos wire_lut_c_driver_res
+                  inv_nand3_xconfigurabledecoder3ii_1_nmos
+                  wire_ff_cc2_out_cap inv_sb_mux_1_pmos
+                  wire_lut_l2_res  wire_local_mux_l2_cap
+                  wire_lut_c_driver_0_rsel_res
+                  inv_lut_int_buffer_1_pmos inv_wordline_driver_4_pmos
+                  inv_rowdecoderstage3_6_pmos inv_ram_local_mux_1_nmos
+                  wire_lut_l3_cap  wire_local_routing_cap
+                  wire_flut_mux_res inv_matmul4x4_ddriver_1_pmos
+                  inv_matmul4x4_ddriver_4_pmos wire_sb_mux_driver_cap
+                  wire_general_ble_output_cap wire_ff_input_out_cap
+                  inv_lut_a_driver_not_2_nmos wire_cb_load_on_cap
+                  inv_wordline_driver_2_pmos inv_ff_cc1_1_pmos
+                  rest_ff_input_select_pmos wire_ram_local_mux_l2_cap
+                  inv_rowdecoderstage3_2_nmos
+                  inv_pgateoutputcrossbar_2_pmos
+                  inv_lut_f_driver_not_1_nmos
+                  wire_lut_b_driver_not_res wire_cb_mux_l1_res
+                  wire_local_mux_l1_cap
+                  inv_xconfigurabledecoderi_1_nmos
+                  wire_local_ble_output_driver_cap
+                  ptran_ff_input_select_nmos inv_lut_a_driver_2_nmos
+                  inv_lut_d_driver_2_nmos
+                  inv_general_ble_output_2_pmos
+                  wire_lut_a_driver_load_res
+                  inv_matmul4x4_local_mux_1_pmos inv_local_mux_1_nmos
+                  ptran_ram_local_mux_l2_nmos inv_writedriver_2_nmos
+                  wire_lut_c_driver_load_cap wire_lut_out_buffer_res
+                  inv_lut_c_driver_1_pmos wire_ff_cc2_out_res
+                  wire_ram_local_mux_l1_res
+                  wire_pgateoutputcrossbar_cap wire_cb_mux_l1_cap
+                  wire_flut_mux_driver_cap wire_lut_a_driver_load_cap
+                  inv_lut_c_driver_not_2_pmos
+                  inv_lut_0sram_driver_2_nmos inv_ff_cc1_2_pmos
+                  wire_memorycell_vertical_res
+                  ptran_ram_local_mux_l1_nmos inv_lut_b_driver_2_nmos
+                  inv_columndecoder_3_pmos wire_lut_a_driver_not_res
+                  wire_lut_out_buffer_cap wire_lut_l5_res 
+                  inv_local_mux_1_pmos
+                  inv_nand3_wordline_driver_1_nmos
+                  rest_lut_out_buffer_pmos wire_ff_tgate_1_out_res
+                  wire_lut_sram_driver_res
+                  wire_general_ble_output_driver_res
+                  inv_lut_out_buffer_1_nmos wire_cb_load_off_cap
+                  ptran_lut_l1_nmos inv_lut_0sram_driver_2_pmos
+                  inv_columndecoder_1_nmos
+                  inv_matmul4x4_local_mux_2_nmos
+                  wire_matmul4x4_local_routing_wire_load_cap
+                  ptran_precharge_side_nmos ptran_equalization_nmos
+                  ptran_local_ble_output_nmos
+                  inv_lut_out_buffer_2_pmos wire_matmul4x4_1_cap
+                  wire_lut_c_driver_not_res
+                  inv_matmul4x4_ddriver_3_nmos inv_cb_mux_1_nmos
+                  ptran_pgateoutputcrossbar_4_nmos inv_flut_mux_1_pmos
+                  wire_cb_load_on_res wire_ram_local_routing_res
+                  inv_xconfigurabledecoderi_1_pmos
+                  inv_lut_e_driver_not_1_nmos wire_lut_l2_cap 
+                  wire_ff_tgate_2_out_cap wire_lut_c_driver_0_res
+                  wire_lut_b_driver_not_cap wire_lut_output_load_1_cap
+                  wire_matmul4x4_local_mux_l2_cap
+                  inv_xconfigurabledecoder2ii_2_nmos
+                  inv_rowdecoderstage3_4_pmos wire_matmul4x4_2_res
+                  wire_ram_local_routing_cap inv_columndecoder_3_nmos
+                  inv_rowdecoderstage12_2_nmos inv_flut_mux_2_pmos
+                  tgate_writedriver_3_nmos inv_lut_b_driver_not_1_nmos
+                  tgate_xconfigurabledecoderi_2_nmos
+                  inv_lut_f_driver_2_pmos
+                  inv_matmul4x4_local_mux_1_nmos inv_ff_cc1_2_nmos
+                  wire_lut_c_driver_0_cap
+                  inv_xconfigurabledecoderiii_2_pmos
+                  inv_pgateoutputcrossbar_3_nmos
+                  inv_xconfigurabledecoder3ii_2_pmos
+                  wire_cb_load_partial_cap wire_ff_input_select_cap
+                  wire_lut_sram_driver_out_cap
+                  inv_nand2_rowdecoderstage3_3_pmos inv_ff_cc2_2_nmos
+                  inv_lut_f_driver_not_2_pmos
+                  wire_local_ble_output_driver_res
+                  inv_lut_c_driver_not_2_nmos inv_samp_output_1_nmos
+                  ptran_lut_l2_nmos wire_sb_load_on_cap
+                  wire_sb_load_off_cap
+                  inv_xconfigurabledecoderiii_2_nmos
+                  inv_wordline_driver_2_nmos wire_matmul4x4_2_cap
+                  wire_lut_to_flut_mux_cap inv_ff_input_1_pmos
+                  inv_lut_int_buffer_1_nmos wire_ff_input_select_res
+                  wire_gen_routing_cap inv_rowdecoderstage3_6_nmos
+                  wire_ff_input_out_res inv_wordline_driver_4_nmos
+                  inv_nand3_rowdecoderstage3_1_pmos
+                  wire_ff_cc1_out_res wire_sb_load_off_res
+                  inv_lut_b_driver_not_2_nmos inv_lut_d_driver_2_pmos
+                  tgate_ff_2_pmos  inv_cb_mux_2_nmos inv_ff_cc2_2_pmos
+                  inv_writedriver_1_nmos
+                  wire_xconfigurabledecoderi_cap
+                  wire_pgateoutputcrossbar_res
+                  wire_general_ble_output_res ptran_local_mux_l1_nmos
+                  wire_ram_local_mux_l1_cap ptran_cb_mux_l2_nmos
+                  inv_ff_input_1_nmos ptran_lut_l4_nmos
+                  wire_lut_c_driver_not_cap inv_flut_mux_2_nmos
+                  ptran_lut_c_driver_0_nmos
+                  inv_rowdecoderstage13_2_nmos
+                  wire_matmul4x4_local_mux_l1_cap
+                  wire_lut_e_driver_not_res wire_lut_b_driver_load_res
+                  inv_columndecoder_2_nmos inv_ff_output_driver_nmos
+                  wire_local_ble_output_res inv_lut_c_driver_0_pmos
+                  inv_lut_a_driver_2_pmos inv_lut_e_driver_not_2_nmos
+                  rest_flut_mux_pmos inv_rowdecoderstage12_2_pmos
+                  wire_ff_cc1_out_cap ptran_lut_l5_nmos
+                  tgate_xconfigurabledecoderi_2_pmos
+                  inv_lut_c_driver_0_nmos wire_wordline_driver_res
+                  ptran_samp_output_1_pmos
+                  wire_matmul4x4_local_mux_l1_res
+                  inv_lut_a_driver_not_1_nmos wire_lut_l6_cap 
+                  inv_matmul4x4_ddriver_4_nmos tgate_ff_1_nmos 
+                  wire_memorycell_vertical_cap
+                  inv_matmul4x4_ddriver_2_nmos
+                  inv_nand2_rowdecoderstage12_1_nmos
+                  wire_lut_a_driver_not_cap wire_lut_output_load_1_res
+                  wire_matmul4x4_local_mux_l2_res
+                  inv_lut_out_buffer_2_nmos
+                  wire_xconfigurabledecoderi_res ptran_flut_mux_nmos
+                  wire_wordline_driver_cap
+                  inv_nand3_xconfigurabledecoder3ii_1_pmos
+                  inv_lut_b_driver_not_1_pmos
+                  wire_lut_b_driver_load_cap
+                  wire_xconfigurabledecoderiii_cap
+                  inv_lut_d_driver_not_2_pmos
+                  wire_lut_f_driver_not_res wire_local_ble_output_cap
+                  inv_lut_int_buffer_2_pmos
+                  inv_matmul4x4_local_mux_2_pmos
+                  inv_lut_e_driver_2_pmos inv_local_ble_output_1_pmos
+                  ptran_sb_mux_l2_nmos inv_flut_mux_1_nmos
+                  wire_rowdecoderstage0_cap ptran_samp_output_2_nmos
+                  rest_lut_c_driver_pmos ptran_samp_output_3_nmos
+                  inv_cb_mux_1_pmos wire_lut_e_driver_cap
+                  ptran_local_mux_l2_nmos wire_flut_mux_driver_res
+                  inv_ff_cc2_1_nmos tgate_ff_2_nmos 
+                  inv_lut_a_driver_not_1_pmos rest_sb_mux_pmos
+                  wire_lut_to_flut_mux_res wire_lut_output_load_2_cap
+                  wire_lut_int_buffer_out_res inv_lut_c_driver_2_nmos
+                  rest_local_ble_output_pmos inv_lut_f_driver_2_nmos
+                  inv_level_shifter_1_pmos inv_ff_output_driver_pmos
+                  wire_ram_local_mux_l2_res wire_cb_mux_driver_cap
+                  rest_general_ble_output_pmos wire_lut_l4_res 
+                  inv_rowdecoderstage3_5_nmos
+                  inv_lut_e_driver_not_2_pmos tran_ff_reset_nmos
+                  wire_matmul4x4_local_mux_driver_cap
+                  wire_lut_a_driver_res inv_lut_c_driver_not_1_nmos
+                  wire_cb_load_off_res wire_lut_int_buffer_out_cap
+                  inv_nand2_xconfigurabledecoderiii_1_nmos
+                  inv_local_ble_output_2_nmos
+                  inv_nand2_rowdecoderstage3_3_nmos
+                  wire_lut_c_driver_0_out_res
+                  wire_lut_d_driver_load_res
+                  wire_matmul4x4_local_routing_wire_load_res
+                  inv_wordline_driver_3_nmos wire_matmul4x4_1_res
+                  wire_lut_int_buffer_cap wire_cb_load_partial_res
+                  rest_cb_mux_pmos inv_writedriver_1_pmos
+                  wire_sb_load_on_res inv_lut_int_buffer_2_nmos
+                  wire_lut_sram_driver_cap wire_lut_c_driver_0_out_cap
+                  wire_lut_d_driver_load_cap
+                  inv_pgateoutputcrossbar_1_pmos
+                  wire_local_ble_output_feedback_res
+                  wire_lut_d_driver_res inv_columndecoder_1_pmos
+                  rest_local_mux_pmos tran_ff_set_n_pmos
+                  wire_lut_b_driver_res wire_lut_c_driver_load_res
+                  ptran_general_ble_output_nmos
+                  inv_wordline_driver_3_pmos tgate_writedriver_3_pmos
+                  wire_local_routing_res wire_lut_c_driver_cap
+                  ptran_matmul4x4_local_mux_l2_nmos
+                  wire_lut_f_driver_res
+                  wire_xconfigurabledecoderiii_res inv_ff_cc2_1_pmos
+                  wire_lut_f_driver_not_cap
+                  inv_general_ble_output_1_pmos
+                  wire_lut_d_driver_not_res
+                  inv_matmul4x4_ddriver_1_nmos
+                  ptran_level_shifter_3_pmos
+                  wire_local_ble_output_feedback_cap
+                  inv_nand3_rowdecoderstage13_1_nmos
+                  rest_matmul4x4_local_mux_pmos ptran_lut_l3_nmos
+                  ptran_samp_output_4_nmos tgate_ff_1_pmos 
+                  wire_sb_mux_l2_cap
+                  inv_nand2_xconfigurabledecoder2ii_1_pmos
+                  wire_lut_f_driver_cap inv_lut_c_driver_2_pmos
+                  wire_ble_outputs_cap inv_matmul4x4_ddriver_2_pmos
+                  ptran_matmul4x4_local_mux_l1_nmos
+                  wire_lut_b_driver_cap wire_cb_mux_driver_res
+                  inv_writedriver_2_pmos inv_sb_mux_1_nmos
+                  wire_memorycell_horizontal_cap
+                  inv_nand3_wordline_driver_1_pmos wire_sb_mux_l2_res
+                  inv_lut_e_driver_2_nmos ptran_sb_mux_l1_nmos
+                  wire_lut_c_driver_0_rsel_cap wire_lut_l4_cap 
+                  wire_lut_sram_driver_out_res
+                  wire_lut_d_driver_not_cap
+                  inv_local_ble_output_2_pmos
+                  inv_rowdecoderstage0_1_nmos
+                  inv_nand2_xconfigurabledecoder2ii_1_nmos
+                  inv_general_ble_output_2_nmos
+                  inv_lut_d_driver_not_1_nmos
+                  inv_lut_a_driver_not_2_pmos
+                  inv_rowdecoderstage3_2_pmos wire_lut_a_driver_cap
+                  inv_pgateoutputcrossbar_1_nmos wire_lut_l1_res 
+                  inv_matmul4x4_ddriver_3_pmos
+                  wire_lut_e_driver_load_res wire_cb_mux_l2_res
+                  wire_matmul4x4_local_mux_driver_res
+                  inv_ff_cc1_1_nmos wire_lut_f_driver_load_res
+                  inv_lut_e_driver_not_1_pmos wire_ble_outputs_res
+                  wire_rowdecoderstage0_res wire_lut_l1_cap 
+                  inv_lut_out_buffer_1_pmos wire_lut_output_load_2_res
+                  inv_pgateoutputcrossbar_2_nmos
+                  inv_level_shifter_1_nmos wire_sb_mux_l1_cap
+                  inv_pgateoutputcrossbar_3_pmos
+                  inv_lut_b_driver_2_pmos tran_ff_reset_n_pmos
+                  inv_nand3_rowdecoderstage3_1_nmos
+                  inv_xconfigurabledecoder2ii_2_pmos
+                  wire_sb_load_partial_cap inv_lut_d_driver_not_2_nmos
+                  wire_cb_mux_l2_cap inv_rowdecoderstage3_4_nmos
+                  wire_lut_l6_res  inv_lut_c_driver_not_1_pmos
+                  inv_nand2_xconfigurabledecoderiii_1_pmos
+                  wire_sb_mux_l1_res
+                  wire_general_ble_output_driver_cap
+                  wire_ff_tgate_1_out_cap wire_local_mux_l1_res
+                  inv_lut_f_driver_not_1_pmos
+                  inv_nand3_rowdecoderstage13_1_pmos wire_lut_l3_res 
+                  wire_flut_mux_cap inv_cb_mux_2_pmos
+                  inv_lut_d_driver_not_1_pmos wire_sb_mux_driver_res
+                  inv_rowdecoderstage3_5_pmos
+                  inv_rowdecoderstage13_2_pmos wire_lut_int_buffer_res
+                  ptran_cb_mux_l1_nmos inv_sb_mux_2_pmos
+                  inv_lut_b_driver_not_2_pmos wire_lut_e_driver_res
+                  inv_lut_f_driver_not_2_nmos
+                  inv_local_ble_output_1_nmos
+                  wire_memorycell_horizontal_res
+                  meas_inv_matmul4x4_ddriver_1_tfall
+                  meas_inv_matmul4x4_ddriver_1_trise
+                  meas_inv_matmul4x4_ddriver_2_tfall
+                  meas_inv_matmul4x4_ddriver_2_trise
+                  meas_inv_matmul4x4_ddriver_3_tfall
+                  meas_inv_matmul4x4_ddriver_3_trise
+                  meas_inv_matmul4x4_ddriver_4_tfall
+                  meas_inv_matmul4x4_ddriver_4_trise meas_total_tfall
+                  meas_total_trise meas_logic_low_voltage
+                  meas_current     meas_avg_power   temper          
+                  alter#          
+ 1                 1.575e-06        8.550e-07        958.5426       
+                   1.508e-17        3.557e-17        3.399e-16      
+                   3.600e-07          7.4733         9.328e-16      
+                   9.000e-08        4.500e-08        4.500e-08      
+                   4.500e-08        1.035e-06        4.500e-08      
+                   4.500e-08        1.800e-07        3.150e-07      
+                   1.100e+03         64.2336         9.328e-16      
+                   4.500e-08         12.2028         4.500e-08      
+                   1.500e-17        7.650e-07         26.6242       
+                   1.025e-16        326.2133         9.000e-08      
+                   1.755e-06        2.250e-07        2.700e-07      
+                   8.498e-17        3.213e-15         22.0014       
+                   4.500e-08        4.500e-08        2.732e-17      
+                   2.255e-17        1.437e-17        4.500e-07      
+                   3.060e-15        9.000e-08        1.800e-07      
+                   4.500e-08        1.164e-16        4.500e-08      
+                   2.250e-07        9.000e-08         12.1235       
+                   116.7438         1.025e-16        2.700e-07      
+                   1.503e-17        1.800e-07        5.850e-07      
+                   2.700e-07        6.750e-07        584.4501       
+                   4.500e-08        1.350e-07        1.800e-07      
+                   5.499e-08        9.328e-16         12.0337       
+                   3.600e-07          9.3985          72.9236       
+                   8.461e-16        1.863e-16        2.245e-17      
+                   9.328e-16        3.600e-07        9.000e-08      
+                   5.850e-08        763.5149         1.350e-07      
+                   5.400e-07        2.295e-06         12.5333       
+                   1.921e-17        212.9939         2.700e-07      
+                   4.500e-08        4.500e-08          8.4286       
+                     9.4203          10.4876         4.500e-07      
+                   3.060e-15        1.800e-07        2.250e-07      
+                   3.150e-07        2.250e-07        6.547e-15      
+                   9.450e-07        4.500e-08        1.350e-07      
+                   8.550e-07        6.547e-15         11.5586       
+                   4.500e-08        9.000e-08        2.250e-07      
+                   4.950e-07        1.917e+03        783.5806       
+                   6.750e-07        9.000e-08        4.249e-17      
+                   1.193e-17         14.8714         1.935e-17      
+                   7.546e-17        1.829e-16        2.250e-07      
+                   4.500e-08        2.198e+03        1.251e-15      
+                   1.665e-06        1.800e-07        1.800e-06      
+                   2.500e-07        2.700e-07        2.250e-07      
+                   4.500e-07        9.000e-08        4.500e-08      
+                   2.373e-17        4.050e-07        4.500e-07      
+                   2.250e-07        3.060e-15        2.125e-17      
+                   1.283e-17        4.500e-08        4.500e-08      
+                   1.800e-07          9.4203         3.150e-07      
+                   4.500e-08        2.700e-07        1.530e-15      
+                   1.530e-15        3.150e-07        9.000e-08      
+                   3.005e-14        4.664e-16        3.690e-07      
+                   4.500e-07         13.3121         1.504e-14      
+                   2.250e-07          9.0008         7.200e-07      
+                   4.500e-08          8.4286         958.5426       
+                   4.050e-07        6.300e-07        4.500e-08      
+                   2.250e-07        5.850e-08        5.499e-08      
+                   2.976e-16        530.1586          14.1293       
+                   4.500e-08        1.164e-16        1.350e-07      
+                   1.350e-07        4.500e-07        1.845e-17      
+                   3.600e-07        2.700e-07        1.800e-07      
+                   1.829e-16          9.4470         584.4501       
+                   9.900e-07        1.800e-07         12.3903       
+                   1.305e-06        1.260e-06        1.800e-07      
+                   4.500e-08        2.250e-07        1.345e-17      
+                   4.950e-07        2.250e-07        5.850e-07      
+                   3.106e+03        2.500e-07        114.5873       
+                   3.150e-07        6.799e-16        4.500e-08      
+                   4.500e-08        1.815e-15        4.500e-08      
+                   4.500e-08        2.000e-17         47.2803       
+                   114.5873         1.800e-07        186.4778       
+                   9.000e-07        7.384e-15        4.500e-08      
+                   4.950e-07        9.328e-16        5.035e-17      
+                   2.250e-07          9.4470         1.977e-17      
+                   6.750e-07        4.500e-08        3.150e-07      
+                   2.250e-07        2.700e-07        7.650e-07      
+                   1.530e-15        9.999e-08        4.500e-08      
+                   9.000e-07        4.500e-07        3.375e-17      
+                   9.000e-08         14.0670         4.500e-08      
+                   4.500e-08        5.400e-07        4.500e-08      
+                   292.2251         9.694e-17         10.3748       
+                   2.700e-07        4.500e-08        1.800e-07      
+                   7.500e-08        4.365e-07         72.9236       
+                   1.743e-17        4.500e-08        106.4969       
+                   4.500e-08        1.800e-07        4.500e-08      
+                   1.348e-17         23.9872         1.800e-07      
+                   1.917e+03        1.656e-17        4.500e-08      
+                   3.150e-07        4.500e-08         11.7804       
+                   584.4501         4.102e+03        2.250e-07      
+                   4.102e+03        1.819e-17        1.917e+03      
+                   4.500e-08        1.100e-07        958.5426       
+                   1.350e-07        1.503e-17        1.880e-17      
+                   9.328e-16        1.350e-07         40.7616       
+                    22.2842         6.300e-07        4.500e-08      
+                   4.500e-08         23.7065         584.4501       
+                   2.250e-07        2.700e-07        1.500e-07      
+                   2.013e+03        1.948e-17        4.500e-08      
+                    21.6440          31.5455         5.850e-08      
+                   1.508e-17        4.050e-07         10.2061       
+                   4.500e-08        4.500e-08        6.505e-17      
+                   4.500e-08        4.500e-08        2.250e-07      
+                   2.500e-07        4.500e-08        2.744e-16      
+                   4.500e-08        3.454e-17        6.300e-07      
+                   2.854e-16        4.500e-08        4.500e-08      
+                   3.784e-17         10.9189         1.100e-07      
+                   2.250e-07        7.384e-15        4.500e-08      
+                   171.9095         1.350e-07        1.800e-07      
+                   5.206e-16        1.700e-16          8.0382       
+                   1.629e-17        1.260e-06        4.950e-07      
+                   4.500e-08        1.350e-07        1.350e-07      
+                   4.500e-07        4.500e-08        3.828e-17      
+                   1.350e-07         13.3121         4.500e-08      
+                   584.4501         116.7438           8.4481       
+                   1.350e-07        584.4501         1.800e-07      
+                   178.8161         958.6000         2.125e-17      
+                   1.350e-07         60.7428         1.800e-07      
+                   4.500e-08        2.744e-16        1.305e-06      
+                   1.125e-06        4.500e-08        4.500e-08      
+                   3.150e-07        1.530e-15        2.250e-07      
+                   1.863e-16        4.500e-08        425.9878       
+                   4.950e-07        4.500e-08        171.9095       
+                   1.674e-17        1.345e-17         64.2336       
+                   1.800e-07        4.500e-08         53.2485       
+                   3.511e-17        3.600e-07        2.700e-07      
+                    17.1179         4.500e-08        2.250e-07      
+                    11.3945         9.000e-08        2.970e-06      
+                   4.050e-07         21.1474         1.800e-07      
+                   9.000e-08        3.106e+03        1.336e-10      
+                   2.071e-10        4.757e-10        4.278e-10      
+                   6.968e-10        7.894e-10        1.304e-09      
+                   1.820e-09        1.378e-09        1.890e-09      
+                     0.            -8.217e-14        1.643e-05      
+                    25.0000        1               

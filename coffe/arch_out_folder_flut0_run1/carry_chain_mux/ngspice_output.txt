@@ -1,0 +1,392 @@
+warning, can't find model 'cw' from line
+
+    cwire_1 n_in gnd cw
+
+warning, can't find model 'rw' from line
+
+    rwire_1 n_in n_out rw
+
+warning, can't find model 'cw' from line
+
+    cwire_2 n_out gnd cw
+
+Warning: vin: no DC value, transient time 0 value used
+
+Note: Starting dynamic gmin stepping
+
+Trying gmin =   1.0000E-03 Note: One successful gmin step
+
+Trying gmin =   1.0000E-04 Note: One successful gmin step
+
+Trying gmin =   1.0000E-05 Note: One successful gmin step
+
+Trying gmin =   1.0000E-06 Warning: Further gmin increment
+
+Trying gmin =   5.6234E-06 Warning: Further gmin increment
+
+Trying gmin =   8.6596E-06 Note: One successful gmin step
+
+Trying gmin =   6.9783E-06 Note: One successful gmin step
+
+Trying gmin =   5.0481E-06 Note: One successful gmin step
+
+Trying gmin =   3.6517E-06 Note: One successful gmin step
+
+Trying gmin =   2.2468E-06 Note: One successful gmin step
+
+Trying gmin =   1.0843E-06 Note: One successful gmin step
+
+Trying gmin =   3.6354E-07 Note: One successful gmin step
+
+Trying gmin =   7.0572E-08 Note: One successful gmin step
+
+Trying gmin =   7.0572E-09 Note: One successful gmin step
+
+Trying gmin =   7.0572E-10 Note: One successful gmin step
+
+Trying gmin =   7.0572E-11 Note: One successful gmin step
+
+Trying gmin =   7.0572E-12 Note: One successful gmin step
+
+Trying gmin =   1.0000E-12 Note: One successful gmin step
+
+Note: Dynamic gmin stepping completed
+
+******
+
+** ngspice-37+ : Circuit level simulation program
+
+** The U. C. Berkeley CAD Group
+
+** Copyright 1985-1994, Regents of the University of California.
+
+** Copyright 2001-2022, The ngspice team.
+
+** Please get your ngspice manual from http://ngspice.sourceforge.net/docs.html
+
+** Please file your bug-reports at http://ngspice.sourceforge.net/bugrep.html
+
+** Creation Date: Mon Jul 25 11:02:59 UTC 2022
+
+******
+
+
+
+Note: No compatibility mode selected!
+
+
+
+
+
+Circuit: Carry chain mux
+
+
+
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+
+
+Warning: toxe, toxp and dtox all given and toxe != toxp + dtox; dtox ignored.
+
+
+
+Initial Transient Solution
+
+--------------------------
+
+
+
+Node                                   Voltage
+
+----                                   -------
+
+vdd                                        0.8
+
+vdd_lp                                    0.95
+
+vsram                                        1
+
+vrefmtj                                  0.627
+
+vclmpmtj                                 0.653
+
+vsram_n                                      0
+
+ground                                       0
+
+n_in                                         0
+
+vdd_test                                   0.8
+
+xcarrychain_shape1.n_a_in_bar      9.46165e-05
+
+xcarrychain_shape1.n_a_in             0.799995
+
+xcarrychain_shape1.n_cin_in_bar        0.799627
+
+xcarrychain_shape1.n_cin_in        2.77682e-07
+
+n_p_1                                 0.799835
+
+xcarrychain_shape1.n_sum_internal     4.76695e-05
+
+xcarrychain_shape1.n_p_bar         2.39843e-05
+
+xcarrychain_shape1.n_b_in          6.67573e-07
+
+xcarrychain_shape1.n_cout_in          0.799414
+
+n_1_1                                 0.799414
+
+n_hang                                0.799947
+
+xcarrychain_shape1.n_sum_in           0.799947
+
+xcarrychain_shape2.n_a_in_bar      4.76774e-05
+
+xcarrychain_shape2.n_a_in             0.799995
+
+xcarrychain_shape2.n_cin_in_bar     0.000119281
+
+xcarrychain_shape2.n_cin_in           0.799413
+
+n_p_2                                 0.799835
+
+xcarrychain_shape2.n_sum_internal        0.799307
+
+xcarrychain_shape2.n_p_bar         2.39322e-05
+
+xcarrychain_shape2.n_b_in          6.66831e-07
+
+xcarrychain_shape2.n_cout_in        0.00016676
+
+n_1_2                              0.000167038
+
+n_hang_2                           2.49585e-05
+
+xcarrychain_shape2.n_sum_in        2.49585e-05
+
+xcarrychain_shape3.n_a_in_bar      9.48584e-05
+
+xcarrychain_shape3.n_a_in             0.799995
+
+xcarrychain_shape3.n_cin_in_bar        0.799733
+
+xcarrychain_shape3.n_cin_in        0.000167315
+
+n_p_3                                 0.799835
+
+xcarrychain_shape3.n_sum_internal     0.000214654
+
+xcarrychain_shape3.n_p_bar         2.39844e-05
+
+xcarrychain_shape3.n_b_in          6.67575e-07
+
+xcarrychain_shape3.n_cout_in          0.799626
+
+n_hang_3                              0.799626
+
+n_1_3                                 0.799947
+
+xcarrychain_shape3.n_sum_in           0.799947
+
+n_1_4                              4.92472e-05
+
+xthemux.n_1_1                      6.09646e-05
+
+xthemux.n_1_2                      6.09901e-05
+
+xthemux.n_1_3                      6.09901e-05
+
+xthemux.n_2_1                         0.799946
+
+xthemux.n_2_2                         0.799946
+
+n_1_5                               5.1452e-05
+
+xlut_output_load.n_1_1             5.24667e-05
+
+xlut_output_load.xff.n_1_1         5.77127e-05
+
+xlut_output_load.xff.n_1_2         5.77429e-05
+
+xlut_output_load.xff.n_1_3         5.77429e-05
+
+xlut_output_load.xff.n_2_1            0.799969
+
+xlut_output_load.xff.n_2_2            0.799969
+
+xlut_output_load.xff.n_3_1         0.000106248
+
+xlut_output_load.xff.n_3_2         0.000106137
+
+xlut_output_load.xff.n_4_1            0.799955
+
+xlut_output_load.xff.n_4_2            0.799955
+
+xlut_output_load.xff.n_5_1            0.799936
+
+xlut_output_load.xff.n_5_2            0.799936
+
+xlut_output_load.xff.n_6_1         3.43642e-05
+
+xlut_output_load.xff.n_6_2         3.43647e-05
+
+xlut_output_load.n_hang1              0.799978
+
+xlut_output_load.n_1_2             5.35843e-05
+
+xlut_output_load.xble_outputs.n_1_2     5.38126e-05
+
+xlut_output_load.xble_outputs.xlocal_ble_output_1.n_1_1     6.43053e-05
+
+xlut_output_load.xble_outputs.xlocal_ble_output_1.n_1_2     6.43308e-05
+
+xlut_output_load.xble_outputs.xlocal_ble_output_1.n_1_3     6.43308e-05
+
+xlut_output_load.xble_outputs.xlocal_ble_output_1.n_2_1        0.799946
+
+xlut_output_load.xble_outputs.xlocal_ble_output_1.n_2_2        0.799946
+
+n_local_out                        2.78694e-05
+
+xlut_output_load.xble_outputs.xlocal_ble_output_2.n_1_1      6.4077e-05
+
+xlut_output_load.xble_outputs.xlocal_ble_output_2.n_1_2     6.41025e-05
+
+xlut_output_load.xble_outputs.xlocal_ble_output_2.n_1_3     6.41025e-05
+
+xlut_output_load.xble_outputs.xlocal_ble_output_2.n_2_1        0.799946
+
+xlut_output_load.xble_outputs.xlocal_ble_output_2.n_2_2        0.799946
+
+xlut_output_load.xble_outputs.n_hang_3     2.78694e-05
+
+xlut_output_load.xble_outputs.n_1_4     5.40409e-05
+
+xlut_output_load.xble_outputs.xgeneral_ble_output_1.n_1_1     6.45336e-05
+
+xlut_output_load.xble_outputs.xgeneral_ble_output_1.n_1_2     6.45591e-05
+
+xlut_output_load.xble_outputs.xgeneral_ble_output_1.n_1_3     6.45591e-05
+
+xlut_output_load.xble_outputs.xgeneral_ble_output_1.n_2_1        0.799946
+
+xlut_output_load.xble_outputs.xgeneral_ble_output_1.n_2_2        0.799946
+
+n_general_out                       3.3228e-05
+
+xlut_output_load.xble_outputs.n_1_5     5.42692e-05
+
+xlut_output_load.xble_outputs.xgeneral_ble_output_2.n_1_1     6.47619e-05
+
+xlut_output_load.xble_outputs.xgeneral_ble_output_2.n_1_2     6.47874e-05
+
+xlut_output_load.xble_outputs.xgeneral_ble_output_2.n_1_3     6.47874e-05
+
+xlut_output_load.xble_outputs.xgeneral_ble_output_2.n_2_1        0.799946
+
+xlut_output_load.xble_outputs.xgeneral_ble_output_2.n_2_2        0.799946
+
+xlut_output_load.xble_outputs.n_hang_5     2.80926e-05
+
+xgeneral_ble_output_load.n_1_2     3.32352e-05
+
+xgeneral_ble_output_load.n_1_3     3.32424e-05
+
+xgeneral_ble_output_load.n_1_4     3.32495e-05
+
+xgeneral_ble_output_load.n_1_5     3.32567e-05
+
+xgeneral_ble_output_load.n_1_6     3.32639e-05
+
+xgeneral_ble_output_load.n_1_7     3.32711e-05
+
+xgeneral_ble_output_load.n_1_8     3.32783e-05
+
+xgeneral_ble_output_load.xsb_mux_partial_1.n_1      3.3387e-05
+
+xgeneral_ble_output_load.xsb_mux_partial_1.n_1_1      3.3387e-05
+
+xgeneral_ble_output_load.xsb_mux_partial_1.n_1_2      3.3387e-05
+
+xgeneral_ble_output_load.xsb_mux_partial_1.n_1_3      3.3387e-05
+
+xgeneral_ble_output_load.xsb_mux_partial_1.n_1_4      3.3387e-05
+
+xgeneral_ble_output_load.n_meas_point     3.32853e-05
+
+xgeneral_ble_output_load.xsb_mux_on_1.xsb_mux_on_mux_only.n_1     4.06804e-05
+
+xgeneral_ble_output_load.xsb_mux_on_1.xsb_mux_on_mux_only.n_1_1     4.08337e-05
+
+xgeneral_ble_output_load.xsb_mux_on_1.xsb_mux_on_mux_only.n_1_2      4.0987e-05
+
+xgeneral_ble_output_load.xsb_mux_on_1.xsb_mux_on_mux_only.n_1_3     4.11403e-05
+
+xgeneral_ble_output_load.xsb_mux_on_1.xsb_mux_on_mux_only.n_1_4     4.12936e-05
+
+xgeneral_ble_output_load.xsb_mux_on_1.xsb_mux_on_mux_only.n_2     4.66176e-05
+
+xgeneral_ble_output_load.xsb_mux_on_1.n_1_1     4.69117e-05
+
+xgeneral_ble_output_load.xsb_mux_on_1.xsb_mux_on_mux_only.n_2_1     4.69116e-05
+
+xgeneral_ble_output_load.xsb_mux_on_1.xsb_mux_driver.n_1_1        0.799885
+
+xgeneral_ble_output_load.xsb_mux_on_1.xsb_mux_driver.n_1_2        0.799885
+
+n_hang1                            5.77753e-05
+
+v_flut#branch                     -3.66192e-08
+
+vin#branch                         8.72167e-09
+
+vground#branch                     5.28524e-07
+
+vsram_n#branch                     1.12491e-16
+
+vclmomtjn#branch                             0
+
+vrefmtjn#branch                              0
+
+vsram#branch                      -1.36541e-09
+
+vsupplylp#branch                             0
+
+vsupply#branch                    -5.27158e-07
+
+
+
+ Reference value :  5.99600e-11 Reference value :  3.59960e-10 Reference value :  6.75960e-10 Reference value :  9.91960e-10 Reference value :  1.30896e-09 Reference value :  1.62496e-09 Reference value :  1.94096e-09 Reference value :  2.20596e-09 Reference value :  2.51396e-09 Reference value :  2.83096e-09 Reference value :  3.14596e-09 Reference value :  3.46096e-09 Reference value :  3.77396e-09
+
+No. of Data Rows : 4019
+
+
+
+  Measurements for Transient Analysis
+
+
+
+meas_inv_carry_chain_mux_1_tfall=  4.941996e-11 targ=  1.689786e-10 trig=  1.195586e-10
+
+meas_inv_carry_chain_mux_1_trise=  4.120774e-11 targ=  2.156288e-09 trig=  2.115080e-09
+
+meas_inv_carry_chain_mux_2_tfall=  8.979572e-11 targ=  2.204876e-09 trig=  2.115080e-09
+
+meas_inv_carry_chain_mux_2_trise=  9.971523e-11 targ=  2.192738e-10 trig=  1.195586e-10
+
+meas_total_tfall    =  8.979572e-11 targ=  2.204876e-09 trig=  2.115080e-09
+
+meas_total_trise    =  9.971523e-11 targ=  2.192738e-10 trig=  1.195586e-10
+
+meas_logic_low_voltage=  3.323403e-05
+
+meas_current        =   -4.96588e-15 from=  0.00000e+00 to=  4.00000e-09
+
+meas_avg_power      =  9.93177e-07
+
+
+
+ngspice-37+ done
+

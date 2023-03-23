@@ -13,7 +13,7 @@ PARAMETERS_DATA_PATH = "parameters.l"
 # The contents of 
 DATA_SWEEP_PATH = "data.txt"
 
-
+temp_count = 0
 class SpiceInterface(object):
     """
     Defines an HSPICE interface class. 
@@ -24,7 +24,7 @@ class SpiceInterface(object):
 
         # This simulation counter keeps track of number of HSPICE sims performed.
         self.simulation_counter = 0
-
+	
         return
 
 
@@ -34,8 +34,7 @@ class SpiceInterface(object):
         """
 
         return self.simulation_counter
-
-
+ 
     def _setup_data_sweep_file(self, parameter_dict):
         """
         Create an HSPICE .DATA statement with the data from parameter_dict.
@@ -47,10 +46,35 @@ class SpiceInterface(object):
 
         # Get a list of parameter names
         param_list = parameter_dict.keys()
-
+	#print(parameter_dict)
         # Write out parameters to a "easy to read format" file (this just helps for debug) 
         # MAKING DATA.TXT
-        data_file = open(DATA_SWEEP_PATH, 'w')
+        global temp_count
+        print("THIS IS A TEST: " + str(temp_count))
+        if temp_count == 0:
+		    data_file = open('data0.txt', 'w')
+        elif temp_count==1:
+		    data_file = open('data1.txt', 'w')
+        elif temp_count==2:
+            data_file = open('data2.txt', 'w')
+        elif temp_count==3:
+            data_file = open('data3.txt', 'w')
+        elif temp_count==4:
+            data_file = open('data4.txt', 'w')
+        elif temp_count==5:
+            data_file = open('data5.txt', 'w')
+        elif temp_count==6:
+            data_file = open('data6.txt', 'w')
+        elif temp_count==7:
+            data_file = open('data7.txt', 'w')
+        elif temp_count==8:
+            data_file = open('data8.txt', 'w')
+        elif temp_count==9:
+            data_file = open('data9.txt', 'w')
+        elif temp_count==10:
+            data_file = open('data10.txt', 'w')
+        else:
+            data_file = open(DATA_SWEEP_PATH, 'w')
         data_file.write("param".ljust(40) + "value".ljust(20) + "\n")
         dashes = "-"*60
         data_file.write(dashes+ "\n")
@@ -61,7 +85,12 @@ class SpiceInterface(object):
 
             data_file.write("\n")
         data_file.close()
-
+        temp_count = temp_count + 1
+	
+        # Replace this section for NGSpice 
+        
+        # Write the .DATA HPSICE file. This first part writes out the header.
+        # MAKING PATAMETERS.L
         # Replace this section for NGSpice 
         
         # Write the .DATA HPSICE file. This first part writes out the header.
@@ -74,8 +103,7 @@ class SpiceInterface(object):
         	
         parameters_file.write(".ENDL PARAMETERS_DATA")
         parameters_file.close()
-	 
-        """
+        '''
         hspice_data_file = open(HSPICE_DATA_SWEEP_PATH, 'w')
         hspice_data_file.write(".DATA sweep_data")
         item_counter = 0
@@ -105,7 +133,7 @@ class SpiceInterface(object):
         hspice_data_file.write(".ENDDATA")
     
         hspice_data_file.close()
-    	"""
+    	'''
         return
     
 
@@ -167,8 +195,11 @@ class SpiceInterface(object):
         # Creat an output file having the ending .lis
         # Run the SPICE simulation and capture output
         output_filename = sp_filename.rstrip(".sp") + ".lis"
-        output_file = open(output_filename, "w")
-        
+        #Creating .lis for preserving 
+        output_file1 = open(output_filename, "w")
+        #Creating .lis to convert to .mt0
+        output_file2 = open(output_filename, "w")
+        #output_file3= open(temp.txt,"w")
         hspice_success = False
         hspice_runs = 0
 
@@ -179,7 +210,24 @@ class SpiceInterface(object):
         #    In this case, we check if the ".mt0" exists, if not, we run hspice again. 
         while (not hspice_success) :
             utils.check_for_time()
-            subprocess.call(["ngspice", sp_filename], stdout=output_file, stderr=output_file)
+            spice_flag = utils.return_spice_flag()
+            if(spice_flag):
+            	subprocess.call(["ngspice", sp_filename], stdout=output_file1, stderr=output_file1)
+            else:
+            	subprocess.call(["hspice", sp_filename], stdout=output_file1, stderr=output_file1)
+            
+            #Added so that we can have a .lis and a .mt0 files with the same stdout log
+            output_file1.close()
+            output_file1 = open(output_filename, "r")
+            ##
+            ft = open("ngspice_output.txt","w")
+            for line in output_file1:
+                ft.write(line + "\n")
+            ft.close()
+            ##
+            for line in output_file1:
+            	output_file2.write(line)
+            	#output_file3.write(line)
             
 	    		
             # how come this file is closed here, it should be closed only if there is a success
@@ -188,9 +236,7 @@ class SpiceInterface(object):
             
             # HSPICE should print the measurements in a file having the same
             # name as the output file with .mt0 ending
-           
             mt0_path = output_filename.replace(".lis", ".mt0")
-            
             p = Path(output_filename)
 	    p.rename(p.with_suffix('.mt0'))
 
@@ -198,14 +244,14 @@ class SpiceInterface(object):
             # check that the ".mt0" file is there
             
             #print(os.path.isfile(mt0_path))
-            
             if os.path.isfile(mt0_path) :
                 # store the measurments in a dictionary
                 spice_measurements = self.parse_mt1(mt0_path)
                 # delete results file to avoid confusion in future runs
-                os.remove(mt0_path)
+                # os.remove(mt0_path) 26/1/23 commented
                 hspice_success = True
-                output_file.close()
+                output_file1.close()
+                output_file2.close()
             # NGSPICE failed to run
             else :
                 hspice_runs = hspice_runs + 1
@@ -222,7 +268,6 @@ class SpiceInterface(object):
 
         # Return to saved cwd
         os.chdir(saved_cwd)
-           
         return spice_measurements
 
     def parse_mt1(self, filepath):

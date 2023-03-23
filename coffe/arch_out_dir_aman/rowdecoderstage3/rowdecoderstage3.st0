@@ -1,0 +1,67 @@
+****** HSPICE -- K-2015.06-SP2 linux64 (Nov 18 2015) ******
+ Input File: rowdecoderstage3.sp
+ lic:
+ lic: FLEXlm: v11.2.1
+ lic: USER:   aarora1              HOSTNAME: luigi
+ lic: HOSTID: "782bcb44a06e"       PID:      26140
+ lic: Using FLEXlm license file:
+ lic: /usr/local/packages/synopsys_2015/key
+ lic: Checkout 1 hspice
+ lic: License/Maintenance for hspice will expire on 14-jan-2021/2019.06
+ lic: 2(in_use)/100(total) FLOATING license(s) on SERVER /usr/local/packages/synopsys_2015/key
+ lic:
+ init: begin read circuit files,  cpu clock=  3.10E-01
+       option search = /usr/local/packages/synopsys_2015/hspice/hspice/
+                         parts/ad
+       option search = /usr/local/packages/synopsys_2015/hspice/hspice/
+                         parts/ad
+       option search = /usr/local/packages/synopsys_2015/hspice/hspice/
+                         parts/behave
+       option search = /usr/local/packages/synopsys_2015/hspice/hspice/
+                         parts/bjt
+       option search = /usr/local/packages/synopsys_2015/hspice/hspice/
+                         parts/burr_brn
+       option search = /usr/local/packages/synopsys_2015/hspice/hspice/
+                         parts/comlinear
+       option search = /usr/local/packages/synopsys_2015/hspice/hspice/
+                         parts/dio
+       option search = /usr/local/packages/synopsys_2015/hspice/hspice/
+                         parts/fet
+       option search = /usr/local/packages/synopsys_2015/hspice/hspice/
+                         parts/lin_tech
+       option search = /usr/local/packages/synopsys_2015/hspice/hspice/
+                         parts/pci
+       option search = /usr/local/packages/synopsys_2015/hspice/hspice/
+                         parts/signet
+       option search = /usr/local/packages/synopsys_2015/hspice/hspice/
+                         parts/ti
+       option search = /usr/local/packages/synopsys_2015/hspice/hspice/
+                         parts/tline
+       option search = /usr/local/packages/synopsys_2015/hspice/hspice/
+                         parts/xilinx
+       option runlvl
+       option brief =     1.00
+ init: end read circuit files,  cpu clock=  3.20E-01 peak memory=       196 mb
+ init: begin check errors,  cpu clock=  3.20E-01
+ init: end check errors,  cpu clock=  3.50E-01 peak memory=       197 mb
+ init: begin setup matrix, pivot=     0 cpu clock=  3.50E-01
+       establish matrix -- done,  cpu clock=  3.50E-01 peak memory=       198 mb
+       re-order matrix -- done,  cpu clock=  3.60E-01 peak memory=       198 mb
+ init: end setup matrix,  cpu clock=  3.60E-01 peak memory=       198 mb
+ data: data=sweep_data      i103           }=    9.00E-07
+ dcop: begin dcop,  cpu clock=  3.60E-01
+ dcop: end dcop,  cpu clock=  3.90E-01 peak memory=       198 mb  tot_iter=      20
+ sweep: tran tran1    begin, stop_t=  4.00E-09 #sweeps=4001 cpu clock=  4.00E-01
+ tran: time= 4.5449E-10 tot_iter=     183 conv_iter=      60 cpu clock= 5.70E-01
+ tran: time= 9.8451E-10 tot_iter=     189 conv_iter=      63 cpu clock= 5.80E-01
+ tran: time= 1.3845E-09 tot_iter=     193 conv_iter=      65 cpu clock= 5.80E-01
+ tran: time= 1.7845E-09 tot_iter=     197 conv_iter=      67 cpu clock= 5.80E-01
+ tran: time= 2.0010E-09 tot_iter=     199 conv_iter=      68 cpu clock= 5.80E-01
+ tran: time= 2.4542E-09 tot_iter=     330 conv_iter=     115 cpu clock= 7.30E-01
+ tran: time= 2.9346E-09 tot_iter=     336 conv_iter=     118 cpu clock= 7.40E-01
+ tran: time= 3.3346E-09 tot_iter=     340 conv_iter=     120 cpu clock= 7.40E-01
+ tran: time= 3.7346E-09 tot_iter=     344 conv_iter=     122 cpu clock= 7.50E-01
+ tran: time= 4.0000E-09 tot_iter=     348 conv_iter=     124 cpu clock= 7.50E-01
+ sweep: tran tran1    end,  cpu clock=  7.50E-01 peak memory=       198 mb
+>info:         ***** hspice job concluded
+ lic: Release hspice token(s)

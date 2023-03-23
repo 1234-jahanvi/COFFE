@@ -1,0 +1,37 @@
+
+
+Setting Timing Driven Routing Constraints ...  Thu Feb  2 11:33:14 2023
+================================================================================
+
+DESIGN BOUNDARY (0.00 0.00)(35.94 83.34)
+slack(+1.641, +2.019, +2.960) std_dev(0.542) base(1.641)
++1.691 (64), +1.741 (24), +1.791 (30), +1.841 (34), +1.891 (33)
++1.941 (20), +2.041 (21), +2.141 (13), +2.241 (5), +2.441 (19)
++2.641 (31), +3.141 (34), +3.641 (0), +4.641 (0), +4.641^(0)
+
+[1] ...
+select (+1.641 : +2.000)
+total_net(353) select(222) bad(0) tieup(0) special(0) dont_route(3)
+hi_fanout(0) already_constr(0) short_net(0) pos_slack(128)
+evaluate 185 nets between (+1.641 : +1.889)
+1.2(75) 1.4(9) 1.6(11) 1.8(16)
+2.0(6) 2.2(8) 2.5(10) 2.7(5)
+3.0(6) 3.5(6) 4.0(10) 5.0(7)
+6.0(6) 7.0(0) 8.0(0)
+
+[2] ...
+select (+1.641 : +1.641)
+total_net(353) select(0) bad(0) tieup(0) special(0) dont_route(3)
+hi_fanout(0) already_constr(0) short_net(243) no_timing(0) pos_slack(107)
+
+
+[3] ...
+M1 res 0.073600 ohm, cap 0.352447 ff, delay 0.432335 ns
+M2 res 0.060400 ohm, cap 0.444774 ff, delay 0.335804 ns
+M3 res 0.060400 ohm, cap 0.481174 ff, delay 0.363286 ns
+M4 res 0.060400 ohm, cap 0.444774 ff, delay 0.335804 ns
+prefer (2 - 4)
+select (+1.641 : +0.000)
+total_net(353) select(0) bad(0) tieup(0) special(0) dont_route(3)
+hi_fanout(0) already_constr(0) short_net(350) pos_slack(0)
+

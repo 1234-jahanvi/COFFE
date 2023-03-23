@@ -10,6 +10,7 @@ import datetime
 FIRS_COL_WIDTH = 30  #First solu
 MIDL_COL_WIDTH = 13
 LAST_COL_WIDTH = 22
+spice_flag_global = 0
 
 def compare_tfall_trise(tfall, trise):
     """ Compare tfall and trise and returns largest value or -1.0
@@ -445,6 +446,9 @@ def print_vpr_areas(report_file, fpga_inst):
     print_and_write(report_file, "  buf_size (routing switch)".ljust(50) + str(fpga_inst.area_dict["switch_buf_size"]/fpga_inst.specs.min_width_tran_area))
     print_and_write(report_file, "")
 
+def return_spice_flag():
+    global spice_flag_global
+    return spice_flag_global
     
 def load_arch_params(filename):
     """ Parse the architecture description file and load values into dictionary. 
@@ -509,6 +513,7 @@ def load_arch_params(filename):
         'FAs_per_flut':2,
         'hb_files' : [],
         'arch_out_folder': "",
+        'spice_flag' : 1,
     }
 
     params_file = open(filename, 'r')
@@ -535,6 +540,7 @@ def load_arch_params(filename):
             sys.exit()
          
         param = words[0]
+        print(param)
         value = words[1]
 
         #architecture parameters 
@@ -658,9 +664,13 @@ def load_arch_params(filename):
             arch_params['hb_files'].append(value)
         elif param == 'arch_out_folder':
             arch_params['arch_out_folder'] = value
+        elif param == 'spice_flag':
+            arch_params['spice_flag'] = int(value)
+            global spice_flag_global
+            spice_flag_global = int(value)
 
     params_file.close()
-    
+    print("Success in params")
     # Check that we read everything
     for param, value in arch_params.items():#arch_params.iteritems():
         if value == -1 or value == "":
@@ -1076,7 +1086,12 @@ def print_architecture_params(arch_params_dict, report_file_path):
     print_and_write(report_file, "  model_library = " + str( arch_params_dict['model_library']) )
     print_and_write(report_file, "  metal = " + str( arch_params_dict['metal']) )
     print_and_write(report_file, "")
-    print_and_write(report_file, "")
+    
+    
+    if(arch_params_dict['spice_flag']):
+    	print_and_write(report_file, "  Spice tool used : NgSpice")
+    else:
+    	print_and_write(report_file, "  Spice tool used : HSpice")
 
     report_file.close()
 

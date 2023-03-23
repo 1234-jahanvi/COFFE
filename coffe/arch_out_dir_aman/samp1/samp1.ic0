@@ -1,0 +1,29 @@
+* "simulator" "HSPICE" 
+* "version" "K-2015.06-SP2 linux64"
+* "format" "HSP"
+* "rundate" "13:14:30 07/08/2020 "
+* "netlist" "samp1.sp "
+* "runtitle" ".title sense amp"
+* time =    0.            
+* temperature =   25.0000        
+*** BEGIN: Saved Operating Point ***                     
+.option 
++ gmindc=   1.0000p       
+.nodeset
++ n_in =   0.            
++ n_out = 722.1567n       
++ tgate_l = 970.0000m       
++ tgate_r =   1.0000        
++ vclmpmtj = 653.0000m       
++ vdd = 800.0000m       
++ vdd_lp =   1.0000        
++ vdd_se =   1.0000        
++ vrefmtj = 627.0000m       
++ vsram =   1.0000        
++ vsram_n =   0.            
++ wordline =   0.            
++ xsamp1.n_1_1 = 999.9999m       
++ xsamp1.n_1_2 = 970.0001m       
++ xsamp1.n_gnd2 = 812.1676m       
++ xsamp1.n_hang = 599.7550n       
+***   END: Saved Operating Point ***                     
