@@ -1205,17 +1205,6 @@ def erf(sp_path,
 			nmos_size = fpga_inst.transistor_sizes[circuit_element + "_nmos"]
 			pmos_size = fpga_inst.transistor_sizes[circuit_element + "_pmos"]
 			erf_ratios[circuit_element] = float(pmos_size)/nmos_size
-	data_file = open('first_time_param.txt', 'w')
- 	data_file.write("param".ljust(40) + "value".ljust(20) + "\n")
-	dashes = "-"*60
-	data_file.write(dashes+ "\n")
-	for param in param_list :
-		data_file.write(param.ljust(40, '-'))
-		for i in range(len(parameter_dict[param])) :
-			data_file.write(str(parameter_dict[param][i]).ljust(20))
-
-		data_file.write("\n")
-	data_file.close()
 	return erf_ratios
 
 

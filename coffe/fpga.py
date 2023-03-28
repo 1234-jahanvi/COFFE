@@ -52,9 +52,13 @@ import ff_subcircuits
 import load_subcircuits
 import memory_subcircuits
 import utils
-import hardblocks_openlane
+import hardblock_functions
 import tran_sizing
-import top_level
+import top_level as top_level_class
+
+#import top_level
+
+top_level = top_level_class.TopLevelHSPICE()
    
 
 
@@ -117,8 +121,14 @@ class _Specs:
         self.carry_chain_type        = arch_params_dict['carry_chain_type']
         self.FAs_per_flut            = arch_params_dict['FAs_per_flut']
         
-        self.spice_flag              = arch_params_dict['spice_flag']
-
+        self.spice_tool_select       = arch_params_dict['spice_tool_select']
+        
+        if self.spice_tool_select == 'ngspice' :
+        	global top_level
+        	top_level = top_level_class.TopLevelNGSPICE()
+        elif self.spice_tool_select == 'hspice' :
+        	global top_level
+        	top_level = top_level_class.TopLevelHSPICE()
 
         # BRAM specs
         self.row_decoder_bits     = arch_params_dict['row_decoder_bits']
@@ -5178,8 +5188,12 @@ class _hard_block(_CompoundCircuit):
         if self.parameters['num_dedicated_outputs'] > 0:
             self.dedicated.generate_top()
 
-        # hard flow
-        self.flow_results = hardblocks_openlane.hardblock_flow(self.parameters)
+        #Hard-Block flow is chosen according to the hardblock_flow_select parameter (input in harrdblock settings file)
+        if(self.parameters['hardblock_flow_select'] == 'openlane'):
+        	self.flow_results = hardblock_functions.HardBlockOpenLane().hardblock_flow(self.parameters)
+        elif(self.parameters['hardblock_flow_select'] == 'normal'):
+        	self.flow_results = hardblock_functions.HardBlockNormal().hardblock_flow(self.parameters)
+        	
         #the area returned by the hardblock flow is in um^2. In area_dict, all areas are in nm^2 
         self.area = self.flow_results[0] * self.parameters['area_scale_factor'] * (1e+6) 
 

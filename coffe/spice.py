@@ -210,10 +210,10 @@ class SpiceInterface(object):
         #    In this case, we check if the ".mt0" exists, if not, we run hspice again. 
         while (not hspice_success) :
             utils.check_for_time()
-            spice_flag = utils.return_spice_flag()
-            if(spice_flag):
+            spice_tool_select = utils.return_spice_tool()
+            if(spice_tool_select == "ngspice"):
             	subprocess.call(["ngspice", sp_filename], stdout=output_file1, stderr=output_file1)
-            else:
+            elif(spice_tool_select == "hspice"):
             	subprocess.call(["hspice", sp_filename], stdout=output_file1, stderr=output_file1)
             
             #Added so that we can have a .lis and a .mt0 files with the same stdout log

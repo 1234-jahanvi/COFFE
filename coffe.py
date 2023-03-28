@@ -76,9 +76,11 @@ is_size_transistors = not args.no_sizing
 # Load the input architecture description file
 arch_params_dict = utils.load_arch_params(args.arch_description)
 
-spice_flag_global = arch_params_dict['spice_flag']
+"""
 
-if(spice_flag_global):
+spice_tool_select = arch_params_dict['spice_tool_select']
+
+if(spice_tool_select):
     with open('coffe/top_level_ngspice.py', 'r') as f:
         # Read the contents of the source file
         source_code = f.read()
@@ -92,7 +94,7 @@ with open('coffe/top_level.py', 'w') as f:
     # Write the contents of the source file to the destination file
     f.write(source_code)
 
-
+"""
     
 
 # Make the top-level spice folder if it doesn't already exist

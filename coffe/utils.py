@@ -10,7 +10,7 @@ import datetime
 FIRS_COL_WIDTH = 30  #First solu
 MIDL_COL_WIDTH = 13
 LAST_COL_WIDTH = 22
-spice_flag_global = 0
+spice_flag_global = ""
 
 def compare_tfall_trise(tfall, trise):
     """ Compare tfall and trise and returns largest value or -1.0
@@ -446,7 +446,7 @@ def print_vpr_areas(report_file, fpga_inst):
     print_and_write(report_file, "  buf_size (routing switch)".ljust(50) + str(fpga_inst.area_dict["switch_buf_size"]/fpga_inst.specs.min_width_tran_area))
     print_and_write(report_file, "")
 
-def return_spice_flag():
+def return_spice_tool():
     global spice_flag_global
     return spice_flag_global
     
@@ -512,8 +512,8 @@ def load_arch_params(filename):
         'carry_chain_type': "ripple",
         'FAs_per_flut':2,
         'hb_files' : [],
-        'arch_out_folder': "",
-        'spice_flag' : 1,
+        'arch_out_folder': " ",
+        'spice_tool_select' : " ",
     }
 
     params_file = open(filename, 'r')
@@ -664,10 +664,10 @@ def load_arch_params(filename):
             arch_params['hb_files'].append(value)
         elif param == 'arch_out_folder':
             arch_params['arch_out_folder'] = value
-        elif param == 'spice_flag':
-            arch_params['spice_flag'] = int(value)
+        elif param == 'spice_tool_select':
+            arch_params['spice_tool_select'] = value
             global spice_flag_global
-            spice_flag_global = int(value)
+            spice_flag_global = value
 
     params_file.close()
     print("Success in params")
@@ -752,6 +752,7 @@ def load_hard_params(filename):
         'core_site_name':'',
         'mode_signal': [],
         'open_lane_path':"",
+        'hardblock_flow_select':""
     }
 
 
@@ -901,7 +902,9 @@ def load_hard_params(filename):
             hard_params['mode_signal'].append(value)
         elif param == 'open_lane_path':
             hard_params['open_lane_path'] = value
-
+	elif param == 'hardblock_flow_select':
+            hard_params['hardblock_flow_select'] = value
+            
     hard_file.close()
     return hard_params
 
@@ -1088,10 +1091,10 @@ def print_architecture_params(arch_params_dict, report_file_path):
     print_and_write(report_file, "")
     
     
-    if(arch_params_dict['spice_flag']):
-    	print_and_write(report_file, "  Spice tool used : NgSpice")
-    else:
-    	print_and_write(report_file, "  Spice tool used : HSpice")
+    if arch_params_dict['spice_tool_select'] == "ngspice" :
+    	print_and_write(report_file, "Spice tool used : NGSPICE")
+    elif arch_params_dict['spice_tool_select'] == "hspice" :
+    	print_and_write(report_file, "Spice tool used : HSPICE")
 
     report_file.close()
 
