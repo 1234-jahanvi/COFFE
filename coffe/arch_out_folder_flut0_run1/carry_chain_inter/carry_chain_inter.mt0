@@ -1,120 +1,0 @@
-warning, can't find model 'cw' from line
-    cwire_1 n_in gnd cw
-warning, can't find model 'rw' from line
-    rwire_1 n_in n_out rw
-warning, can't find model 'cw' from line
-    cwire_2 n_out gnd cw
-Warning: vin: no DC value, transient time 0 value used
-Note: Starting dynamic gmin stepping
-Trying gmin =   1.0000E-03 Note: One successful gmin step
-Trying gmin =   1.0000E-04 Note: One successful gmin step
-Trying gmin =   1.0000E-05 Note: One successful gmin step
-Trying gmin =   1.0000E-06 Warning: Further gmin increment
-Trying gmin =   5.6234E-06 Note: One successful gmin step
-Trying gmin =   2.3714E-06 Note: One successful gmin step
-Trying gmin =   6.4938E-07 Note: One successful gmin step
-Trying gmin =   9.3057E-08 Note: One successful gmin step
-Trying gmin =   9.3057E-09 Note: One successful gmin step
-Trying gmin =   9.3057E-10 Note: One successful gmin step
-Trying gmin =   9.3057E-11 Note: One successful gmin step
-Trying gmin =   9.3057E-12 Note: One successful gmin step
-Trying gmin =   1.0000E-12 Note: One successful gmin step
-Note: Dynamic gmin stepping completed
-******
-** ngspice-37+ : Circuit level simulation program
-** The U. C. Berkeley CAD Group
-** Copyright 1985-1994, Regents of the University of California.
-** Copyright 2001-2022, The ngspice team.
-** Please get your ngspice manual from http://ngspice.sourceforge.net/docs.html
-** Please file your bug-reports at http://ngspice.sourceforge.net/bugrep.html
-** Creation Date: Mon Jul 25 11:02:59 UTC 2022
-******
-
-Note: No compatibility mode selected!
-
-
-Circuit: Carry Chain
-
-Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
-
-Warning: toxe, toxp and dtox all given and toxe != toxp + dtox; dtox ignored.
-
-Initial Transient Solution
---------------------------
-
-Node                                   Voltage
-----                                   -------
-vdd                                        0.8
-vdd_lp                                    0.95
-vsram                                        1
-vrefmtj                                  0.627
-vclmpmtj                                 0.653
-vsram_n                                      0
-ground                                       0
-n_in                                         0
-vdd_test                                   0.8
-xcarrychain_0.n_a_in_bar           9.46163e-05
-xcarrychain_0.n_a_in                  0.799995
-xcarrychain_0.n_cin_in_bar            0.799627
-xcarrychain_0.n_cin_in             2.77681e-07
-n_1p                                  0.799835
-xcarrychain_0.n_sum_internal       4.76694e-05
-xcarrychain_0.n_p_bar              2.39843e-05
-xcarrychain_0.n_b_in               6.67573e-07
-xcarrychain_0.n_cout_in               0.799414
-n_1_1                                 0.799413
-n_sum_out                             0.799947
-xcarrychain_0.n_sum_in                0.799947
-xcarrychain.n_a_in_bar             4.76769e-05
-xcarrychain.n_a_in                    0.799995
-xcarrychain.n_cin_in_bar           7.19453e-05
-xcarrychain.n_cin_in                  0.799413
-n_2p                                  0.799835
-xcarrychain.n_sum_internal            0.799306
-xcarrychain.n_p_bar                2.39322e-05
-xcarrychain.n_b_in                 6.66831e-07
-xcarrychain.n_cout_in              7.20465e-05
-n_1_2                              7.20468e-05
-n_sum_out2                         2.49588e-05
-xcarrychain.n_sum_in               2.49588e-05
-xdrivers.n_1_1                        0.799947
-xdrivers.n_1_2                     7.27251e-05
-n_1_3                              8.89669e-05
-xcarrychain_l.n_a_in_bar              0.799892
-xcarrychain_l.n_a_in               9.41194e-05
-xcarrychain_l.n_cin_in_bar            0.799839
-xcarrychain_l.n_cin_in             2.79195e-07
-n_3p                                  0.799944
-xcarrychain_l.n_sum_internal       4.79245e-05
-xcarrychain_l.n_p_bar              0.000166234
-xcarrychain_l.n_b_in                  0.799999
-xcarrychain_l.n_cout_in               0.799839
-n_hangl                               0.799839
-n_sum_out3                            0.799947
-xcarrychain_l.n_sum_in                0.799947
-v_test#branch                     -1.46182e-08
-vin#branch                         8.72164e-09
-vground#branch                      1.2657e-07
-vsram_n#branch                               0
-vclmomtjn#branch                             0
-vrefmtjn#branch                              0
-vsram#branch                                 0
-vsupplylp#branch                             0
-vsupply#branch                     -1.2657e-07
-
- Reference value :  4.52960e-10 Reference value :  1.13096e-09 Reference value :  1.81296e-09 Reference value :  2.45596e-09 Reference value :  3.14196e-09 Reference value :  3.82096e-09 Reference value :  4.47396e-09 Reference value :  5.15896e-09 Reference value :  5.84496e-09 Reference value :  6.47596e-09 Reference value :  7.16196e-09 Reference value :  7.84596e-09 Reference value :  8.50196e-09 Reference value :  9.18096e-09 Reference value :  9.86696e-09 Reference value :  1.05050e-08 Reference value :  1.11910e-08 Reference value :  1.18750e-08 Reference value :  1.25230e-08 Reference value :  1.32070e-08 Reference value :  1.38900e-08 Reference value :  1.45312e-08 Reference value :  1.52142e-08 Reference value :  1.58962e-08 Reference value :  1.65512e-08 Reference value :  1.72362e-08 Reference value :  1.79182e-08 Reference value :  1.85592e-08 Reference value :  1.92442e-08 Reference value :  1.99292e-08 Reference value :  2.05872e-08 Reference value :  2.12682e-08 Reference value :  2.19532e-08 Reference value :  2.25882e-08 Reference value :  2.32712e-08 Reference value :  2.39532e-08 Reference value :  2.46072e-08 Reference value :  2.52922e-08 Reference value :  2.59702e-08
-No. of Data Rows : 26091
-
-  Measurements for Transient Analysis
-
-meas_inv_carry_chain_inter_1_tfall=  9.366423e-12 targ=  6.812632e-11 trig=  5.875989e-11
-meas_inv_carry_chain_inter_1_trise=  1.124343e-11 targ=  2.080959e-09 trig=  2.069716e-09
-meas_inv_carry_chain_inter_2_tfall=  3.595773e-11 targ=  2.105674e-09 trig=  2.069716e-09
-meas_inv_carry_chain_inter_2_trise=  4.451240e-11 targ=  1.032723e-10 trig=  5.875989e-11
-meas_total_tfall    =  3.595773e-11 targ=  2.105674e-09 trig=  2.069716e-09
-meas_total_trise    =  4.451240e-11 targ=  1.032723e-10 trig=  5.875989e-11
-meas_logic_low_voltage=  0.000000e+00
-meas_current        =   -2.82352e-14 from=  0.00000e+00 to=  2.60000e-08
-meas_avg_power      =  8.68775e-07
-
-ngspice-37+ done
