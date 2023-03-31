@@ -78,7 +78,7 @@ class HardBlockOpenLane(HardBlockFlow):
 	      clk_period = flow_settings['clock_period'][0]
 	      top_level = flow_settings['top_level']
 	      #core_utilization = str(float(flow_settings['core_utilization'][0])*100)
-	      core_utilization = "90"
+	      core_utilization = "0"
 	      #rest_core_utilization = str(100.0 - float(flow_settings['core_utilization'][0])*100)
 	      rest_core_utilization = "10"
 	      open_lane_path = flow_settings['open_lane_path']
@@ -103,14 +103,7 @@ class HardBlockOpenLane(HardBlockFlow):
 	      file.write("}" + "\n")
 	      file.write("}," + "\n")
 	      #file.write("\"LIB_SYNTH\": \"dir::src/sky130_fd_sc_hd__typical.lib\"," + "\n")
-	      """
-	      file.write("\"LIB_SYNTH\": \"" + open_lane_lib_path + "sky130_fd_sc_hd__typical.lib\"," + "\n")
-	      #file.write("\"LIB_FASTEST\": \"dir::src/sky130_fd_sc_hd__fast.lib\"," + "\n")
-	      file.write("\"LIB_FASTEST\": \"" + open_lane_lib_path + "sky130_fd_sc_hd__fast.lib\"," + "\n")
-	      file.write("\"LIB_SLOWEST\": \"" + open_lane_lib_path + "sky130_fd_sc_hd__slow.lib\"," + "\n")
-	      file.write("\"LIB_TYPICAL\": \"" + open_lane_lib_path + "sky130_fd_sc_hd__typical.lib\"," + "\n")
-	      file.write("\"TEST_EXTERNAL_GLOB\": \"" + open_lane_lib_path + "*\"" + "\n")
-	      """
+
 	      file.write("\"LIB_SYNTH\": \"dir::src/sky130_fd_sc_hd__typical.lib\"," + "\n")
 	      file.write("\"LIB_FASTEST\": \"dir::src/sky130_fd_sc_hd__fast.lib\"," + "\n")
 	      file.write("\"LIB_SLOWEST\": \"dir::src/sky130_fd_sc_hd__slow.lib\"," + "\n")
@@ -118,34 +111,7 @@ class HardBlockOpenLane(HardBlockFlow):
 	      file.write("\"TEST_EXTERNAL_GLOB\": \"dir::../dsp_slice/src/*\"" + "\n")
 	      file.write("}" + "\n")
 	      file.close()
-	      """
-	      file.write("{" + "\n")
-	      file.write("\"DESIGN_NAME\": '" + design_name + "'," + "\n")
-	      #file.write("'VERILOG_FILES': 'dir::src/dsp_slice.v'," + "\n")
-	      file.write("'VERILOG_FILES': '" + open_lane_lib_path + design_name + ".v'," + "\n")
-	      file.write("'CLOCK_PORT': '" + clk_port_name + "'," + "\n")
-	      file.write("'CLOCK_NET': 'clk'," + "\n")
-	      file.write("'GLB_RESIZER_TIMING_OPTIMIZATIONS': true," + "\n")
-	      file.write("'CLOCK_PERIOD': " + clk_period + "," + "\n")
-	      file.write("'PL_TARGET_DENSITY': 0.7," + "\n")
-	      file.write("'FP_SIZING' : 'relative'," + "\n")
-	      file.write("'pdk::sky130*': {" + "\n")
-	      file.write("'FP_CORE_UTIL': 90," + "\n")
-	      file.write("'scl::sky130_fd_sc_hd': {" + "\n")
-	      file.write("'FP_CORE_UTIL': 10" + "\n")
-	      file.write("}" + "\n")
-	      file.write("}," + "\n")
-	      #file.write("'LIB_SYNTH': 'dir::src/sky130_fd_sc_hd__typical.lib'," + "\n")
-	      file.write("'LIB_SYNTH': '" + open_lane_lib_path + "sky130_fd_sc_hd__typical.lib'," + "\n")
-	      #file.write("'LIB_FASTEST': 'dir::src/sky130_fd_sc_hd__fast.lib'," + "\n")
-	      file.write("'LIB_FASTEST': '" + open_lane_lib_path + "sky130_fd_sc_hd__fast.lib'," + "\n")
-	      file.write("'LIB_SLOWEST': '" + open_lane_lib_path + "sky130_fd_sc_hd__slow.lib'," + "\n")
-	      file.write("'LIB_TYPICAL': '" + open_lane_lib_path + "sky130_fd_sc_hd__typical.lib'," + "\n")
-	      file.write("'TEST_EXTERNAL_GLOB': '" + open_lane_lib_path + "*'" + "\n")
-	      file.write("}" + "\n")
-	      file.close()
-	      """
-	      
+	
 	      os.chdir(src_folder_path)
 	      
 	      subprocess.call("cp " + os.path.expanduser(flow_settings['design_folder']) + "/" + design_name + ".v " + os.path.expanduser(src_folder_path) + "/" + "\n", shell=True)
@@ -154,24 +120,18 @@ class HardBlockOpenLane(HardBlockFlow):
 	      
 	      subprocess.call("make quick_run QUICK_RUN_DESIGN="+design_name+ "\n", shell=True)
 	      
-	      #subprocess.call("./flow.tcl -design " + design_name + ".v" )
-	      
-	      print("hello my name is karthik")
-	      
-	      # clean after DC!
-	      """
-	      subprocess.call('rm -rf command.log', shell=True)
-	      subprocess.call('rm -rf default.svf', shell=True)
-	      subprocess.call('rm -rf filenames.log', shell=True)
-	      subprocess.call('rm -rf dc_script.tcl', shell=True) 
-	      
-		"""
+	    
 	      # Make sure it worked properly
 	      # Open the timing report and make sure the critical path is non-zero:
+	     
+	      latest_run_folder_path = open_lane_path + "/designs/" + design_name + "/runs"
+	      os.chdir(latest_run_folder_path)
+	      latest_run_folder = subprocess.check_output("ls -td -- */ | head -n 1 | cut -d'/' -f1", shell=True)
+	      print(latest_run_folder)
 	      
 	      #UPDATE THE CODE BELOW
-	      """
-	      check_file = open(os.path.expanduser(flow_settings['synth_folder']) + "/check.rpt", "r")
+	      
+	      check_file = open(os.path.expanduser(open_lane_lib_path) + "/check.rpt", "r")
 	      for line in check_file:
 		if "Error" in line:
 		  print ("Your design has errors. Refer to check.rpt in synthesis directory")
@@ -180,7 +140,7 @@ class HardBlockOpenLane(HardBlockFlow):
 		  print ("Your design has warnings. Refer to check.rpt in synthesis directory")
 		  print ("In spite of the warning, the rest of the flow will continue to execute.")
 	      check_file.close()
-	     """
+	     
 	      
 	      #if the user doesn't want to perform place and route, extract the results from DC reports and end
 	      
