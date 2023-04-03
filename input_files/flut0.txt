@@ -67,7 +67,7 @@ FAs_per_flut = 2
 #Hspice/ngspice selection
 ############################
 # type: hspice or ngspice
-spice_tool_select=ngspice
+spice_tool_select=hspice
 
 
 #######################################
@@ -197,7 +197,7 @@ metal=0.227273,0.000000
 # if hybrid blocks are enabled, list configurations here
 #hb_files = input_files/BRAM/hb1.txt
 
-arch_out_folder = coffe/arch_out_folder_flut0_run_march23_ngspice
+arch_out_folder = coffe/arch_out_folder_flut0_run
 
 
 
