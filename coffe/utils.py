@@ -447,6 +447,8 @@ def print_vpr_areas(report_file, fpga_inst):
     print_and_write(report_file, "")
 
 def return_spice_tool():
+    """Returns the spice tool which is being used(Given as an input paramter in the input files) 
+        """
     global spice_flag_global
     return spice_flag_global
     
@@ -540,7 +542,7 @@ def load_arch_params(filename):
             sys.exit()
          
         param = words[0]
-        print(param)
+
         value = words[1]
 
         #architecture parameters 
@@ -670,7 +672,7 @@ def load_arch_params(filename):
             spice_flag_global = value
 
     params_file.close()
-    print("Success in params")
+    
     # Check that we read everything
     for param, value in arch_params.items():#arch_params.iteritems():
         if value == -1 or value == "":

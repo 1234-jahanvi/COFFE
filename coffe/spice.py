@@ -46,7 +46,7 @@ class SpiceInterface(object):
 
         # Get a list of parameter names
         param_list = parameter_dict.keys()
-	#print(parameter_dict)
+        
         # Write out parameters to a "easy to read format" file (this just helps for debug) 
         # MAKING DATA.TXT
         global temp_count
@@ -103,7 +103,7 @@ class SpiceInterface(object):
         	
         parameters_file.write(".ENDL PARAMETERS_DATA")
         parameters_file.close()
-        '''
+        """
         hspice_data_file = open(HSPICE_DATA_SWEEP_PATH, 'w')
         hspice_data_file.write(".DATA sweep_data")
         item_counter = 0
@@ -133,7 +133,7 @@ class SpiceInterface(object):
         hspice_data_file.write(".ENDDATA")
     
         hspice_data_file.close()
-    	'''
+    	"""
         return
     
 

@@ -45,7 +45,7 @@ import math
 
 # Subcircuit Modules
 import basic_subcircuits
-# from basic_subcircuits import *
+
 import mux_subcircuits 
 import lut_subcircuits 
 import ff_subcircuits 
@@ -55,8 +55,6 @@ import utils
 import hardblock_functions
 import tran_sizing
 import top_level as top_level_class
-
-#import top_level
 
 top_level = top_level_class.TopLevelHSPICE()
    
@@ -6096,7 +6094,7 @@ class FPGA:
             rc = self.metal_stack[layer]
             # Calculate total wire R and C
             resistance = rc[0]*length
-            capacitance = rc[1]*(length/2)
+            capacitance = rc[1]*length/2
             # Add to wire_rc dictionary
             self.wire_rc_dict[wire] = (resistance, capacitance)     
 
