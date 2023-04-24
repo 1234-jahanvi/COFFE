@@ -433,7 +433,7 @@ def get_current_delay(fpga_inst, is_ram_component):
 	path_delay += fpga_inst.logic_cluster.ble.lut.delay * \
 	    fpga_inst.logic_cluster.ble.lut.delay_weight
 	# LUT input drivers
-	#print path_delay
+	# print path_delay
 	for lut_input_name, lut_input in fpga_inst.logic_cluster.ble.lut.input_drivers.iteritems():
 		path_delay += lut_input.driver.delay*lut_input.driver.delay_weight
 		path_delay += lut_input.not_driver.delay*lut_input.not_driver.delay_weight
@@ -818,9 +818,8 @@ def erf_inverter_balance_trise_tfall(sp_path,
 
 		# Find the new interval where the tfall trise equality occurs.
 		for i in xrange(len(nm_size_list)):
-			# There are two possible cases how spice_meas is treated. If there is only 
-   			# one element in spice_meas, we need to directly take that element or if there
-      		# are more than one elements , we need to take the first element of the array
+			# tfall_str = spice_meas["meas_" + inv_name + "_tfall"][i]
+			# trise_str = spice_meas["meas_" + inv_name + "_trise"][i]
 			try:
 			    tfall_str = str(spice_meas["meas_" + inv_name + "_tfall"])
 			except ValueError:
@@ -908,9 +907,8 @@ def erf_inverter_balance_trise_tfall(sp_path,
 		current_best_tfall_trise_balance = 1
 		best_index = 0
 		for i in xrange(len(nm_size_list)):
-			# There are two possible cases how spice_meas is treated. If there is only 
-   			# one element in spice_meas, we need to directly take that element or if there
-      		# are more than one elements , we need to take the first element of the array
+			# tfall_str = spice_meas["meas_" + inv_name + "_tfall"][i]
+			# trise_str = spice_meas["meas_" + inv_name + "_trise"][i]
 			try:
 			    tfall_str = str(spice_meas["meas_" + inv_name + "_tfall"])
 			except ValueError:
@@ -921,14 +919,14 @@ def erf_inverter_balance_trise_tfall(sp_path,
 			    trise_str = spice_meas["meas_" + inv_name + "_trise"][i]
 			# For some reason I occasionally see a failure due to "internal timestep being too small" The following shall avoid the program
 			# from crashing but it will throw away that part of the results
-			try:
+			'''try:
 				tfall = float(tfall_str)
 			except ValueError:
-				tfall = 1
+				tfall = 1;
 			try:
 				trise = float(trise_str)
 			except ValueError:
-				trise = 2
+				trise = 2;'''
 			tfall = float(tfall_str)
 			trise = float(trise_str)
 			diff = abs(tfall-trise)
@@ -1010,9 +1008,8 @@ def erf_inverter(sp_path,
 	# This was a single HSPICE run, so the value we want is at index 0
 
 	print("meas_" + inv_name + "_tfall")
-	# There are two possible cases how spice_meas is treated. If there is only 
-   	# one element in spice_meas, we need to directly take that element or if there
-    # are more than one elements , we need to take the first element of the array
+	# inv_tfall_str = spice_meas["meas_" + inv_name + "_tfall"]
+	# inv_trise_str = spice_meas["meas_" + inv_name + "_trise"]
 	try:
 	    inv_tfall_str = str(spice_meas["meas_" + inv_name + "_tfall"])
 	except ValueError:
@@ -1153,9 +1150,8 @@ def erf(sp_path,
 				continue
 
 			# Get the tfall and trise delays for the inverter from the spice measurements
-			# There are two possible cases how spice_meas is treated. If there is only 
-   			# one element in spice_meas, we need to directly take that element or if there
-      		# are more than one elements , we need to take the first element of the array
+			# tfall = float(spice_meas["meas_" + circuit_element + "_tfall"][0])
+			# trise = float(spice_meas["meas_" + circuit_element + "_trise"][0])
 			try:
 			    tfall_str = str(spice_meas["meas_" + circuit_element + "_tfall"])
 			except ValueError:
@@ -1277,9 +1273,6 @@ def run_combo(fpga_inst, sp_path, element_names, combo, erf_ratios, spice_interf
 	# run returns a dict of measurements. For each key, we have a list of meaasurements.
 	# That;s why we add the [0]
 	# Extract total delay from measurements
- 	# There are two possible cases how spice_meas is treated. If there is only 
-   	# one element in spice_meas, we need to directly take that element or if there
-    # are more than one elements , we need to take the first element of the array
 	try:
 	    tfall_str = str(spice_meas["meas_total_tfall"])
 	except ValueError:
@@ -1441,9 +1434,8 @@ def search_ranges(sizing_ranges, fpga_inst, sizable_circuit, opt_type, re_erf, a
 	tfall_trise_list = []
 	meas_logic_low_voltage = []
 	for i in xrange(len(sizing_combos)):
-     	# There are two possible cases how spice_meas is treated. If there is only 
-   		# one element in spice_meas, we need to directly take that element or if there
-      	# are more than one elements , we need to take the first element of the array
+		# tfall_str = spice_meas["meas_total_tfall"][i]
+		# trise_str = spice_meas["meas_total_trise"][i]
 		try:
 		    tfall_str = str(spice_meas["meas_total_tfall"])
 		except ValueError:
@@ -1453,6 +1445,16 @@ def search_ranges(sizing_ranges, fpga_inst, sizable_circuit, opt_type, re_erf, a
 		except ValueError:
 		    trise_str = spice_meas["meas_total_trise"][i]
 
+		 # jahanvi old code
+		'''if spice_meas["meas_logic_low_voltage"][i] == "failed" :
+			meas_logic_low_voltage.append(1)
+		else:
+			try:
+				a, e = (spice_meas["meas_logic_low_voltage"][i]).split("*")
+				meas_logic_low_voltage.append(float(a) * float(e))
+			except ValueError:
+				meas_logic_low_voltage.append(float(spice_meas["meas_logic_low_voltage"][i]))
+			# meas_logic_low_voltage.append(float(spice_meas["meas_logic_low_voltage"][i]))'''
 
 		try:
 			meas_logic_low_voltage_str = str(spice_meas["meas_logic_low_voltage"])

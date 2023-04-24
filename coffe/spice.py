@@ -6,9 +6,11 @@ import subprocess
 import coffe.utils as utils
 from pathlib2 import Path
 
-# All .sp files should be created to use sweep_data.l to set parameters.
-# HSPICE_DATA_SWEEP_PATH = "sweep_data.l"
-PARAMETERS_DATA_PATH = "parameters.l"
+# All .sp files should be created to use sweep_data.l to set parameters if they need to run in HSPICE
+# If they need to run in NGSPICE then we use parameters.l
+
+HSPICE_DATA_SWEEP_PATH = "sweep_data.l"
+NGSPICE_PARAMETERS_DATA_PATH = "parameters.l"
 
 # The contents of 
 DATA_SWEEP_PATH = "data.txt"
@@ -46,38 +48,18 @@ class SpiceInterface(object):
 
         # Get a list of parameter names
         param_list = parameter_dict.keys()
-        
+	#print(parameter_dict)
         # Write out parameters to a "easy to read format" file (this just helps for debug) 
         # MAKING DATA.TXT
         global temp_count
         print("THIS IS A TEST: " + str(temp_count))
-        if temp_count == 0:
-		    data_file = open('data0.txt', 'w')
-        elif temp_count==1:
-		    data_file = open('data1.txt', 'w')
-        elif temp_count==2:
-            data_file = open('data2.txt', 'w')
-        elif temp_count==3:
-            data_file = open('data3.txt', 'w')
-        elif temp_count==4:
-            data_file = open('data4.txt', 'w')
-        elif temp_count==5:
-            data_file = open('data5.txt', 'w')
-        elif temp_count==6:
-            data_file = open('data6.txt', 'w')
-        elif temp_count==7:
-            data_file = open('data7.txt', 'w')
-        elif temp_count==8:
-            data_file = open('data8.txt', 'w')
-        elif temp_count==9:
-            data_file = open('data9.txt', 'w')
-        elif temp_count==10:
-            data_file = open('data10.txt', 'w')
-        else:
-            data_file = open(DATA_SWEEP_PATH, 'w')
+        #print(param_list)
+        data_file_name = "data" + str(temp_count) + ".txt"
+        data_file = open(data_file_name, "w")
+        
         data_file.write("param".ljust(40) + "value".ljust(20) + "\n")
         dashes = "-"*60
-        data_file.write(dashes+ "\n")
+        data_file.write(dashes + "\n")
         for param in param_list :
             data_file.write(param.ljust(40, '-'))
             for i in range(len(parameter_dict[param])) :
@@ -86,54 +68,49 @@ class SpiceInterface(object):
             data_file.write("\n")
         data_file.close()
         temp_count = temp_count + 1
+        
+        if utils.return_spice_tool()=="ngspice":
+        	# Creates parameters.l for the NGSpice flow
+		parameters_file = open(NGSPICE_PARAMETERS_DATA_PATH, 'w')
+		parameters_file.write("*** INCLUDE PARAMETERS_DATA \n\n")
+		parameters_file.write(".LIB PARAMETERS_DATA \n")
+		for param_name in param_list:
+			parameters_file.write(".PARAM " + param_name + " = " + str(parameter_dict[param_name][0]) + "\n")
+		parameters_file.write(".ENDL PARAMETERS_DATA")
+		parameters_file.close()
 	
-        # Replace this section for NGSpice 
-        
-        # Write the .DATA HPSICE file. This first part writes out the header.
-        # MAKING PATAMETERS.L
-        # Replace this section for NGSpice 
-        
-        # Write the .DATA HPSICE file. This first part writes out the header.
-        # MAKING PATAMETERS.L
-        parameters_file = open(PARAMETERS_DATA_PATH, 'w')
-        parameters_file.write("*** INCLUDE PARAMETERS_DATA \n\n")
-        parameters_file.write(".LIB PARAMETERS_DATA \n")
-        for param_name in param_list:
-        	parameters_file.write(".PARAM " + param_name + " = " + str(parameter_dict[param_name][0]) + "\n")
-        	
-        parameters_file.write(".ENDL PARAMETERS_DATA")
-        parameters_file.close()
-        """
-        hspice_data_file = open(HSPICE_DATA_SWEEP_PATH, 'w')
-        hspice_data_file.write(".DATA sweep_data")
-        item_counter = 0
-        for param_name in param_list:
-            if item_counter >= max_items_per_line:
-                hspice_data_file.write("\n" + param_name)
-                item_counter = 0
-            else:
-                hspice_data_file.write(" " + param_name)
-            item_counter += 1
-        hspice_data_file.write("\n")
-    
-        # Add data for each elements in the lists.
-        num_settings = len(parameter_dict[param_list[0]])
-        for i in xrange(num_settings):
-            item_counter = 0
-            for param_name in param_list:
-                if item_counter >= max_items_per_line:
-                    hspice_data_file.write(str(parameter_dict[param_name][i]) + "\n")
-                    item_counter = 0
-                else:
-                    hspice_data_file.write(str(parameter_dict[param_name][i]) + " ")
-                item_counter += 1
-            hspice_data_file.write ("\n")
-    	
-        # Add the footer
-        hspice_data_file.write(".ENDDATA")
-    
-        hspice_data_file.close()
-    	"""
+	elif utils.return_spice_tool()=="hspice":
+		# Creates sweep_data.l for the HSpice flow
+	 	# Write the .DATA HPSICE file. This first part writes out the header.
+		hspice_data_file = open(HSPICE_DATA_SWEEP_PATH, 'w')
+		hspice_data_file.write(".DATA sweep_data")
+		item_counter = 0
+		for param_name in param_list:
+		    if item_counter >= max_items_per_line:
+		        hspice_data_file.write("\n" + param_name)
+		        item_counter = 0
+		    else:
+		        hspice_data_file.write(" " + param_name)
+		    item_counter += 1
+		hspice_data_file.write("\n")
+	    
+		# Add data for each elements in the lists.
+		num_settings = len(parameter_dict[param_list[0]])
+		for i in xrange(num_settings):
+		    item_counter = 0
+		    for param_name in param_list:
+		        if item_counter >= max_items_per_line:
+		            hspice_data_file.write(str(parameter_dict[param_name][i]) + "\n")
+		            item_counter = 0
+		        else:
+		            hspice_data_file.write(str(parameter_dict[param_name][i]) + " ")
+		        item_counter += 1
+		    hspice_data_file.write ("\n")
+	    	
+		# Add the footer
+		hspice_data_file.write(".ENDDATA")
+		hspice_data_file.close()
+       
         return
     
 
@@ -191,15 +168,16 @@ class SpiceInterface(object):
         # Change working dir so that SPICE output files are created in circuit subdirectory
         saved_cwd = os.getcwd()
         os.chdir(sp_dir)
-        
+
         # Creat an output file having the ending .lis
         # Run the SPICE simulation and capture output
         output_filename = sp_filename.rstrip(".sp") + ".lis"
+        
         #Creating .lis for preserving 
-        output_file1 = open(output_filename, "w")
+        output_file_lis = open(output_filename, "w")
         #Creating .lis to convert to .mt0
-        output_file2 = open(output_filename, "w")
-        #output_file3= open(temp.txt,"w")
+        output_file_mt0 = open(output_filename, "w")
+
         hspice_success = False
         hspice_runs = 0
 
@@ -209,49 +187,45 @@ class SpiceInterface(object):
         #    to many instances checking out the license at the same time or license going down temporarly. 
         #    In this case, we check if the ".mt0" exists, if not, we run hspice again. 
         while (not hspice_success) :
+        
             utils.check_for_time()
             spice_tool_select = utils.return_spice_tool()
             if(spice_tool_select == "ngspice"):
-            	subprocess.call(["ngspice", sp_filename], stdout=output_file1, stderr=output_file1)
+            	subprocess.call(["ngspice", sp_filename], stdout=output_file_lis, stderr=output_file_lis)
             elif(spice_tool_select == "hspice"):
-            	subprocess.call(["hspice", sp_filename], stdout=output_file1, stderr=output_file1)
+            	subprocess.call(["hspice", sp_filename], stdout=output_file_lis, stderr=output_file_lis)
             
             #Added so that we can have a .lis and a .mt0 files with the same stdout log
-            output_file1.close()
-            output_file1 = open(output_filename, "r")
-            ##
-            ft = open("ngspice_output.txt","w")
-            for line in output_file1:
-                ft.write(line + "\n")
-            ft.close()
-            ##
-            for line in output_file1:
-            	output_file2.write(line)
-            	#output_file3.write(line)
+            output_file_lis.close()
             
-	    		
-            # how come this file is closed here, it should be closed only if there is a success
-            # since else the call process will write in a closed file
-            ##output_file.close()
+            #Copying the .lis output file content to spice_output.txt
+            output_file_lis = open(output_filename, "r")
+            spice_output_file = open("spice_output.txt","w")
+            for line in output_file_lis:
+                spice_output_file.write(line + "\n")
+            spice_output_file.close()
+           
+           #Copying the .lis output file content to .mt0 file
+            for line in output_file_lis:
+            	output_file_mt0.write(line)
+            
             
             # HSPICE should print the measurements in a file having the same
             # name as the output file with .mt0 ending
             mt0_path = output_filename.replace(".lis", ".mt0")
             p = Path(output_filename)
 	    p.rename(p.with_suffix('.mt0'))
-
           
             # check that the ".mt0" file is there
-            
-            #print(os.path.isfile(mt0_path))
             if os.path.isfile(mt0_path) :
                 # store the measurments in a dictionary
                 spice_measurements = self.parse_mt1(mt0_path)
                 # delete results file to avoid confusion in future runs
                 # os.remove(mt0_path) 26/1/23 commented
                 hspice_success = True
-                output_file1.close()
-                output_file2.close()
+                output_file_lis.close()
+                output_file_mt0.close()
+                
             # NGSPICE failed to run
             else :
                 hspice_runs = hspice_runs + 1
@@ -274,8 +248,7 @@ class SpiceInterface(object):
     
     	measurements = {}
         meas_names = []
-        mt0_file = open(filepath, 'r')
-        
+        mt0_file = open(filepath, "r")
         for line in mt0_file:
         	
             # Ignore these lines
@@ -283,11 +256,18 @@ class SpiceInterface(object):
                 continue
             if line.startswith("."):
                 continue
-            if line.startswith("meas_"):
-            	line = line.replace("=", "")
-            	words = line.split()
-            	#print(words[0])
-            	measurements[words[0]] = words[1]
+            
+            if utils.return_spice_tool()=="ngspice":
+		if line.startswith("meas_"):
+		    	line = line.replace("=", "")
+		    	words = line.split()
+		    	measurements[words[0]] = words[1]
+            elif utils.return_spice_tool()=="ngspice":
+            	if line.startswith(" meas_"):
+		    	line = line.replace("=", "")
+		    	words = line.split()
+		    	measurements[words[0]] = words[1]
+            
             	
             key1 = "meas_total_tfall"
             key2 = "meas_total_trise"
@@ -300,9 +280,10 @@ class SpiceInterface(object):
             
             if key3 not in measurements.keys():
             	measurements[key3]='0.0'
-            
+        
+        
+        mt0_file.close()    
 	print(measurements)
-	mt0_file.close()
 	return measurements
 
     def parse_mt0(self, filepath):

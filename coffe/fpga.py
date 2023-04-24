@@ -45,18 +45,21 @@ import math
 
 # Subcircuit Modules
 import basic_subcircuits
-
 import mux_subcircuits 
 import lut_subcircuits 
 import ff_subcircuits 
 import load_subcircuits
 import memory_subcircuits
 import utils
-import hardblock_functions
+from hardblock_openlane import HardBlockOpenLane
+from hardblock_commercial import HardBlockCommercial
 import tran_sizing
-import top_level as top_level_class
+import top_level_hspice
+import top_level_ngspice
 
-top_level = top_level_class.TopLevelHSPICE()
+
+top_level = top_level_hspice.TopLevelHSPICE()
+spice_tool_select = ""
    
 
 
@@ -123,10 +126,14 @@ class _Specs:
         
         if self.spice_tool_select == 'ngspice' :
         	global top_level
-        	top_level = top_level_class.TopLevelNGSPICE()
+        	global spice_tool_select
+        	spice_tool_select = "ngspice"
+        	top_level = top_level_ngspice.TopLevelNGSPICE()
         elif self.spice_tool_select == 'hspice' :
         	global top_level
-        	top_level = top_level_class.TopLevelHSPICE()
+        	global spice_tool_select
+        	spice_tool_select = "hspice"
+        	top_level = top_level_hspice.TopLevelHSPICE()
 
         # BRAM specs
         self.row_decoder_bits     = arch_params_dict['row_decoder_bits']
@@ -5188,9 +5195,9 @@ class _hard_block(_CompoundCircuit):
 
         #Hard-Block flow is chosen according to the hardblock_flow_select parameter (input in harrdblock settings file)
         if(self.parameters['hardblock_flow_select'] == 'openlane'):
-        	self.flow_results = hardblock_functions.HardBlockOpenLane().hardblock_flow(self.parameters)
+        	self.flow_results = HardBlockOpenLane().hardblock_flow(self.parameters)
         elif(self.parameters['hardblock_flow_select'] == 'normal'):
-        	self.flow_results = hardblock_functions.HardBlockNormal().hardblock_flow(self.parameters)
+        	self.flow_results = HardBlockCommercial().hardblock_flow(self.parameters)
         	
         #the area returned by the hardblock flow is in um^2. In area_dict, all areas are in nm^2 
         self.area = self.flow_results[0] * self.parameters['area_scale_factor'] * (1e+6) 
@@ -6094,7 +6101,7 @@ class FPGA:
             rc = self.metal_stack[layer]
             # Calculate total wire R and C
             resistance = rc[0]*length
-            capacitance = rc[1]*length/2
+            capacitance = rc[1]*(length/2)
             # Add to wire_rc dictionary
             self.wire_rc_dict[wire] = (resistance, capacitance)     
 
@@ -7337,10 +7344,14 @@ class FPGA:
         includes_file.write(".LIB \"basic_subcircuits.l\" BASIC_SUBCIRCUITS\n\n")
         includes_file.write("* Include subcircuits\n")
         includes_file.write(".LIB \"subcircuits.l\" SUBCIRCUITS\n\n")
-        #includes_file.write("* Include sweep data file for .DATA sweep analysis\n")
-        #includes_file.write(".INCLUDE \"sweep_data.l\"\n\n")
-        includes_file.write("* Include parameters data file \n")
-        includes_file.write(".LIB \"parameters.l\" PARAMETERS_DATA\n\n")
+        
+        if spice_tool_select=="ngspice":
+        	includes_file.write("* Include parameters data file \n")
+        	includes_file.write(".LIB \"parameters.l\" PARAMETERS_DATA\n\n")
+        elif spice_tool_select=="hspice":
+        	includes_file.write("* Include sweep data file for .DATA sweep analysis\n")
+        	includes_file.write(".INCLUDE \"sweep_data.l\"\n\n")
+       
         includes_file.write(".ENDL INCLUDES")
         includes_file.close()
         
