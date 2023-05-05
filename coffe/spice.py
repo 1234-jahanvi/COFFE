@@ -262,13 +262,17 @@ class SpiceInterface(object):
 		    	line = line.replace("=", "")
 		    	words = line.split()
 		    	measurements[words[0]] = words[1]
-            elif utils.return_spice_tool()=="ngspice":
+            elif utils.return_spice_tool()=="hspice":
             	if line.startswith(" meas_"):
-		    	line = line.replace("=", "")
+		    	line = line.replace("=", " ")
 		    	words = line.split()
+		    	words[1]=words[1].replace("m","e-3")
+		    	words[1]=words[1].replace("u","e-6")
+		    	words[1]=words[1].replace("n","e-9")		    
+		    	words[1]=words[1].replace("p","e-12")
+		    	words[1]=words[1].replace("f","e-15")
 		    	measurements[words[0]] = words[1]
             
-            	
             key1 = "meas_total_tfall"
             key2 = "meas_total_trise"
             key3 = "meas_avg_power"
