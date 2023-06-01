@@ -45,12 +45,15 @@ class SpiceInterface(object):
 
         # Get a list of parameter names
         param_list = parameter_dict.keys()
-
-        # Write out parameters to a "easy to read format" file (this just helps for debug) 
-        data_file = open(DATA_SWEEP_PATH, 'w')
+        global temp_count
+        print("THIS IS A TEST: " + str(temp_count))
+        #print(param_list)
+        data_file_name = "data" + str(temp_count) + ".txt"
+        data_file = open(data_file_name, "w")
+        
         data_file.write("param".ljust(40) + "value".ljust(20) + "\n")
         dashes = "-"*60
-        data_file.write(dashes+ "\n")
+        data_file.write(dashes + "\n")
         for param in param_list :
             data_file.write(param.ljust(40, '-'))
             for i in range(len(parameter_dict[param])) :
@@ -58,6 +61,20 @@ class SpiceInterface(object):
 
             data_file.write("\n")
         data_file.close()
+        temp_count = temp_count + 1
+        
+        # Write out parameters to a "easy to read format" file (this just helps for debug) 
+        # data_file = open(DATA_SWEEP_PATH, 'w')
+        # data_file.write("param".ljust(40) + "value".ljust(20) + "\n")
+        # dashes = "-"*60
+        # data_file.write(dashes+ "\n")
+        # for param in param_list :
+        #     data_file.write(param.ljust(40, '-'))
+        #     for i in range(len(parameter_dict[param])) :
+        #         data_file.write(str(parameter_dict[param][i]).ljust(20))
+
+        #     data_file.write("\n")
+        # data_file.close()
 
         # Write the .DATA HPSICE file. This first part writes out the header.
         hspice_data_file = open(HSPICE_DATA_SWEEP_PATH, 'w')
