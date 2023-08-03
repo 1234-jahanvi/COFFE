@@ -219,7 +219,7 @@ class SpiceInterface(object):
             # check that the ".mt0" file is there
             if os.path.isfile(mt0_path) :
                 # store the measurments in a dictionary
-                spice_measurements = self.parse_mt1(mt0_path)
+                spice_measurements = self.parse_mt0(mt0_path)
                 # delete results file to avoid confusion in future runs
                 # os.remove(mt0_path) 26/1/23 commented
                 hspice_success = True
