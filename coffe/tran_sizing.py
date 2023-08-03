@@ -325,7 +325,7 @@ def get_eval_delay(fpga_inst, opt_type, subcircuit, tfall, trise, low_voltage, i
 		# Switch block
 		path_delay += fpga_inst.sb_mux.delay*fpga_inst.sb_mux.delay_weight
 
-		'''
+		
 		# Connection block
 		path_delay += fpga_inst.cb_mux.delay*fpga_inst.cb_mux.delay_weight
 		# Local mux
@@ -355,7 +355,7 @@ def get_eval_delay(fpga_inst, opt_type, subcircuit, tfall, trise, low_voltage, i
 
 		# print path_delay
 		# path_delay +=fpga_inst.carrychain.delay *fpga_inst.logic_cluster.ble.lut.delay_weight
-		'''
+		
 		if fpga_inst.specs.enable_bram_block == 0:
 			return path_delay
 
@@ -2449,7 +2449,7 @@ def size_fpga_transistors(fpga_inst, run_options, spice_interface):
 
 		time_before_sizing = time.time()
 		
-		'''
+		
 
 		############################################
 		# Size connection block mux transistors
@@ -3278,7 +3278,7 @@ def size_fpga_transistors(fpga_inst, run_options, spice_interface):
 
 			time_before_sizing = time.time()
 		
-		'''
+		
 
 			############################################
 			# Done sizing, update results lists

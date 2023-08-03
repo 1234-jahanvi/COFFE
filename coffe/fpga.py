@@ -6158,7 +6158,7 @@ class FPGA:
         self.delay_dict[self.sb_mux.name] = self.sb_mux.delay 
         self.sb_mux.power = float(spice_meas["meas_avg_power"][0])
         
-        '''
+        
         # Connection Block MUX
         print ("  Updating delay for " + self.cb_mux.name)
         spice_meas = spice_interface.run(self.cb_mux.top_spice_path, parameter_dict) 
@@ -6938,7 +6938,7 @@ class FPGA:
         self.RAM.wordlinedriver.power = float(spice_meas["meas_avg_power"][0])
         if self.RAM.wordlinedriver.wl_repeater == 1:
             self.RAM.wordlinedriver.power *=2
-	'''
+	
         return valid_delay
 
 

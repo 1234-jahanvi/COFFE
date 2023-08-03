@@ -348,7 +348,15 @@ class SpiceInterface(object):
                 continue
             if line.startswith("."):
                 continue
-    
+            if line.startswith(" meas_"):
+		    	line = line.replace("=", " ")
+		    	words = line.split()
+		    	words[1]=words[1].replace("m","e-3")
+		    	words[1]=words[1].replace("u","e-6")
+		    	words[1]=words[1].replace("n","e-9")		    
+		    	words[1]=words[1].replace("p","e-12")
+		    	words[1]=words[1].replace("f","e-15")
+		    	measurements[words[0]] = words[1]
             if parsing_names:
                 words = line.split()
                 for meas_name in words:
@@ -397,6 +405,17 @@ class SpiceInterface(object):
                     current_meas += 1
                     if current_meas == num_measurements:
                         current_meas = 0
+            key1 = "meas_total_tfall"
+            key2 = "meas_total_trise"
+            key3 = "meas_avg_power"
+            if key1 not in measurements.keys():
+            	measurements[key1]='0.0'
+    		
+            if key2 not in measurements.keys():
+            	measurements[key2]='0.0'
+            
+            if key3 not in measurements.keys():
+            	measurements[key3]='0.0'
         mt0_file.close()
 
         # This part is added to support having tow different fanins (e.g. ram rowdecoder)
